@@ -1,0 +1,936 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.18)  22 DEC 2022 20:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**MuttamaDataPaper.tex
+(./MuttamaDataPaper.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2022-11-02> (./copernicus.cls
+Document Class: copernicus 2022/12/05 10.1.4 Copernicus papers
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Additional configuration file copernicus.cfg used
+(./copernicus.cfg) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
+\mathindent=\skip48
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen140
+)
+\bleed=\dimen141
+\longtwo@top=\skip51
+\longtwo@bottom=\skip52
+\longtwo@box=\box51
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box52
+\UL@hyphenbox=\box53
+\UL@skip=\skip53
+\UL@hook=\toks16
+\UL@height=\dimen142
+\UL@pe=\count193
+\UL@pixel=\dimen143
+\ULC@box=\box54
+Package: ulem 2019/11/18
+\ULdepth=\dimen144
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/regexpatch/regexpatch.sty (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-11-02 L3 programming layer (loader) 
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count194
+\l__pdf_internal_box=\box55
+))
+Package: regexpatch 2021/03/21 v0.2f Extending etoolbox patching commands
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-06-22 L3 Experimental document command parser
+)) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/11/30 3.83 The Babel package
+\babel@savecnt=\count195
+\U@D=\dimen145
+\l@unhyphenated=\language3
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count196
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'british' set to \l@english
+(babel)             (\language0). Reported on input line 82.
+Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
+(babel)             (\language0). Reported on input line 83.
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@english
+(babel)             (\language0). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@english
+(babel)             (\language0). Reported on input line 108.
+)) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen146
+\ar@mcellbox=\box56
+\extrarowheight=\dimen147
+\NC@list=\toks19
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box57
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen148
+\TX@old@table=\dimen149
+\TX@old@col=\dimen150
+\TX@target=\dimen151
+\TX@delta=\dimen152
+\TX@cols=\count197
+\TX@ftn=\toks20
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen153
+\Gin@req@width=\dimen154
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks22
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip56
+For additional information on amsmath, use the `?' option.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen155
+)) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen156
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count198
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count199
+\leftroot@=\count266
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count267
+\DOTSCASE@=\count268
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box58
+\strutbox@=\box59
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen157
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count269
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count270
+\dotsspace@=\muskip16
+\c@parentequation=\count271
+\dspbrk@lvl=\count272
+\tag@help=\toks24
+\row@=\count273
+\column@=\count274
+\maxfields@=\count275
+\andhelp@=\toks25
+\eqnshift@=\dimen158
+\alignsep@=\dimen159
+\tagshift@=\dimen160
+\tagwidth@=\dimen161
+\totwidth@=\dimen162
+\lineht@=\dimen163
+\@envbody=\toks26
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks28
+\thm@bodyfont=\toks29
+\thm@headfont=\toks30
+\thm@notefont=\toks31
+\thm@headpunct=\toks32
+\thm@preskip=\skip59
+\thm@postskip=\skip60
+\thm@headsep=\skip61
+\dth@everypar=\toks33
+)
+\affilsep=\skip62
+\@affilsep=\skip63
+\c@Maxaffil=\count276
+\c@authors=\count277
+\c@affil=\count278
+\c@authnum=\count279
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+
+Class copernicus Warning: Cannot find accents.sty; proceeding without it.
+
+
+Class copernicus Warning: Cannot find cancel.sty; proceeding without it.
+
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count280
+\multirow@dima=\skip65
+\bigstrutjot=\dimen164
+)
+
+Class copernicus Warning: Cannot find supertabular.sty; proceeding without it.
+
+
+Class copernicus Warning: Cannot find algorithmic.sty; proceeding without it.
+
+
+Class copernicus Warning: Cannot find algorithm.sty; proceeding without it.
+
+\c@figscheme=\count281
+\c@plates=\count282
+\c@listings=\count283
+\c@boxes=\count284
+
+Class copernicus Warning: Cannot find caption.sty; proceeding without it.
+
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count285
+\lst@gtempboxa=\box60
+\lst@token=\toks34
+\lst@length=\count286
+\lst@currlwidth=\dimen165
+\lst@column=\count287
+\lst@pos=\count288
+\lst@lostspace=\dimen166
+\lst@width=\dimen167
+\lst@newlines=\count289
+\lst@lineno=\count290
+\lst@maxwidth=\dimen168
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count291
+\lst@skipnumbers=\count292
+\lst@framebox=\box61
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+\listingnumwidth=\dimen169
+
+Class copernicus Warning: Cannot find subfloat.sty; proceeding without it.
+
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip66
+\bibsep=\skip67
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count293
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count294
+\rotFPtop=\skip68
+\rotFPbot=\skip69
+\rot@float@box=\box62
+\rot@mess@toks=\toks35
+)
+
+Class copernicus Warning: Cannot find lineno.sty; proceeding without it.
+
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-11-13 v7.00u Hypertext links for LaTeX
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count295
+)
+\@linkdim=\dimen170
+\Hy@linkcounter=\count296
+\Hy@pagecounter=\count297
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-11-13 v7.00u Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count298
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-11-13 v7.00u Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `bookmarks' set `false' on input line 4045.
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks OFF on input line 4416.
+\c@Hy@tempcnt=\count299
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen171
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count300
+\Field@Width=\dimen172
+\Fld@charsize=\dimen173
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count301
+\c@Item=\count302
+\c@Hfootnote=\count303
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-11-13 v7.00u Hyperref driver for pdfTeX
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count304
+\c@bookmark@seq@number=\count305
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip70
+)
+\c@reaction=\count306
+\tabularwidth=\dimen174
+Package color Info: Redefining color textcol on input line 2898.
+Package color Info: Redefining color bgcol on input line 2899.
+Package color Info: Redefining color barcol on input line 2900.
+)
+LaTeX Info: Redefining \vec on input line 14.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip71
+\LTright=\skip72
+\LTpre=\skip73
+\LTpost=\skip74
+\LTchunksize=\count307
+\LTcapwidth=\dimen175
+\LT@head=\box63
+\LT@firsthead=\box64
+\LT@foot=\box65
+\LT@lastfoot=\box66
+\LT@gbox=\box67
+\LT@cols=\count308
+\LT@rows=\count309
+\c@LT@tables=\count310
+\c@LT@chunks=\count311
+\LT@p@ftn=\toks36
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen176
+\WF@size=\dimen177
+\c@WF@wrappedlines=\count312
+\WF@box=\box68
+\WF@everypar=\toks37
+Package: wrapfig 2003/01/31  v 3.6
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count313
+\float@exts=\toks38
+\float@box=\box69
+\@float@everytoks=\toks39
+\@floatcapt=\box70
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks40
+\minrowclearance=\skip75
+\rownum=\count314
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box71
+\sift@deathcycles=\count315
+\@vwid@loff=\dimen178
+\@vwid@roff=\dimen179
+)
+\c@taburow=\count316
+\tabu@nbcols=\count317
+\tabu@cnt=\count318
+\tabu@Xcol=\count319
+\tabu@alloc=\count320
+\tabu@nested=\count321
+\tabu@target=\dimen180
+\tabu@spreadtarget=\dimen181
+\tabu@naturalX=\dimen182
+\tabucolX=\dimen183
+\tabu@Xsum=\dimen184
+\extrarowdepth=\dimen185
+\abovetabulinesep=\dimen186
+\belowtabulinesep=\dimen187
+\tabustrutrule=\dimen188
+\tabu@thebody=\toks41
+\tabu@footnotes=\toks42
+\tabu@box=\box72
+\tabu@arstrutbox=\box73
+\tabu@hleads=\box74
+\tabu@vleads=\box75
+\tabu@cellskip=\skip76
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box76
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip77
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen189
+\c@nlinenum=\count322
+\TeXr@lab=\toks43
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 89.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+) (./MuttamaDataPaper.aux)
+\openout1 = `MuttamaDataPaper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\c@lstlisting=\count323
+Package hyperref Info: Link coloring OFF on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 133.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 133.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+
+Package natbib Warning: Citation `Jolly2001' on page 1 undefined on input line 165.
+
+
+Package natbib Warning: Citation `White2009' on page 1 undefined on input line 165.
+
+
+Package natbib Warning: Citation `Scanlon2007' on page 1 undefined on input line 165.
+
+
+Package natbib Warning: Citation `Walker2002' on page 1 undefined on input line 165.
+
+
+Package natbib Warning: Citation `Finlayson2010' on page 1 undefined on input line 165.
+
+
+Package natbib Warning: Citation `Leblanc2012' on page 1 undefined on input line 167.
+
+
+Package natbib Warning: Citation `Mcfarlane2016' on page 1 undefined on input line 171.
+
+
+Package natbib Warning: Citation `Conyers2008' on page 1 undefined on input line 173.
+
+
+Package natbib Warning: Citation `Summerell2006' on page 1 undefined on input line 175.
+
+
+Package natbib Warning: Citation `Hughes2007' on page 1 undefined on input line 175.
+
+
+Package natbib Warning: Citation `vanDijk2008' on page 1 undefined on input line 176.
+
+
+Package natbib Warning: Citation `Dalhaus2010' on page 1 undefined on input line 176.
+
+<Figures/Dryland Salinity Papers.png, id=5, 526.8483pt x 325.215pt>
+File: Figures/Dryland Salinity Papers.png Graphic file (type png)
+<use Figures/Dryland Salinity Papers.png>
+Package pdftex.def Info: Figures/Dryland Salinity Papers.png  used on input line 179.
+(pdftex.def)             Requested size: 453.24931pt x 279.78365pt.
+
+Package natbib Warning: Citation `Jolly2001' on page 1 undefined on input line 184.
+
+
+Package natbib Warning: Citation `White2009' on page 1 undefined on input line 185.
+
+
+Package natbib Warning: Citation `White2009' on page 1 undefined on input line 189.
+
+
+Package natbib Warning: Citation `Jolly2001' on page 1 undefined on input line 189.
+
+
+Package natbib Warning: Citation `White2009' on page 1 undefined on input line 190.
+
+
+Package natbib Warning: Citation `Conyers2008' on page 1 undefined on input line 191.
+
+
+Package natbib Warning: Citation `Conyers2008' on page 1 undefined on input line 199.
+
+[1
+
+{c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package natbib Warning: Citation `Cartwright2010' on page 2 undefined on input line 210.
+
+
+Package natbib Warning: Citation `Dalhaus2010' on page 2 undefined on input line 210.
+
+
+Package natbib Warning: Citation `Summerell2006' on page 2 undefined on input line 213.
+
+
+Package natbib Warning: Citation `Hughes2007' on page 2 undefined on input line 213.
+
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.223 W
+       ithout regular and expensive automated sampling, field campaigns to <./Figures/Dryland Salinity Papers.png>]
+
+Package natbib Warning: Citation `Grayson1997' on page 3 undefined on input line 225.
+
+
+Package natbib Warning: Citation `Breuer2015' on page 3 undefined on input line 225.
+
+
+Package natbib Warning: Citation `Lyon2008' on page 3 undefined on input line 225.
+
+
+Package natbib Warning: Citation `Cartwright2010' on page 3 undefined on input line 225.
+
+
+Package natbib Warning: Citation `Lintern2018' on page 3 undefined on input line 225.
+
+
+Package natbib Warning: Citation `Lessels2020' on page 3 undefined on input line 227.
+
+
+Package natbib Warning: Citation `Lintern2018' on page 3 undefined on input line 228.
+
+[3]
+<Figures/gw_or_sw_map.png, id=32, 722.7pt x 505.6491pt>
+File: Figures/gw_or_sw_map.png Graphic file (type png)
+<use Figures/gw_or_sw_map.png>
+Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 268.
+(pdftex.def)             Requested size: 402.89255pt x 281.88847pt.
+
+Package natbib Warning: Citation `DECC2009' on page 4 undefined on input line 273.
+
+
+Package natbib Warning: Citation `Webb1999' on page 4 undefined on input line 278.
+
+
+Package natbib Warning: Citation `Akter2018' on page 4 undefined on input line 278.
+
+
+Package natbib Warning: Citation `Conyers2008' on page 4 undefined on input line 282.
+
+
+Package natbib Warning: Citation `Conyers2008' on page 4 undefined on input line 285.
+
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.301   S
+         ource 1: Data from the PhD study by Akter \citeyearpar{Akter2018}.
+
+ <./Figures/gw_or_sw_map.png (PNG copy)>]
+
+Package natbib Warning: Citation `Akter2018' on page 5 undefined on input line 301.
+
+
+Package natbib Warning: Citation `Lessels2014' on page 5 undefined on input line 304.
+
+
+Package natbib Warning: Citation `Akter2018' on page 5 undefined on input line 312.
+
+
+Package natbib Warning: Citation `Lessels2014' on page 5 undefined on input line 315.
+
+[5]
+
+Package natbib Warning: Citation `Akter2018' on page 6 undefined on input line 390.
+
+
+Package natbib Warning: Citation `Akter2018' on page 6 undefined on input line 392.
+
+
+Package natbib Warning: Citation `Akter2018' on page 6 undefined on input line 398.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 409.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [6
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.433 
+      
+
+] [7]
+
+Package natbib Warning: Citation `R2022' on page 8 undefined on input line 531.
+
+[8]
+<Figures/na_count.png, id=66, 526.8483pt x 325.215pt>
+File: Figures/na_count.png Graphic file (type png)
+<use Figures/na_count.png>
+Package pdftex.def Info: Figures/na_count.png  used on input line 540.
+(pdftex.def)             Requested size: 453.24931pt x 279.78365pt.
+<Figures/na_GW.png, id=67, 526.8483pt x 325.215pt>
+File: Figures/na_GW.png Graphic file (type png)
+<use Figures/na_GW.png>
+Package pdftex.def Info: Figures/na_GW.png  used on input line 544.
+(pdftex.def)             Requested size: 453.24931pt x 279.78365pt.
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.575 \clearpage
+                
+
+ <./Figures/na_count.png>] [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.575 \clearpage
+                 <./Figures/na_GW.png>] [11
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.621 \clearpage
+                
+
+]
+<Figures/gwsw.png, id=89, 526.8483pt x 325.215pt>
+File: Figures/gwsw.png Graphic file (type png)
+<use Figures/gwsw.png>
+Package pdftex.def Info: Figures/gwsw.png  used on input line 624.
+(pdftex.def)             Requested size: 402.89255pt x 248.69934pt.
+[12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.629 \clearpage
+                
+
+ <./Figures/gwsw.png>]
+<Figures/monthly.png, id=96, 722.7pt x 505.6491pt>
+File: Figures/monthly.png Graphic file (type png)
+<use Figures/monthly.png>
+Package pdftex.def Info: Figures/monthly.png  used on input line 632.
+(pdftex.def)             Requested size: 251.80688pt x 176.1774pt.
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.647 \clearpage
+                
+
+ <./Figures/monthly.png>]
+<Figures/annual.png, id=105, 1806.75pt x 1264.725pt>
+File: Figures/annual.png Graphic file (type png)
+<use Figures/annual.png>
+Package pdftex.def Info: Figures/annual.png  used on input line 650.
+(pdftex.def)             Requested size: 251.80688pt x 176.24977pt.
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.666 \clearpage
+                
+
+ <./Figures/annual.png>]
+<Figures/FDC.png, id=112, 435.5472pt x 269.0853pt>
+File: Figures/FDC.png Graphic file (type png)
+<use Figures/FDC.png>
+Package pdftex.def Info: Figures/FDC.png  used on input line 669.
+(pdftex.def)             Requested size: 402.89255pt x 248.91643pt.
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.681 \clearpage
+                
+
+ <./Figures/FDC.png>]
+<Figures/Final_Corrected_piezodepths.png, id=118, 762.85pt x 762.85pt>
+File: Figures/Final_Corrected_piezodepths.png Graphic file (type png)
+<use Figures/Final_Corrected_piezodepths.png>
+Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 683.
+(pdftex.def)             Requested size: 503.61377pt x 503.6106pt.
+
+LaTeX Warning: Text page 16 contains only floats.
+
+[16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.684 \end{figure}
+                  
+
+ <./Figures/Final_Corrected_piezodepths.png (PNG copy)>] [17]
+<Figures/ec_map.png, id=130, 435.5472pt x 269.0853pt>
+File: Figures/ec_map.png Graphic file (type png)
+<use Figures/ec_map.png>
+Package pdftex.def Info: Figures/ec_map.png  used on input line 695.
+(pdftex.def)             Requested size: 402.89255pt x 248.91643pt.
+<Figures/ec_plot.png, id=131, 426.6339pt x 569.0058pt>
+File: Figures/ec_plot.png Graphic file (type png)
+<use Figures/ec_plot.png>
+Package pdftex.def Info: Figures/ec_plot.png  used on input line 699.
+(pdftex.def)             Requested size: 402.89255pt x 537.34866pt.
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.702 \clearpage
+                 <./Figures/ec_map.png>] [19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.702 \clearpage
+                 <./Figures/ec_plot.png>]
+<Figures/clhco3_map.png, id=143, 505.89pt x 505.89pt>
+File: Figures/clhco3_map.png Graphic file (type png)
+<use Figures/clhco3_map.png>
+Package pdftex.def Info: Figures/clhco3_map.png  used on input line 704.
+(pdftex.def)             Requested size: 402.89255pt x 402.89851pt.
+<Figures/clhco3_plot.png, id=144, 426.6339pt x 569.0058pt>
+File: Figures/clhco3_plot.png Graphic file (type png)
+<use Figures/clhco3_plot.png>
+Package pdftex.def Info: Figures/clhco3_plot.png  used on input line 708.
+(pdftex.def)             Requested size: 402.89255pt x 537.34866pt.
+
+Package natbib Warning: Citation `Conyers2008' on page 20 undefined on input line 728.
+
+[20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.733 
+      
+
+
+ <./Figures/clhco3_map.png>] [21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.733 
+       <./Figures/clhco3_plot.png>] [22]
+<Figures/pca_biplot.png, id=165, 505.89pt x 505.89pt>
+File: Figures/pca_biplot.png Graphic file (type png)
+<use Figures/pca_biplot.png>
+Package pdftex.def Info: Figures/pca_biplot.png  used on input line 738.
+(pdftex.def)             Requested size: 453.24931pt x 453.2589pt.
+[23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.752 M
+       ost salt species are grouped together, apart from potassium (K),
+
+ <./Figures/pca_biplot.png>]
+
+! LaTeX Error: No counter 'algorithm' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.784 \appendix
+                
+Here is how much of TeX's memory you used:
+ 16046 strings out of 476928
+ 255700 string characters out of 5823313
+ 641173 words of memory out of 5000000
+ 36924 multiletter control sequences out of 15000+600000
+ 505839 words of font info for 85 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 87i,9n,91p,414b,516s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+!  ==> Fatal error occurred, no output PDF file produced!
