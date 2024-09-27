@@ -20,6 +20,7 @@
 % Advances in Radio Science (ars)
 % Advances in Science and Research (asr)
 % Advances in Statistical Climatology, Meteorology and Oceanography (ascmo)
+% Aerosol Research (ar)
 % Annales Geophysicae (angeo)
 % Archives Animal Breeding (aab)
 % Atmospheric Chemistry and Physics (acp)
@@ -27,7 +28,6 @@
 % Biogeosciences (bg)
 % Climate of the Past (cp)
 % DEUQUA Special Publications (deuquasp)
-% Drinking Water Engineering and Science (dwes)
 % Earth Surface Dynamics (esurf)
 % Earth System Dynamics (esd)
 % Earth System Science Data (essd)
@@ -57,6 +57,7 @@
 % Scientific Drilling (sd)
 % SOIL (soil)
 % Solid Earth (se)
+% State of the Planet (sp)
 % The Cryosphere (tc)
 % Weather and Climate Dynamics (wcd)
 % Web Ecology (we)
@@ -86,6 +87,19 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 %
+%% \usepackage commands included in the copernicus.cls:
+%\usepackage[german, english]{babel}
+%\usepackage{tabularx}
+%\usepackage{cancel}
+%\usepackage{multirow}
+%\usepackage{supertabular}
+%\usepackage{algorithmic}
+%\usepackage{algorithm}
+%\usepackage{amsthm}
+%\usepackage{float}
+%\usepackage{subfig}
+%\usepackage{rotating}
+
 \begin{document}
 
 
@@ -93,7 +107,7 @@
 Muttama Creek Catchment, NSW, Australia}
 
 
-\Author[1]{R. Willem}{Vervoort}
+\Author[1][willem.vervoort@sydney.edu.au]{R. Willem}{Vervoort}
 \Author[1]{Floris}{van Ogtrop}
 \Author[1]{Mina}{Tambrchi}
 \Author[1]{Farzina}{Akter}
@@ -158,7 +172,7 @@ the collected data and opportunities for further research.
 transferred to institution/company.}
 
 
-\introduction
+\section{Introduction}
 
 Dryland and irrigation salinity has long been a major natural resource
 management concern in Australia
@@ -259,11 +273,21 @@ The landscape is undulating with only limited elevation variations (227
 catchment towards the Murrumbidgee River near Gundagai. The main
 township, Cootamundra is located in the upper half of the catchment. The
 dominant land use type of this catchment is about 93\% agriculture,
-dominated by winter-spring cropping and pasture . Mean annual rainfall
-(1891-2017) in the catchment is 653 mm for the Bureau of Meteorology
-Landgrove station (station 073022).
+dominated by winter-spring cropping and pasture. Mean annual rainfall
+(1891-2024) in the catchment is 654 mm for the longest running Bureau of
+Meteorology Landgrove station (station 073022).
+
+Streamflow is measured continuously by WaterNSW the state agency
+responsible for water data collection at three locations in the
+catchment: Coolac, station no. 410044, the main downstream point, and
+Berthong, station no. 41000207 and Jindalee, station no. 410112 on two
+branches above the Cootamundra township. This data is available as open
+access via the (WaterNSW WaterInsights
+platform){[}\url{https://waterinsights.waternsw.com.au/}{]}. Here, we
+only use the data from the Coolac station as a comparison.
 
 \clearpage
+
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Figures/gw_or_sw_map} \caption{Muttama Catchment Sampling Locations with Elevation. Symbol colour indicates whether location was a groundwater or surface water source, with blue being surface water and brown/orange being groundwater. The numbers on the map represent the sample location number.}\label{fig:samplemap}
 \end{figure}
@@ -318,7 +342,7 @@ These groups are designated as:
   other methods.
 \end{itemize}
 
-Overall, 1065 water samples were collected from 62 sample locations over
+Overall, 1087 water samples were collected from 62 sample locations over
 the 2010 - 2020 period. However, not all sites were sampled at all times
 and not all samples were fully analysed for all hydrogeochemical
 variables. Both surface water and groundwater samples were collected (23
@@ -326,7 +350,7 @@ groundwater sample sites and 39 surface water sites) distributed across
 the catchment, depending on standing water availability and access.
 
 In addition to the water quality dataset, data from 23 groundwater data
-loggers was downloaded from the same groundwater sample sites as in the
+loggers is provided from the same groundwater sample sites as in the
 hydrogeochemical dataset.
 
 \subsubsection{Hydrogeochemical Variables}
@@ -345,8 +369,9 @@ complemented by laboratory analysis, which repeated some of the field
 measurements, and for an additional 15 anion and cation variables.
 
 \clearpage
-\begin{table}
 
+\begin{table}
+\centering
 \caption{\label{tab:TableMeasurements}Variables measured in the field and laboratory}
 \centering
 \begin{tabular}[t]{l|l|l|l}
@@ -374,22 +399,25 @@ Turbidity &  &  & Al\\
 \end{tabular}
 \end{table}
 
-The variables pH, EC, SPC, Temperature, and in some cases DO and
-Turbidity were measured using a range of field probes. All field probes
-measured pH, EC, Temperature and calculated SPC. Early measurements used
-a YSI probe that included a turbidity and DO probe (YSI 6600 and YSI 600
-for surface and groundwater, respectively). Later groundwater samples
-used a different YSI probe (YSI ProPlus multi-parameter) that only
-included a DO probe. Later surface water and groundwater sampling used a
-Xylem EXO probe which also included DO and turbidity.
-
-Anions in most of the samples were analysed using high-performance
-liquid chromatography method (Dionex P680 HPLC) and cations were
-measured on acidified samples using an Inductively Coupled Plasma
-Optical Emission Spectrometer (ICP-OES, Varian 720-ES) at the University
-of Sydney \citep{Akter2018}. Duplicate samples in the analysis had a
-reported relative percentage difference (RPD) lower than 5\% in part of
-the sample dataset \citep{Akter2018}. Some of the samples in the
+The variables pH, EC, SPC (field temperature corrected EC), Temperature,
+and in some cases DO and Turbidity were measured using a range of field
+probes. All field probes measured pH, EC, Temperature and calculated
+SPC. Early measurements (Samples up to November 2014) used a YSI probe
+that included a turbidity and DO probe (YSI 6600 and YSI 600 for surface
+and groundwater, respectively). Later groundwater samples (After
+November 2014) used a different YSI probe (YSI ProPlus multi-parameter)
+that only included a DO probe. Later (After mid 2019) surface water and
+groundwater sampling used a Xylem EXO probe which also included DO and
+turbidity. Some of the variability in the field measurements might be
+due to this variation in the field instrumentation, because the exact
+instruments information was not recorded with the data. Anions in most
+of the samples were analysed using high-performance liquid
+chromatography method (Dionex P680 HPLC) and cations were measured on
+acidified samples using an Inductively Coupled Plasma Optical Emission
+Spectrometer (ICP-OES, Varian 720-ES) at the University of Sydney
+\citep{Akter2018}. Duplicate samples in the analysis had a reported
+relative percentage difference (RPD) lower than 5\% in part of the
+sample dataset \citep{Akter2018}. Some of the samples in the
 undergraduate student sample set (Source 3) were analysed by a
 commercial laboratory
 (\href{https://www.alsglobal.com/en/locations/asia-pacific/pacific/australia/nsw/sydney-woodpark-environmental}{ALS
@@ -416,7 +444,7 @@ field notes. Overall, this resulted in data with gaps and sometimes odd
 shifts in the recorded data.
 
 Manual water level measurements were taken at each manual sampling date
-for hydrogeochemical data.
+to provide detailed hydrogeochemical data.
 
 To correct the groundwater logger data, the daily data was matched to
 the observed data using linear regression if more than 3 manual observed
@@ -425,117 +453,77 @@ p-value \textgreater{} 0.1. If there were less than 3 manual observed
 data point for the specific logger an adjustment to the data was based
 on the difference between the average observed data and the average
 recorded water levels. Otherwise no adjustment was made. This is
-slightly tricky: when the manual observations are made, the well is also
-purged and the logger is removed from the well. This data (during the
-purging and recovery) is removed from the logger data series. As a
-result, there is no direct match between the logger data series and the
-manual observations.
+slightly tricky: After the manual observations are made, the well is
+purged and the logger is temporarily removed from the well. This data
+(during the temporarily removal of the logger during the purging and
+subsequent recovery of the groundwater level) is removed from the logger
+data series. As a result, there is no direct time match between the
+logger data series and the manual observations.
 
 To explain this more clearly the following pseudo code describes the
 process:
 
-\begin{itemize}
-\tightlist
-\item
-  Split the logger data for each ground water well by serial number;
-\item
-  Interpolate the manual observed values using \texttt{na.approx()} to
-  account for the fact that no logger data exists when manual
-  measurements are made:
-\item
-  if there are sufficient observed points (assumed to be \textgreater{}
-  3):
-
-  \begin{itemize}
-  \tightlist
-  \item
-    run a regression between interpolated depth and observed depth;
-  \item
-    check the p-values of the slope and intercept;
-  \item
-    if the slope is not significant (using p \textgreater{} 0.10):
-
-    \begin{itemize}
-    \tightlist
-    \item
-      use only the intercept to correct the logger data;
-    \end{itemize}
-  \item
-    else
-
-    \begin{itemize}
-    \tightlist
-    \item
-      if the intercept is not signficant, but the slope is:
-
-      \begin{itemize}
-      \tightlist
-      \item
-        use only the slope to correct the logger data;
-      \end{itemize}
-    \item
-      else
-
-      \begin{itemize}
-      \tightlist
-      \item
-        use both slope and intercept of the regression to correct the
-        logger data;
-      \end{itemize}
-    \item
-      end if
-    \end{itemize}
-  \item
-    end if
-  \end{itemize}
-\item
-  else
-
-  \begin{itemize}
-  \tightlist
-  \item
-    There are not enough values for a regression, use mean difference
-    between logged and observed value to correct the logger data
-  \end{itemize}
-\item
-  end if
-\end{itemize}
+Split the logger data for each ground water well by serial number;\\
+\textbf{IF} there are sufficient observed points (assumed to be
+\textgreater{} 3):\\
+\hspace*{0.333em}\hspace*{0.333em}run a regression between interpolated
+depth and observed depth;\\
+\hspace*{0.333em}\hspace*{0.333em}check the p-values of the slope and
+intercept;\\
+\hspace*{0.333em}\hspace*{0.333em}\textbf{IF} the slope is not
+significant (using p \textgreater{} 0.10):\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}use
+only the intercept to correct the logger data;\\
+\hspace*{0.333em}\hspace*{0.333em}\textbf{ELSE}\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\textbf{IF}
+the intercept is not significant, but the slope is:\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}use
+only the slope to correct the logger data;\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\textbf{ELSE}\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}use
+both slope and intercept of the regression to correct the logger data;\\
+\textbf{ELSE}\\
+\hspace*{0.333em}\hspace*{0.333em}There are not enough values for a
+regression, use mean difference between logged and observed value to
+correct the logger data;
 
 The code used to match the manually observed data with the logger data
-is in the \texttt{Match\_obs\_logger\_data.R}, which is stored in the
-github repository associated with this paper.
+is in the script \texttt{Match\_obs\_logger\_data.R}, which is stored in
+the github repository associated with this paper.
 
 After the automated process, two of the groundwater level data series
 still had substantial discrepancies in some sections of the data. This
 was most likely due to the a lack of observed data for the specific
 logger. A final manual correction was applied. As this process is based
-on judgement of the data by the authors, we documented this in detail in
-Appendix 1.
+on judgement of the data by the authors of this paper, we documented
+this in detail in Appendix 1.
 
-The final corrected data includes a column which describes whether the
-data is based on the automatic correction or a further manual
-correction.
+The final corrected data that is published with this paper includes a
+column which describes whether the data is based on the automatic
+correction or a further manual correction.
 
 \subsection{Boxplots and maps}
 
 Using the most complete data, boxplots and spatial maps were generated
-to highlight the spatial and temporal variation in the data set. As this
-paper is mainly focused on describing the dataset, we chose to use
-boxplots to visually highlight statistical differences between data
-variables rather than using full statistical analysis.
+to highlight the spatial and temporal variation in the data set. We have
+chosen to use boxplots to visually highlight statistical differences
+between data variables rather than doing a full statistical analysis.
 
 The mean concentration and interquartile range (25th - 75th percentile)
 of the concentration data distributions were calculated to give an
 indication of variance of the data in the spatial maps.
 
-All graphs and maps were produced using R \citep{R2022}. All code can be
-found in the associated github repository
+All graphs and maps were produced using R \citep{R2024}. All code can be
+found in the associated (github
+repository){[}\url{https://github.com/WillemVervoort/MuttamaDataPaper}{]},
+as part of the markdown document for this paper.
 
 \section{Results}
 
 \subsection{Distribution of missing Values}
 
 \clearpage
+
 \begin{figure}
 \includegraphics[width=0.9\linewidth]{Figures/na_count} \caption{Distribution of missing values for the different data sources and measurement types.}\label{fig:na-plot}
 \end{figure}
@@ -560,7 +548,7 @@ more incomplete data, because some of the minor elements were not
 analysed. The field recorded variables pH, EC, SPC and Temperature were
 the most complete as they were generally measured directly in the field.
 Analysis of bicarbonate in the field only started around 2014. Thus the
-distribution of the NA values in the overall dataset is mostly a
+distribution of the NA values in the overall data set is mostly a
 reflection of the time period of sampling and the change in methodology
 over the ten years of sampling.
 
@@ -570,11 +558,13 @@ instrumented. Rather than giving a full breakdown by well location, the
 overall level of completeness of the series is displayed (Fig
 \ref{fig:gw-na-plot}).
 
-\subsubsection{Groundwater compared with Surface water}
+\subsubsection{Comparisons of Groundwater samples with Surface water
+samples}
 
 \clearpage
-\begin{table}
 
+\begin{table}
+\centering
 \caption{\label{tab:TableElementstats}Summary statistics for elements measured in the field}
 \centering
 \begin{tabular}[t]{l|r|r|r|r|r|r}
@@ -583,19 +573,19 @@ overall level of completeness of the series is displayed (Fig
 \cline{2-4} \cline{5-7}
 Element & Mean & Min & Max & Mean & Min & Max\\
 \hline
-temp\_field & 17.4 & 11.4 & 30.8 & 15.0 & 4.1 & 32.9\\
+temp\_field & 17.4 & 11.4 & 30.8 & 15.1 & 4.1 & 32.9\\
 \hline
-do\_percent\_field & 19.9 & -3.2 & 70.7 & 87.9 & 29.8 & 184.0\\
+do\_percent\_field & 19.9 & -3.2 & 70.7 & 88.4 & 29.8 & 184.0\\
 \hline
 do\_mg\_l\_field & 1.9 & 0.0 & 6.7 & 7.7 & 2.2 & 18.3\\
 \hline
-spc\_field & 4589.6 & 347.4 & 14317.0 & 1053.3 & 61.0 & 4354.0\\
+spc\_field & 4633.9 & 347.4 & 16481.0 & 1054.1 & 61.0 & 4354.0\\
 \hline
-ec\_field & 3821.8 & 457.0 & 11029.2 & 1371.5 & 117.0 & 4163.0\\
+ec\_field & 4006.5 & 457.0 & 14385.0 & 1369.9 & 117.0 & 4163.0\\
 \hline
-ph\_field & 7.3 & 6.3 & 8.8 & 8.0 & 6.7 & 10.0\\
+ph\_field & 7.3 & 6.0 & 8.8 & 8.0 & 6.7 & 10.0\\
 \hline
-orp\_field & 26.6 & -328.1 & 242.0 & 78.2 & -126.5 & 211.1\\
+orp\_field & 73.2 & -328.1 & 242.0 & 78.2 & -126.5 & 211.1\\
 \hline
 turbidity\_field &  & Inf & -Inf & 14.0 & 0.5 & 44.0\\
 \hline
@@ -670,15 +660,17 @@ are no samples from this source after 2013.
 \end{figure}
 
 Surface water samples were reasonably well distributed across the flow
-duration curve, with only a possible bias towards periods of medium
-flow. This is most likely since many of the surface water sampling
-points are often completely dry during periods of low flow, and
-therefore cannot be sampled. Conversely, there are no manual samples
-during high or very high flow as during flood situations sampling was
-dangerous and restricted by work health and safety considerations. The
-samples at high flow are all from our automated sampling.
+duration curve, measured at the Coolac station (410044), with only a
+possible bias towards periods of medium flow. This is most likely since
+many of the surface water sampling points are often completely dry
+during periods of low flow, and therefore cannot be sampled. Conversely,
+there are no manual samples during high or very high flow as during
+flood situations sampling was dangerous and restricted by work health
+and safety considerations. The samples at high flow are all from our
+automated sampling.
 
 \clearpage
+
 \begin{figure}
 \includegraphics[width=1\linewidth]{Figures/Final_Corrected_piezodepths} \caption{Overview of the corrected groundwater time series for all the wells}\label{fig:gw-series}
 \end{figure}
@@ -691,6 +683,7 @@ logger data, but further corrections are likely to be speculation.
 \subsection{Spatial variation}
 
 \clearpage
+
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Figures/ec_map} \caption{Spatial Variation of EC throughout the catchment, using Mean EC for each sampling location}\label{fig:ECmap}
 \end{figure}
@@ -700,6 +693,7 @@ logger data, but further corrections are likely to be speculation.
 \end{figure}
 
 \clearpage
+
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Figures/clhco3_map} \caption{Spatial Variation of Cl:HCO3 ratio throughout the catchment, using Mean for each sampling location.}\label{fig:Carbonate-map}
 \end{figure}
@@ -713,15 +707,15 @@ catchment, including between groundwater and surface water sampling
 sites (Figures \ref{fig:ECmap} and \ref{fig:Carbonate-map}). As
 examples, the spatial distributions for EC and Cl:HCO\textsubscript{3}
 are shown, as well as the space time boxplots for the variables. Similar
-maps can be easily generated for other parameters using the code in the
-supplementary material. In the map, the concentration is indicated by
-the size of the symbol, while the colour shading indicates the
-variability. This suggests surface water samples had lower variability
-and lower concentrations. Below the maps, a boxplot (Figures
-\ref{fig:ECboxplot} and \ref{fig:Carbonate-boxplot}) further indicates
-the difference in the distributions from the surface water sample sites
-and the groundwater sample sites, and indicates the difference between
-sample sites.
+maps can be easily generated for other parameters. In the map, the
+concentration is indicated by the size of the symbol, while the colour
+shading indicates the variability. This suggests surface water samples
+had lower variability and lower concentrations.
+
+Below the maps, a boxplot (Figures \ref{fig:ECboxplot} and
+\ref{fig:Carbonate-boxplot}) highlights the difference in the
+distributions from the surface water sample sites and the groundwater
+sample sites, and also indicates the difference between sample sites.
 
 Previous studies have suggested there may be a difference in
 Cl:HCO\textsubscript{3} ratio in surface water between the eastern and
@@ -731,40 +725,24 @@ maps. This partly has to do with the limitations in the spatial
 sampling, which relied on existing groundwater tube wells and accessible
 stream points.
 
-\subsection{Principal Component Analysis (PCA)}
+\subsection{Piper plot}
 
-\clearpage
+The piper plot of the data also does not provide much further
+information. There is a slight shift towards the HCO\textsubscript{3}
+and Ca/Mg type waters for the groundwater samples compared to the
+surface water samples. There is also a small cluster of surface water
+samples that are more SO\textsubscript{4} dominated, potentially
+indicating different geological origins.
+
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{Figures/pca_biplot} \caption{PCA Biplot of the data. Missing values were removed from the data resulting in a reduced data set}\label{fig:PCA-plot}
+\includegraphics[width=0.8\linewidth]{Figures/piper_plot} \caption{Piper-plot of all groundwater and surface water data collected over the period}\label{fig:piperplot}
 \end{figure}
-
-The results of the PCA (Fig \ref{fig:PCA-plot}) highlights that location
-is the most important determinant of the characteristics of a sample.
-Coordinates and whether the sample originates from groundwater or
-surface water (gw\_or\_sw) explains most of the variation. Rainfall and
-Seasons (numerical, 1 = Spring, 4 = Winter) do not appear to have much
-of an effect, suggesting that the variation in time in the data is
-smaller than the variation in space. This could be partly because we
-have lumped groundwater and surface water samples together, and the
-variation in the surface water samples is masked by the more stationary
-nature of the groundwater concentrations.
-
-Most salt species are grouped together, apart from potassium (K),
-magnesium (Mg), nitrates (NO\textsubscript{3}) and bicarbonates
-(HCO\textsubscript{3}). This suggests that these variables (K, Mg,
-NO\textsubscript{3} and HCO\textsubscript{3}) are the main parameters
-that will separate the samples. Given that HCO\textsubscript{3} and Mg
-are negatively correlated with the gw\_or\_sw variable, this suggests
-that groundwater samples are higher in Mg and HCO\textsubscript{3}
-compared to surface water samples. In contrast NO\textsubscript{3} and K
-are associated with the spatial variables x and y, thus suggesting some
-spatial pattern in the samples.
 
 \section{Conclusions}
 
-This paper reports on a long term (10 year) hydrogeochemistry dataset
+This paper reports on a long term (12 year) hydrogeochemistry dataset
 from a single catchment in NSW, Australia. This dataset includes both
-groundwater and surface water samples for 0 locations within the
+groundwater and surface water samples for 60 locations within the
 catchment. While the dataset was collected by different groups of people
 at different times and locations, it still provides a valuable long term
 and spatially diverse data set which can be used for research into the
@@ -772,8 +750,7 @@ space and time variation in dryland and groundwater salinity.
 
 
 
-\codedataavailability{add a GitHub and cloudstor
-repos} %% use this section when having data sets and software code available
+\codedataavailability{https://github.com/WillemVervoort/MuttamaDataPaper} %% use this section when having data sets and software code available
 
 
 
