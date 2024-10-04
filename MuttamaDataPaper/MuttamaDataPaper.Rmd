@@ -57,7 +57,8 @@ copyrightstatement: |
 ### It is strongly recommended to make use of these sections in case data sets and/or software code have been part of your research the article is based on.
 availability:
   codedata: |
-    https://github.com/WillemVervoort/MuttamaDataPaper
+    The majority of the code and data including the Rmarkdown for this paper is stored on Github https://github.com/WillemVervoort/MuttamaDataPaper
+    However, due to the volume of raw data, the groundwater logger data is stored in a separate Open Science Foundation project: https://osf.io/beuwk/
 authorcontribution: |
   T. Bishop initiated the sampling campaign. T. Bishop, F. van Ogtrop and R.W. Vervoort conceptualised the overall study. R.W. Vervoort and M. Tambrchi wrote the paper and analysed results. F.Akter and J. Lessels collected and analysed the majority of the samples. M. Tambrchi, A. Buzacott, J. Moloney, F. Akter analysed and managed the data. All authors participated in sampling, laboratory analysis and review of the paper. 
 acknowledgements: |
@@ -65,7 +66,11 @@ acknowledgements: |
 appendix: |
  \section{Figures and tables in appendices}
 output:
-  bookdown::pdf_document2(): rticles::copernicus_article # for using bookdown features like \@ref()
+  rticles::copernicus_article: 
+    highlight: NULL
+    keep_tex: true
+  bookdown::pdf_book:
+    base_format: rticles::copernicus_article # for using bookdown features like \@ref()
 ---
 
 ```{r packages, echo=F, warning=F, include=F, message=F}
@@ -76,7 +81,6 @@ require(knitr)
 require(bookdown)
 require(pander)
 require(tidyverse)
-require(lubridate)
 require(ggpubr) # saving ggplot figures
 library(kableExtra) ##table formatting package
 require(multirow)
@@ -303,7 +307,7 @@ To explain this more clearly the following pseudo code describes the process:
 | **ELSE**
 |   There are not enough values for a regression, use mean difference between logged and observed value to correct the logger data;
 
-The code used to match the manually observed data with the logger data is in the script `Match_obs_logger_data.R`, which is stored in the github repository associated with this paper.
+The code used to match the manually observed data with the logger data is in the script `Match_obs_logger_data.R`, which is stored with the raw data in the Open Science Foundation (OSF) repository associated with this paper [https://osf.io/beuwk/](https://osf.io/beuwk/).
 
 After the automated process, two of the groundwater level data series still had substantial discrepancies in some sections of the data. This was most likely due to the a lack of observed data for the specific logger. A final manual correction was applied. As this process is based on judgement of the data by the authors of this paper, we documented this in detail in Appendix 1.
 
@@ -315,7 +319,7 @@ Using the most complete data, boxplots and spatial maps were generated to highli
 
 The mean concentration and interquartile range (25th - 75th percentile) of the concentration data distributions were calculated to give an indication of variance of the data in the spatial maps.
 
-All graphs and maps were produced using R [@R2024]. All code can be found in the associated (github repository)[<https://github.com/WillemVervoort/MuttamaDataPaper>], as part of the markdown document for this paper.
+All graphs and maps were produced using R [@R2023]. All code can be found in the associated (github repository)[<https://github.com/WillemVervoort/MuttamaDataPaper>], as part of the markdown document for this paper.
 
 # Results
 
@@ -731,7 +735,7 @@ Previous studies have suggested there may be a difference in Cl:HCO~3~ ratio in 
 
 ## Piper plot
 
-The piper plot of the data also does not provide much further information. There is a slight shift towards the HCO~3~ and Ca/Mg type waters for the groundwater samples compared to the surface water samples. There is also a small cluster of surface water samples that are more SO~4~ dominated, potentially indicating different geological origins.
+The piper plot of the data (\ref{fig:piper-plot}) also does not provide much further information. There is a slight shift towards the HCO~3~ and Ca/Mg type waters for the groundwater samples compared to the surface water samples. There is also a small cluster of surface water samples that are more SO~4~ dominated, potentially indicating different geological origins as mentioned earlier in the paper.
 
 ```{r piper-data, echo = F}
 # input data need to be in % divide by sums
@@ -763,6 +767,40 @@ ggsave("Figures/piper_plot.png", unit="cm", dpi = 300,
 
 ```
 
+<!-- ```{r piper-data-alt, echo = F} -->
+<!-- # input data need to be in % divide by sums -->
+<!-- cation_sum <-  Muttama_data$ca_meq_l +  Muttama_data$mg_meq_l +   -->
+<!--   Muttama_data$na_meq_l +  Muttama_data$k_meq_l -->
+<!-- anion_sum <- Muttama_data$cl_meq_l + Muttama_data$hco3_meq_l + -->
+<!--   Muttama_data$so4_meq_l -->
+<!-- piper_data <- tibble(Ca = Muttama_data$ca_meq_l/cation_sum*100,  -->
+<!--                      Mg = Muttama_data$mg_meq_l/cation_sum*100, -->
+<!--                      Cl = Muttama_data$cl_meq_l/anion_sum*100, -->
+<!--                      SO4 = Muttama_data$so4_meq_l/anion_sum*100, -->
+<!--                      name = Muttama_data$gw_or_sw, -->
+<!--                      source = Muttama_data$src, -->
+<!--                      ion_balance = Muttama_data$ion_balance) -->
+<!-- # load the piper plot code -->
+<!-- source("scripts/ggplot_piper.R") -->
+
+<!-- piper_data_plot <- transform_piper_data(Mg = piper_data$Mg,  -->
+<!--                              Ca = piper_data$Ca, -->
+<!--                              Cl = piper_data$Cl, SO4 = piper_data$SO4, -->
+<!--                              name = piper_data$name) %>% -->
+<!--                              mutate(source = rep(piper_data$source,3)) -->
+<!-- ``` -->
+
+<!-- ```{r piper-plot, echo = F, eval = F} -->
+
+<!-- #ggplot_piper() -->
+<!-- ggplot_piper() + geom_point(aes(x,y, colour=as.factor(source)), size=2, data=piper_data_plot) #+  -->
+<!--   #scale_colour_manual(name="Ground Water or Surface Water", values=c(GW = "red", SW = "darkblue")) -->
+<!-- #ggsave("Figures/piper_plot.png", unit="cm", dpi = 300, -->
+<!--        width = 20, height = 10)  -->
+
+<!-- ``` -->
+
+
 ```{r piperplot, warning=FALSE, echo=F, fig.cap = "Piper-plot of all groundwater and surface water data collected over the period",  out.width="80%"}
 
 knitr::include_graphics("Figures/piper_plot.png")
@@ -772,4 +810,4 @@ knitr::include_graphics("Figures/piper_plot.png")
 
 # Conclusions
 
-This paper reports on a long term (12 year) hydrogeochemistry dataset from a single catchment in NSW, Australia. This dataset includes both groundwater and surface water samples for `r length(unique(Muttama_data$site_mut))` locations within the catchment. While the dataset was collected by different groups of people at different times and locations, it still provides a valuable long term and spatially diverse data set which can be used for research into the space and time variation in dryland and groundwater salinity.
+This paper reports on a long term (12 year) hydrogeochemistry dataset from a single catchment in NSW, Australia. This dataset includes both groundwater and surface water samples for `r length(unique(Muttama_data$site_mut))` locations within the catchment. While the dataset was collected by different groups of people at different times and locations, it still provides a valuable long term and spatially diverse data set which can be used for research into the space and time variation of dryland and groundwater salinity.
