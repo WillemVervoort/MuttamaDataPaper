@@ -107,8 +107,8 @@
 Muttama Creek Catchment, NSW, Australia}
 
 
-\Author[1][willem.vervoort@sydney.edu.au]{R. Willem}{Vervoort}
-\Author[1]{Floris}{van Ogtrop}
+\Author[1]{R. Willem}{Vervoort}
+\Author[1][floris.vanogtrop@sydney.edu.au]{Floris}{van Ogtrop}
 \Author[1]{Mina}{Tambrchi}
 \Author[1]{Farzina}{Akter}
 \Author[1]{Alexander}{Buzacott}
@@ -128,7 +128,7 @@ Muttama Creek Catchment, NSW, Australia}
 \runningauthor{Vervoort et al.}
 
 
-\correspondence{R. Willem\ Vervoort\ (willem.vervoort@sydney.edu.au)}
+\correspondence{Floris\ van Ogtrop\ (floris.vanogtrop@sydney.edu.au)}
 
 
 
@@ -171,6 +171,14 @@ the collected data and opportunities for further research.
 \copyrightstatement{The author's copyright for this publication is
 transferred to institution/company.}
 
+
+\textbf{ACTIONS}
+
+\textbf{ - check data, include new data\\
+- explain group 4 in EC pH figure\\
+- CL/HCO3 = 1 line\\
+- check number of anions/cations analysed\\
+}
 
 \section{Introduction}
 
@@ -230,9 +238,9 @@ government datasets from official monitoring
 limited in hydrogeochemical data. Part of this is related to the
 sensitivity of the data given the relationship with possible land
 values. However, as the understanding of salinity occurrence grows this
-argument is less valid. In fact, making data more widely available would
-increase the opportunities for research and increase our understanding
-of dryland salinity processes.
+argument is less valid. Making data more widely available would increase
+the opportunities for research and increase our understanding of dryland
+salinity processes.
 
 Without regular and expensive automated sampling, field campaigns to
 collect water quality data tend to be ``snapshot'' activities
@@ -339,7 +347,9 @@ These groups are designated as:
   during the PhD from Lessels \citeyearpar{Lessels2014}. Because these
   samples were not taken by a ``person'' and were taken on a flow
   weighted basis, we separated the data from the ``grab'' samples in the
-  other methods.
+  other methods. These samples are also missing the measurements that
+  were collected in the field, as these were only analysed in the
+  laboratory.
 \end{itemize}
 
 Overall, 1087 water samples were collected from 62 sample locations over
@@ -463,33 +473,32 @@ logger data series and the manual observations.
 To explain this more clearly the following pseudo code describes the
 process:
 
-Split the logger data for each ground water well by serial number;\\
-\textbf{IF} there are sufficient observed points (assumed to be
-\textgreater{} 3):\\
-\hspace*{0.333em}\hspace*{0.333em}run a regression between interpolated
-depth and observed depth;\\
-\hspace*{0.333em}\hspace*{0.333em}check the p-values of the slope and
-intercept;\\
-\hspace*{0.333em}\hspace*{0.333em}\textbf{IF} the slope is not
-significant (using p \textgreater{} 0.10):\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}use
-only the intercept to correct the logger data;\\
-\hspace*{0.333em}\hspace*{0.333em}\textbf{ELSE}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\textbf{IF}
-the intercept is not significant, but the slope is:\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}use
-only the slope to correct the logger data;\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\textbf{ELSE}\\
-\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}use
-both slope and intercept of the regression to correct the logger data;\\
-\textbf{ELSE}\\
-\hspace*{0.333em}\hspace*{0.333em}There are not enough values for a
-regression, use mean difference between logged and observed value to
-correct the logger data;
+\begin{algorithm}
+\caption{Pseudo code cleaning groundwater level data}
+\label{a1}
+\begin{algorithmic}
+\IF {sufficient points \> 3} 
+        \STATE run a regression between interpolated depth and observed depth  
+        \STATE check the p-values of the slope and intercept
+        \IF {the slope is not significant (using p \> 0.10)}
+                \STATE  use only the intercept to correct the logger data
+        \ELSE
+                \IF {the intercept is not significant, but the slope is}
+                        \STATE use only the slope to correct the logger data
+                \ELSE
+                       \STATE use both slope and intercept of the regression to correct the logger data
+                \ENDIF
+        \ENDIF
+\ELSE
+        \STATE There are not enough values for a regression, use mean difference between logged and observed value to correct the logger data
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
 
 The code used to match the manually observed data with the logger data
-is in the script \texttt{Match\_obs\_logger\_data.R}, which is stored in
-the github repository associated with this paper.
+is in the script \texttt{Match\_obs\_logger\_data.R}, which is stored
+with the raw data in the Open Science Foundation (OSF) repository
+associated with this paper \url{https://osf.io/beuwk/}.
 
 After the automated process, two of the groundwater level data series
 still had substantial discrepancies in some sections of the data. This
@@ -513,7 +522,7 @@ The mean concentration and interquartile range (25th - 75th percentile)
 of the concentration data distributions were calculated to give an
 indication of variance of the data in the spatial maps.
 
-All graphs and maps were produced using R \citep{R2024}. All code can be
+All graphs and maps were produced using R \citep{R2023}. All code can be
 found in the associated (github
 repository){[}\url{https://github.com/WillemVervoort/MuttamaDataPaper}{]},
 as part of the markdown document for this paper.
@@ -622,6 +631,8 @@ samples had the best coverage.
 \includegraphics[width=0.5\linewidth]{Figures/monthly} \caption{Distribution of samples throughout the year (total number of samples collected during each month) against average monthly rainfall during the study period. }\label{fig:month-plot}
 \end{figure}
 
+\clearpage
+
 Overall the water quality sampling appears to have a reasonable
 distribution across all months (Fig \ref{fig:month-plot}), so seasonal
 trends should be identifiable in the data. Average rainfall data (1995 -
@@ -634,11 +645,10 @@ of Source 3, (the student data) is a clear effect of yearly field trips,
 which tended to occur at approximately the same time of the year in late
 September/early October.
 
-\clearpage
-
 \begin{figure}
 \includegraphics[width=0.5\linewidth]{Figures/annual} \caption{Distribution of samples over the study period (total number of samples collected during each year) against average monthly rainfall during the study period. }\label{fig:annual-plot}
 \end{figure}
+\clearpage
 
 The number of samples collected in each year relative to the different
 sources changes throughout the years reflecting the duration of the
@@ -653,11 +663,11 @@ means that there are very few groundwater samples before 2013. In
 contrast, the autosamplers were installed early in the project and there
 are no samples from this source after 2013.
 
-\clearpage
-
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Figures/FDC} \caption{Sample distribution on flow duration curve derived from flow data from Coolac autosampler.}\label{fig:FDC}
 \end{figure}
+
+\clearpage
 
 Surface water samples were reasonably well distributed across the flow
 duration curve, measured at the Coolac station (410044), with only a
@@ -669,11 +679,11 @@ flood situations sampling was dangerous and restricted by work health
 and safety considerations. The samples at high flow are all from our
 automated sampling.
 
-\clearpage
-
 \begin{figure}
 \includegraphics[width=1\linewidth]{Figures/Final_Corrected_piezodepths} \caption{Overview of the corrected groundwater time series for all the wells}\label{fig:gw-series}
 \end{figure}
+
+\clearpage
 
 The overall corrected groundwater timeseries shows the shorter time that
 loggers were installed in the wells (\ref{fig:gw-series}). It also
@@ -725,18 +735,19 @@ maps. This partly has to do with the limitations in the spatial
 sampling, which relied on existing groundwater tube wells and accessible
 stream points.
 
-\subsection{Piper plot}
-
-The piper plot of the data also does not provide much further
-information. There is a slight shift towards the HCO\textsubscript{3}
-and Ca/Mg type waters for the groundwater samples compared to the
-surface water samples. There is also a small cluster of surface water
-samples that are more SO\textsubscript{4} dominated, potentially
-indicating different geological origins.
-
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Figures/piper_plot} \caption{Piper-plot of all groundwater and surface water data collected over the period}\label{fig:piperplot}
 \end{figure}
+
+\subsection{Piper plot}
+
+The piper plot of the data (\ref{fig:piperplot}) also does not provide
+much further information. There is a slight shift towards the
+HCO\textsubscript{3} and Ca/Mg type waters for the groundwater samples
+compared to the surface water samples. There is also a small cluster of
+surface water samples that are more SO\textsubscript{4} dominated,
+potentially indicating different geological origins as mentioned earlier
+in the paper.
 
 \section{Conclusions}
 
@@ -746,11 +757,16 @@ groundwater and surface water samples for 60 locations within the
 catchment. While the dataset was collected by different groups of people
 at different times and locations, it still provides a valuable long term
 and spatially diverse data set which can be used for research into the
-space and time variation in dryland and groundwater salinity.
+space and time variation of dryland and groundwater salinity.
 
 
 
-\codedataavailability{https://github.com/WillemVervoort/MuttamaDataPaper} %% use this section when having data sets and software code available
+\codedataavailability{The majority of the code and data including the
+Rmarkdown for this paper is stored on Github
+https://github.com/WillemVervoort/MuttamaDataPaper However, due to the
+volume of raw data, the groundwater logger data is stored in a separate
+Open Science Foundation project:
+https://osf.io/beuwk/} %% use this section when having data sets and software code available
 
 
 

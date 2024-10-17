@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.26)  4 OCT 2024 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.11)  11 OCT 2024 17:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,7 +7,7 @@ entering extended mode
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
 (./copernicus.cls
-Document Class: copernicus 2022/12/05 10.1.4 Copernicus papers
+Document Class: copernicus 2023/12/15 10.1.12 Copernicus papers
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
@@ -74,7 +74,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2024/09/18 v24.10 The Babel package
+Package: babel 2024/10/05 v24.11 The Babel package
 \babel@savecnt=\count270
 \U@D=\dimen146
 \l@unhyphenated=\language5
@@ -82,9 +82,9 @@ Package: babel 2024/09/18 v24.10 The Babel package
 \bbl@readstream=\read2
 \bbl@dirlevel=\count271
 Package babel Info: You haven't specified a language as a class or package
-(babel)             option. I'll load 'nil'. Reported on input line 4282.
+(babel)             option. I'll load 'nil'. Reported on input line 4270.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/nil.ldf
-Language: nil 2024/09/18 v24.10 Nil language
+Language: nil 2024/10/05 v24.11 Nil language
 \l@nil=\language6
 )) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
@@ -219,6 +219,8 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@authors=\count286
 \c@affil=\count287
 \c@authnum=\count288
+\corr@cnt=\count289
+\curr@corr@cnt=\count290
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -232,7 +234,7 @@ Class copernicus Warning: Cannot find cancel.sty; proceeding without it.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip65
-\multirow@cntb=\count289
+\multirow@cntb=\count291
 \multirow@dima=\skip66
 \bigstrutjot=\dimen165
 )
@@ -244,51 +246,51 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count290
-\c@ALC@line=\count291
-\c@ALC@rem=\count292
-\c@ALC@depth=\count293
+\c@ALC@unique=\count292
+\c@ALC@line=\count293
+\c@ALC@rem=\count294
+\c@ALC@depth=\count295
 \ALC@tlm=\skip67
 \algorithmicindent=\skip68
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count294
+\c@float@type=\count296
 \float@exts=\toks35
 \float@box=\box61
 \@float@everytoks=\toks36
 \@floatcapt=\box62
 )
 \@float@every@algorithm=\toks37
-\c@algorithm=\count295
+\c@algorithm=\count297
 )
-\c@figscheme=\count296
-\c@plates=\count297
-\c@listings=\count298
-\c@boxes=\count299
+\c@figscheme=\count298
+\c@plates=\count299
+\c@listings=\count300
+\c@boxes=\count301
 
 Class copernicus Warning: Cannot find caption.sty; proceeding without it.
 
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count300
+\lst@mode=\count302
 \lst@gtempboxa=\box63
 \lst@token=\toks38
-\lst@length=\count301
+\lst@length=\count303
 \lst@currlwidth=\dimen166
-\lst@column=\count302
-\lst@pos=\count303
+\lst@column=\count304
+\lst@pos=\count305
 \lst@lostspace=\dimen167
 \lst@width=\dimen168
-\lst@newlines=\count304
-\lst@lineno=\count305
+\lst@newlines=\count306
+\lst@lineno=\count307
 \lst@maxwidth=\dimen169
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count306
-\lst@skipnumbers=\count307
+\c@lstnumber=\count308
+\lst@skipnumbers=\count309
 \lst@framebox=\box64
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
@@ -303,10 +305,10 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip69
 \bibsep=\skip70
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count308
+\c@NAT@ctr=\count310
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count309
+\c@r@tfl@t=\count311
 \rotFPtop=\skip71
 \rotFPbot=\skip72
 \rot@float@box=\box65
@@ -355,16 +357,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count310
+\c@section@level=\count312
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count311
+\etb@tempcnta=\count313
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen171
-\Hy@linkcounter=\count312
-\Hy@pagecounter=\count313
+\Hy@linkcounter=\count314
+\Hy@pagecounter=\count315
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -372,7 +374,7 @@ Now handling font encoding PD1 ...
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count314
+\Hy@SavedSpaceFactor=\count316
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -386,7 +388,7 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks OFF on input line 4430.
-\c@Hy@tempcnt=\count315
+\c@Hy@tempcnt=\count317
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen172
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
@@ -394,7 +396,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count316
+\Fld@menulength=\count318
 \Field@Width=\dimen173
 \Fld@charsize=\dimen174
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -408,9 +410,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count317
-\c@Item=\count318
-\c@Hfootnote=\count319
+\Hy@abspage=\count319
+\c@Item=\count320
+\c@Hfootnote=\count321
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -419,8 +421,8 @@ File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count320
-\c@bookmark@seq@number=\count321
+\Fld@listcount=\count322
+\c@bookmark@seq@number=\count323
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -430,11 +432,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip73
 )
-\c@reaction=\count322
+\c@reaction=\count324
 \tabularwidth=\dimen175
-Package color Info: Redefining color textcol on input line 2898.
-Package color Info: Redefining color bgcol on input line 2899.
-Package color Info: Redefining color barcol on input line 2900.
+Package color Info: Redefining color textcol on input line 2980.
+Package color Info: Redefining color bgcol on input line 2981.
+Package color Info: Redefining color barcol on input line 2982.
 )
 LaTeX Info: Redefining \vec on input line 14.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
@@ -443,22 +445,22 @@ Package: longtable 2024-04-26 v4.20 Multi-page Table package (DPC)
 \LTright=\skip75
 \LTpre=\skip76
 \LTpost=\skip77
-\LTchunksize=\count323
+\LTchunksize=\count325
 \LTcapwidth=\dimen176
 \LT@head=\box66
 \LT@firsthead=\box67
 \LT@foot=\box68
 \LT@lastfoot=\box69
 \LT@gbox=\box70
-\LT@cols=\count324
-\LT@rows=\count325
-\c@LT@tables=\count326
-\c@LT@chunks=\count327
+\LT@cols=\count326
+\LT@rows=\count327
+\c@LT@tables=\count328
+\c@LT@chunks=\count329
 \LT@p@ftn=\toks40
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen177
 \WF@size=\dimen178
-\c@WF@wrappedlines=\count328
+\c@WF@wrappedlines=\count330
 \WF@box=\box71
 \WF@everypar=\toks41
 Package: wrapfig 2003/01/31  v 3.6
@@ -466,7 +468,7 @@ Package: wrapfig 2003/01/31  v 3.6
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 \everycr=\toks42
 \minrowclearance=\skip78
-\rownum=\count329
+\rownum=\count331
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -480,16 +482,16 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box72
-\sift@deathcycles=\count330
+\sift@deathcycles=\count332
 \@vwid@loff=\dimen179
 \@vwid@roff=\dimen180
 )
-\c@taburow=\count331
-\tabu@nbcols=\count332
-\tabu@cnt=\count333
-\tabu@Xcol=\count334
-\tabu@alloc=\count335
-\tabu@nested=\count336
+\c@taburow=\count333
+\tabu@nbcols=\count334
+\tabu@cnt=\count335
+\tabu@Xcol=\count336
+\tabu@alloc=\count337
+\tabu@nested=\count338
 \tabu@target=\dimen181
 \tabu@spreadtarget=\dimen182
 \tabu@naturalX=\dimen183
@@ -520,7 +522,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen190
-\c@nlinenum=\count337
+\c@nlinenum=\count339
 \TeXr@lab=\toks45
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
@@ -570,13 +572,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count338
+\c@lstlisting=\count340
 Package hyperref Info: Link coloring OFF on input line 103.
-
-Overfull \hbox (30.38885pt too wide) in paragraph at lines 110--121
-[]\T1/ptm/m/n/10 illem.vervoort@sydney.edu.au]R. WillemVervoort                                                                                                                                                                           
- []
-
 LaTeX Font Info:    Trying to load font information for U+msa on input line 147.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -591,213 +588,229 @@ Package xcolor Warning: Incompatible color definition on input line 147.
 
 Package xcolor Warning: Incompatible color definition on input line 149.
 
-<Figures/Dryland Salinity Papers.png, id=29, 528.0528pt x 326.6604pt>
-File: Figures/Dryland Salinity Papers.png Graphic file (type png)
-<use Figures/Dryland Salinity Papers.png>
-Package pdftex.def Info: Figures/Dryland Salinity Papers.png  used on input line 193.
-(pdftex.def)             Requested size: 453.24931pt x 280.3941pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
 
 
 [1
 
 {c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (1.76079pt too wide) in paragraph at lines 222--236
+<Figures/Dryland Salinity Papers.png, id=45, 528.0528pt x 326.6604pt>
+File: Figures/Dryland Salinity Papers.png Graphic file (type png)
+<use Figures/Dryland Salinity Papers.png>
+Package pdftex.def Info: Figures/Dryland Salinity Papers.png  used on input line 201.
+(pdftex.def)             Requested size: 453.24931pt x 280.3941pt.
+
+
+[2 <./Figures/Dryland Salinity Papers.png>]
+Overfull \hbox (1.76079pt too wide) in paragraph at lines 230--244
 []\T1/ptm/m/n/10 It is clear from these examples that detailed spatial and temporal datasets are key to understanding different hydrogeochemical
  []
 
 
 
-[2 <./Figures/Dryland Salinity Papers.png>]
-
 [3]
-<Figures/gw_or_sw_map.png, id=107, 722.7pt x 505.6491pt>
+
+[4]
+<Figures/gw_or_sw_map.png, id=111, 722.7pt x 505.6491pt>
 File: Figures/gw_or_sw_map.png Graphic file (type png)
 <use Figures/gw_or_sw_map.png>
-Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 292.
+Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 300.
 (pdftex.def)             Requested size: 402.89255pt x 281.88847pt.
 
 
-[4
+[5
 
  <./Figures/gw_or_sw_map.png (PNG copy)>]
-Overfull \hbox (0.39166pt too wide) in paragraph at lines 366--370
+Overfull \hbox (0.39166pt too wide) in paragraph at lines 376--380
 []\T1/ptm/m/n/10 The data for each location consist of up to six variables which were measured in the field (Table []1[]). These were complemented
  []
 
 
 
-[5]
-Overfull \hbox (2.56165pt too wide) in paragraph at lines 402--427
+[6]
+Overfull \hbox (2.56165pt too wide) in paragraph at lines 412--437
 \T1/ptm/m/n/10 measured using a range of field probes. All field probes measured pH, EC, Temperature and calculated SPC. Early measurements
  []
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 437.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 447.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 
-[6
+[7
 
 ]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 477.
 
-[7]
-Overfull \hbox (0.35117pt too wide) in paragraph at lines 512--515
+
+[8]
+Overfull \hbox (0.35117pt too wide) in paragraph at lines 521--524
 []\T1/ptm/m/n/10 The mean concentration and interquartile range (25th - 75th percentile) of the concentration data distributions were calculated
  []
 
 
-Package natbib Warning: Citation `R2024' on page 8 undefined on input line 516.
 
-
-
-[8]
-<Figures/na_count.png, id=167, 528.0528pt x 326.6604pt>
+[9]
+<Figures/na_count.png, id=191, 528.0528pt x 326.6604pt>
 File: Figures/na_count.png Graphic file (type png)
 <use Figures/na_count.png>
-Package pdftex.def Info: Figures/na_count.png  used on input line 528.
+Package pdftex.def Info: Figures/na_count.png  used on input line 537.
 (pdftex.def)             Requested size: 453.24931pt x 280.3941pt.
-<Figures/na_GW.png, id=168, 528.0528pt x 326.6604pt>
+<Figures/na_GW.png, id=192, 528.0528pt x 326.6604pt>
 File: Figures/na_GW.png Graphic file (type png)
 <use Figures/na_GW.png>
-Package pdftex.def Info: Figures/na_GW.png  used on input line 532.
+Package pdftex.def Info: Figures/na_GW.png  used on input line 541.
 (pdftex.def)             Requested size: 453.24931pt x 280.3941pt.
 
 
-[9
+[10
 
  <./Figures/na_count.png>]
 
-[10 <./Figures/na_GW.png>]
-
-[11
-
-]
-<Figures/gwsw.png, id=189, 526.8483pt x 325.215pt>
-File: Figures/gwsw.png Graphic file (type png)
-<use Figures/gwsw.png>
-Package pdftex.def Info: Figures/gwsw.png  used on input line 614.
-(pdftex.def)             Requested size: 402.89255pt x 248.69934pt.
-
+[11 <./Figures/na_GW.png>]
 
 [12
 
- <./Figures/gwsw.png>]
-<Figures/monthly.png, id=196, 722.7pt x 505.6491pt>
-File: Figures/monthly.png Graphic file (type png)
-<use Figures/monthly.png>
-Package pdftex.def Info: Figures/monthly.png  used on input line 622.
-(pdftex.def)             Requested size: 251.80688pt x 176.1774pt.
+]
+<Figures/gwsw.png, id=213, 526.8483pt x 325.215pt>
+File: Figures/gwsw.png Graphic file (type png)
+<use Figures/gwsw.png>
+Package pdftex.def Info: Figures/gwsw.png  used on input line 623.
+(pdftex.def)             Requested size: 402.89255pt x 248.69934pt.
 
 
 [13
 
- <./Figures/monthly.png>]
-<Figures/annual.png, id=205, 1806.75pt x 1264.725pt>
+ <./Figures/gwsw.png>]
+<Figures/monthly.png, id=221, 722.7pt x 505.6491pt>
+File: Figures/monthly.png Graphic file (type png)
+<use Figures/monthly.png>
+Package pdftex.def Info: Figures/monthly.png  used on input line 631.
+(pdftex.def)             Requested size: 251.80688pt x 176.1774pt.
+
+
+[14 <./Figures/monthly.png>]
+<Figures/annual.png, id=229, 1806.75pt x 1264.725pt>
 File: Figures/annual.png Graphic file (type png)
 <use Figures/annual.png>
-Package pdftex.def Info: Figures/annual.png  used on input line 640.
+Package pdftex.def Info: Figures/annual.png  used on input line 649.
 (pdftex.def)             Requested size: 251.80688pt x 176.24977pt.
-
-
-[14
-
- <./Figures/annual.png>]
-<Figures/FDC.png, id=212, 435.5472pt x 269.0853pt>
-File: Figures/FDC.png Graphic file (type png)
-<use Figures/FDC.png>
-Package pdftex.def Info: Figures/FDC.png  used on input line 659.
-(pdftex.def)             Requested size: 402.89255pt x 248.91643pt.
 
 
 [15
 
- <./Figures/FDC.png>]
-<Figures/Final_Corrected_piezodepths.png, id=218, 762.85pt x 762.85pt>
-File: Figures/Final_Corrected_piezodepths.png Graphic file (type png)
-<use Figures/Final_Corrected_piezodepths.png>
-Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 675.
-(pdftex.def)             Requested size: 503.61377pt x 503.6106pt.
+
+ <./Figures/annual.png>]
+<Figures/FDC.png, id=236, 435.5472pt x 269.0853pt>
+File: Figures/FDC.png Graphic file (type png)
+<use Figures/FDC.png>
+Package pdftex.def Info: Figures/FDC.png  used on input line 667.
+(pdftex.def)             Requested size: 402.89255pt x 248.91643pt.
 
 
 [16
 
- <./Figures/Final_Corrected_piezodepths.png (PNG copy)>]
+ <./Figures/FDC.png>]
+<Figures/Final_Corrected_piezodepths.png, id=242, 762.85pt x 762.85pt>
+File: Figures/Final_Corrected_piezodepths.png Graphic file (type png)
+<use Figures/Final_Corrected_piezodepths.png>
+Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 683.
+(pdftex.def)             Requested size: 503.61377pt x 503.6106pt.
 
-[17]
-<Figures/ec_map.png, id=230, 435.5472pt x 269.0853pt>
+
+[17
+
+]
+
+[18 <./Figures/Final_Corrected_piezodepths.png (PNG copy)>]
+
+[19
+
+]
+<Figures/ec_map.png, id=259, 435.5472pt x 269.0853pt>
 File: Figures/ec_map.png Graphic file (type png)
 <use Figures/ec_map.png>
-Package pdftex.def Info: Figures/ec_map.png  used on input line 688.
+Package pdftex.def Info: Figures/ec_map.png  used on input line 698.
 (pdftex.def)             Requested size: 402.89255pt x 248.91643pt.
-<Figures/ec_plot.png, id=231, 426.6339pt x 569.0058pt>
+<Figures/ec_plot.png, id=260, 426.6339pt x 569.0058pt>
 File: Figures/ec_plot.png Graphic file (type png)
 <use Figures/ec_plot.png>
-Package pdftex.def Info: Figures/ec_plot.png  used on input line 692.
+Package pdftex.def Info: Figures/ec_plot.png  used on input line 702.
 (pdftex.def)             Requested size: 402.89255pt x 537.34866pt.
 
 
-[18 <./Figures/ec_map.png>]
+[20 <./Figures/ec_map.png>]
 
-[19 <./Figures/ec_plot.png>]
-<Figures/clhco3_map.png, id=243, 505.89pt x 505.89pt>
+[21 <./Figures/ec_plot.png>]
+<Figures/clhco3_map.png, id=272, 505.89pt x 505.89pt>
 File: Figures/clhco3_map.png Graphic file (type png)
 <use Figures/clhco3_map.png>
-Package pdftex.def Info: Figures/clhco3_map.png  used on input line 698.
+Package pdftex.def Info: Figures/clhco3_map.png  used on input line 708.
 (pdftex.def)             Requested size: 402.89255pt x 402.89851pt.
-<Figures/clhco3_plot.png, id=244, 426.6339pt x 569.0058pt>
+<Figures/clhco3_plot.png, id=273, 426.6339pt x 569.0058pt>
 File: Figures/clhco3_plot.png Graphic file (type png)
 <use Figures/clhco3_plot.png>
-Package pdftex.def Info: Figures/clhco3_plot.png  used on input line 702.
+Package pdftex.def Info: Figures/clhco3_plot.png  used on input line 712.
 (pdftex.def)             Requested size: 402.89255pt x 537.34866pt.
 
 
-[20
+[22
 
 
  <./Figures/clhco3_map.png>]
 
-[21 <./Figures/clhco3_plot.png>]
-<Figures/piper_plot.png, id=261, 569.0058pt x 284.5029pt>
+[23 <./Figures/clhco3_plot.png>]
+<Figures/piper_plot.png, id=290, 569.0058pt x 284.5029pt>
 File: Figures/piper_plot.png Graphic file (type png)
 <use Figures/piper_plot.png>
-Package pdftex.def Info: Figures/piper_plot.png  used on input line 738.
+Package pdftex.def Info: Figures/piper_plot.png  used on input line 739.
 (pdftex.def)             Requested size: 402.89255pt x 201.44713pt.
 
+Overfull \hbox (33.64099pt too wide) in paragraph at lines 769--769
+[]\T1/ptm/m/n/9 The majority of the code and data including the Rmarkdown for this paper is stored on Github https://github.com/WillemVervoort/MuttamaDataPaper
+ []
 
-[22 <./Figures/piper_plot.png>] (./MuttamaDataPaper.bbl
 
-[23]
+Overfull \hbox (15.46567pt too wide) in paragraph at lines 769--769
+\T1/ptm/m/n/9 However, due to the volume of raw data, the groundwater logger data is stored in a separate Open Science Foundation project: https://osf.io/beuwk/ 
+ []
+
+
+
+[24 <./Figures/piper_plot.png>] (./MuttamaDataPaper.bbl
+
+[25]
 Underfull \hbox (badness 1117) in paragraph at lines 49--50
 []\T1/ptm/m/n/9 Lintern, A., Webb, J. A., Ryu, D., Liu, S., Waters, D., Leahy, P., Bende-Michl, U., and Western, A. W.: What Are the Key
  []
 
 
 
-[24])
+[26])
 
-[25]
-
-Package natbib Warning: There were undefined citations.
-
-(./MuttamaDataPaper.aux)
+[27] (./MuttamaDataPaper.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2021/03/21>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16607 strings out of 475538
- 259687 string characters out of 5775359
- 706267 words of memory out of 5000000
- 38872 multiletter control sequences out of 15000+600000
+ 16686 strings out of 475538
+ 260449 string characters out of 5775616
+ 704609 words of memory out of 5000000
+ 38935 multiletter control sequences out of 15000+600000
  594649 words of font info for 93 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,9n,93p,553b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,9n,93p,553b,665s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MuttamaDataPaper.pdf (25 pages, 3068677 bytes).
+Output written on MuttamaDataPaper.pdf (27 pages, 3070938 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 88 named destinations out of 1000 (max. 500000)
+ 386 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

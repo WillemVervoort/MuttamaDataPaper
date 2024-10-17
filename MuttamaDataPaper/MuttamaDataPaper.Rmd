@@ -5,11 +5,12 @@ author:
   - given_name: R. Willem
     surname: Vervoort
     affiliation: 1
-    corresponding: true
     email: willem.vervoort@sydney.edu.au
   - given_name: Floris
     surname: van Ogtrop
     affiliation: 1
+    email: floris.vanogtrop@sydney.edu.au
+    corresponding: true
   - given_name: Mina
     surname: Tambrchi
     affiliation: 1
@@ -51,20 +52,20 @@ running:
 # This section is mandatory even if you declare that no competing interests are present.
 competinginterests: |
   The authors declare no competing interests.
-copyrightstatement: |
-  The author's copyright for this publication is transferred to institution/company.
+#copyrightstatement: |
+ # The author's copyright for this publication is transferred to institution/company.
 ### The following commands are for the statements about the availability of data sets and/or software code corresponding to the manuscript.
 ### It is strongly recommended to make use of these sections in case data sets and/or software code have been part of your research the article is based on.
 availability:
   codedata: |
     The majority of the code and data including the Rmarkdown for this paper is stored on Github https://github.com/WillemVervoort/MuttamaDataPaper
     However, due to the volume of raw data, the groundwater logger data is stored in a separate Open Science Foundation project: https://osf.io/beuwk/
-authorcontribution: |
+authorcontribution: | 
   T. Bishop initiated the sampling campaign. T. Bishop, F. van Ogtrop and R.W. Vervoort conceptualised the overall study. R.W. Vervoort and M. Tambrchi wrote the paper and analysed results. F.Akter and J. Lessels collected and analysed the majority of the samples. M. Tambrchi, A. Buzacott, J. Moloney, F. Akter analysed and managed the data. All authors participated in sampling, laboratory analysis and review of the paper. 
 acknowledgements: |
   This dataset would not have been possible without the generous assistance and access to properties from the following land owners in the Muttama Creek area: R. Last, the Tozer family, M. Sullivan, P. McClintock, P. McGuire, S. Sharman, A. Hollihan, the managers at Brawlin Springs as part of the Romani Pastoral Company, and the managers and owners of Wavehill, in particular J. Litchfield. We would like to thank several generations of students in the units LWSC2002, ENVX3003 and ENSY5708, as well a multiple interns from French Institutions and University and Wageningen University for assisting with the sample collection.
-appendix: |
- \section{Figures and tables in appendices}
+#appendix: |
+ #\section{Figures and tables in appendices}
 output:
   rticles::copernicus_article: 
     highlight: NULL
@@ -73,6 +74,10 @@ output:
     base_format: rticles::copernicus_article # for using bookdown features like \@ref()
 ---
 
+**ACTIONS**  
+**
+- check number of anions/cations analysed  
+**
 ```{r packages, echo=F, warning=F, include=F, message=F}
 options(tinytex.verbose = TRUE)
 
@@ -91,6 +96,10 @@ library(sf)
 library(raster)
 library(ggspatial)
 theme_set(theme_bw()) # ggplot theme
+# define colour palette colour blind friendly
+cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7","#999999")
+
+
 ```
 
 # Introduction
@@ -120,7 +129,7 @@ The poor spatial and timescale distribution of water quality datasets has long b
 
 <!-- defining the need for detailed data -->
 
-It is clear from these examples that detailed spatial and temporal datasets are key to understanding different hydrogeochemical processes in the landscape [e.g. @Cartwright2010; @Dalhaus2010], but overall publicly available datasets on dryland salinity in Australia remain limited to detailed data from small experimental catchments (\< 100 ha) [@Summerell2006; @Hughes2007] or sparse government datasets from official monitoring (i.e. <https://realtimedata.waternsw.com.au> which tend to be limited in hydrogeochemical data. Part of this is related to the sensitivity of the data given the relationship with possible land values. However, as the understanding of salinity occurrence grows this argument is less valid. In fact, making data more widely available would increase the opportunities for research and increase our understanding of dryland salinity processes.
+It is clear from these examples that detailed spatial and temporal datasets are key to understanding different hydrogeochemical processes in the landscape [e.g. @Cartwright2010; @Dalhaus2010], but overall publicly available datasets on dryland salinity in Australia remain limited to detailed data from small experimental catchments (\< 100 ha) [@Summerell2006; @Hughes2007] or sparse government datasets from official monitoring (i.e. <https://realtimedata.waternsw.com.au> which tend to be limited in hydrogeochemical data. Part of this is related to the sensitivity of the data given the relationship with possible land values. However, as the understanding of salinity occurrence grows this argument is less valid. Making data more widely available would increase the opportunities for research and increase our understanding of dryland salinity processes.
 
 <!--Some examples of spatial sampling-->
 
@@ -150,7 +159,7 @@ coolac <- coolac %>%
   dplyr::select(Date, Flow)
 
 ##read in Muttama water quality data data
-Muttama_data<-read_csv("Data/MuttamaWaterQuality_DATA_2023-10-03_1141.csv")
+Muttama_data<-read_csv("Data/MuttamaWaterQuality-AllDataDownload_DATA_2024-10-15_1434.csv")
 Muttama_data<-Muttama_data%>%
   mutate(datetime = dmy_hm(datetime)) %>%
   mutate(Month = month(datetime),
@@ -160,16 +169,16 @@ Muttama_data<-Muttama_data%>%
           src = replace_na(src,1),
           site_code = substr(record_id,14,17))
 
-
 ## Groundwater level data (summarised to daily and corrected)
 GW_data <- read_csv("Data/Muttama_piezometer_output.csv") %>%
   mutate(datetime = ymd(Date)) %>%
   mutate(Month = month(datetime),
           Year = year(datetime),
           Date = date(datetime),
-          gw_or_sw = "NA",
-          site_code = Piezo)
-
+          gw_or_sw = "GW",
+          site_code = Piezo,
+         site_m = as.integer(substr(Piezo,3,4)))
+  
 # Rainfall data
 rainfall<-read_csv("Data/Cootamundra_rainfall.csv")
 rainfall <- rainfall %>%
@@ -180,34 +189,39 @@ rainfall <- rainfall %>%
 # include the coordinates for the sample data
 coord <- read_csv("Data/SiteList.csv")
 coord <- coord %>%
-   mutate(site_m = substr(site_code,3,4))%>%
+   mutate(site_m = substr(site_longname,3,4),
+          site_code = substr(site_longname,1,4))%>%
    transform(site_m = as.integer(site_m))
 Muttama <- left_join(Muttama_data, coord, 
-                     by = c('site_code', "site_mut"), 
+                     by = c('site_code','site_mut'), 
                      copy = T)
 Muttama_gw <- left_join(GW_data, coord, 
-                     by = 'site_code', 
+                     by = c('site_code', 'site_m'), 
                      copy = T)
+
+#Combine flow data with water quality data
+Muttama_joined <- left_join(Muttama , coolac, by = "Date") %>%
+  dplyr::select(Date,Flow)
+
 ```
 
 ```{r mapping-basic, echo = F, eval = F}
 # !! warning: 5m DEM means you need substantial memory on your computer to regenerate this map !!
 ##read in shapefile
-coolac<-sf::st_read("../Muttama Dataset Analysis/GIS/MuttamaCatchmentAtCoolac2.shp")
-st_crs(coolac) = 4283
+Muttama_catchment<-sf::st_read("Data/GIS/MuttamaCatchmentAtCoolac2.shp")
+st_crs(Muttama_catchment) = 4283
 # this is Australia WGS84 Lambert
 #plot(coolac)
-streams<-sf::st_read("../Muttama Dataset Analysis/GIS/MuttamaStreams2.shp")
-st_crs(streams) = 4283
-
+streams<-sf::st_read("Data/GIS/MuttamaStreams2.shp")
+streams <- st_transform(streams, 4283)
 # the DEM is not provided with the data due to its size
 # it can be downloaded freely from the following website: https://elevation.fsdf.org.au/, accessed 12/09/2024
-DEM_Coolac <- raster("../Muttama Dataset Analysis/GIS/DEM_clippedToCatchment2.tif")
+DEM_Coolac <- raster("../../../Muttama Dataset Analysis/GIS/DEM_clippedToCatchment2.tif")
 # # following https://rdrr.io/cran/ggspatial/man/layer_spatial.Raster.html
 DEM_Coolac_df <- as.data.frame(DEM_Coolac, xy=T)
 
 #gw or sw map
-map <- ggplot() + geom_sf(data=coolac,
+map <- ggplot() + geom_sf(data=Muttama_catchment,
                                colour = "black", fill = NA)  +
        geom_sf(data = streams,
                colour = "darkblue", fill =NA) +
@@ -219,10 +233,13 @@ map <- ggplot() + geom_sf(data=coolac,
   #geom_point(data=Muttama,aes(x,y,colour=factor(gw_or_sw),shape=factor(gw_or_sw))) +
   # coord_equal() + #keep axes equivalent
   xlab("Longitude") + ylab("Latitude")+
-  geom_text(data=Muttama,aes(x,y,label=as.character(Muttama$site_m),colour=factor(gw_or_sw))) +
-  scale_colour_manual('Water Source',values=c('brown1','midnightblue'),labels=c('GW','SW'))+
-  labs(colour="Source") + theme_bw()
-
+  geom_text(data=Muttama,aes(x,y,label=as.character(Muttama$site_m),
+                             colour=factor(gw_or_sw)), key_glyph = "rect") +
+  scale_colour_continuous(guide = "DEM") +
+  scale_colour_manual('Water Source',values=c('brown1','midnightblue'),
+                      labels=c('GW','SW')) +
+  labs(colour="Source") + theme_bw() 
+#map
 
 # map
 ggsave("Figures/gw_or_sw_map.png", unit="cm", dpi = 300)
@@ -251,9 +268,24 @@ The water quality dataset contains data from 4 main sampling sources related to 
 
 -   Source 3: A dataset collected by undergraduate and postgraduate students as part of field trips in different units of study at the University of Sydney is identified as "Student data". This data was sampled "ad-hoc" during the field trip period using standard sampling protocols as described for the data from Akter [-@Akter2018].
 
--   Source 4: Data from several autosamplers installed in the catchment during the PhD from Lessels [-@Lessels2014]. Because these samples were not taken by a "person" and were taken on a flow weighted basis, we separated the data from the "grab" samples in the other methods.
+-   Source 4: Data from several autosamplers installed in the catchment during the PhD from Lessels [-@Lessels2014]. Because these samples were not taken by a "person" and were taken on a flow weighted basis, we separated the data from the "grab" samples in the other methods. These samples are also missing the measurements that were collected in the field, as these were only analysed in the laboratory.
 
-Overall, `r nrow(Muttama)` water samples were collected from `r nrow(coord)` sample locations over the 2010 - 2020 period. However, not all sites were sampled at all times and not all samples were fully analysed for all hydrogeochemical variables. Both surface water and groundwater samples were collected (`r nrow(coord %>% filter(str_detect(coord$site_code,"GW")==T))` groundwater sample sites and `r nrow(coord %>% filter(str_detect(coord$site_code,"SW")==T))` surface water sites) distributed across the catchment, depending on standing water availability and access.
+```{r source4, echo = F}
+#identify source 4 in the data
+Muttama <- Muttama %>%
+  mutate(src = ifelse(str_detect(Muttama$record_id,"_AS")==T,4,src))
+
+# correct watertype 3 to 2 for autosamplers
+Muttama <- Muttama %>%
+  mutate(water_type = ifelse(str_detect(Muttama$record_id,"_AS")== T, 2,
+                             water_type))
+
+
+```
+
+
+
+Overall, `r nrow(Muttama)` water samples were collected from `r nrow(coord)` sample locations over the `r year(min(Muttama$Date))` - `r year(max(Muttama$Date))` period. However, not all sites were sampled at all times and not all samples were fully analysed for all hydrogeochemical variables. Both surface water and groundwater samples were collected (`r nrow(coord %>% filter(str_detect(coord$site_code,"GW")==T))` groundwater sample sites and `r nrow(coord %>% filter(str_detect(coord$site_code,"SW")==T))` surface water sites) distributed across the catchment, depending on standing water availability and access.
 
 In addition to the water quality dataset, data from `r nrow(coord %>% filter(str_detect(coord$site_code,"GW")==T))` groundwater data loggers is provided from the same groundwater sample sites as in the hydrogeochemical dataset.
 
@@ -261,7 +293,7 @@ In addition to the water quality dataset, data from `r nrow(coord %>% filter(str
 
 The overall structure of the hydrogeochemical dataset consists of repeated measurements over time at multiple locations in Muttama catchment. For each location the name of the location and the spatial coordinates were recorded in decimal degrees (Longitude = x and Latitude = y) as well as whether the location was a groundwater or a surface water location. The names of the locations are fairly random and basic locality indicators, which cannot be interpreted exactly.
 
-The data for each location consist of up to six variables which were measured in the field (Table \ref{tab:TableMeasurements}). These were complemented by laboratory analysis, which repeated some of the field measurements, and for an additional 15 anion and cation variables.
+The data for each location consist of up to six variables which were measured in the field (Table \ref{tab:TableMeasurements}). These were complemented by laboratory analysis, which repeated some of the field measurements, and for an additional 15 <!--check-->anion and cation variables.
 
 \clearpage
 
@@ -271,8 +303,8 @@ lab<-read_csv('Data/lab.csv')
 table_M <- tibble(`Field measurements` = c(field,rep(NA,2)), 
                   `Lab repeat` = c(unlist(lab[1:3,1]), rep(NA,6)),
                   `Anions` = c(unlist(lab[4:9,1]),rep(NA,3)),
-                  `Cations` = unlist(lab[,2]))
-options(knitr.kable.NA = '')
+                  `Cations` = unlist(lab[,2]))# %>%
+#options(knitr.kable.NA = '')
 knitr::kable(table_M, "latex", caption = "Variables measured in the field and laboratory") %>% kable_styling()
 
 ```
@@ -292,20 +324,27 @@ Manual water level measurements were taken at each manual sampling date to provi
 To correct the groundwater logger data, the daily data was matched to the observed data using linear regression if more than 3 manual observed data were available and slope and intercept of the regression had a p-value \> 0.1. If there were less than 3 manual observed data point for the specific logger an adjustment to the data was based on the difference between the average observed data and the average recorded water levels. Otherwise no adjustment was made. This is slightly tricky: After the manual observations are made, the well is purged and the logger is temporarily removed from the well. This data (during the temporarily removal of the logger during the purging and subsequent recovery of the groundwater level) is removed from the logger data series. As a result, there is no direct time match between the logger data series and the manual observations.
 
 To explain this more clearly the following pseudo code describes the process:
-
-| Split the logger data for each ground water well by serial number;
-| **IF** there are sufficient observed points (assumed to be \> 3):
-|   run a regression between interpolated depth and observed depth;
-|   check the p-values of the slope and intercept;
-|   **IF** the slope is not significant (using p \> 0.10):
-|     use only the intercept to correct the logger data;
-|   **ELSE**
-|      **IF** the intercept is not significant, but the slope is:
-|        use only the slope to correct the logger data;
-|      **ELSE**
-|        use both slope and intercept of the regression to correct the logger data;
-| **ELSE**
-|   There are not enough values for a regression, use mean difference between logged and observed value to correct the logger data;
+\begin{algorithm}
+\caption{Pseudo code cleaning groundwater level data}
+\label{a1}
+\begin{algorithmic}
+\IF {sufficient points \> 3} 
+        \STATE run a regression between interpolated depth and observed depth  
+        \STATE check the p-values of the slope and intercept
+        \IF {the slope is not significant (using p \> 0.10)}
+                \STATE  use only the intercept to correct the logger data
+        \ELSE
+                \IF {the intercept is not significant, but the slope is}
+                        \STATE use only the slope to correct the logger data
+                \ELSE
+                       \STATE use both slope and intercept of the regression to correct the logger data
+                \ENDIF
+        \ENDIF
+\ELSE
+        \STATE There are not enough values for a regression, use mean difference between logged and observed value to correct the logger data
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
 
 The code used to match the manually observed data with the logger data is in the script `Match_obs_logger_data.R`, which is stored with the raw data in the Open Science Foundation (OSF) repository associated with this paper [https://osf.io/beuwk/](https://osf.io/beuwk/).
 
@@ -326,10 +365,11 @@ All graphs and maps were produced using R [@R2023]. All code can be found in the
 ## Distribution of missing Values
 
 ```{r NAcount, echo = F, eval = F}
+
 Muttama_na<- Muttama %>%
   dplyr::select(everything()) %>%
   group_by(src) %>%
-  summarise_all(funs(sum(is.na(.)/nrow(Muttama))*100))
+  summarise_all(list(~sum(is.na(.)/nrow(Muttama))*100))
 
 Muttama_na%>%
   pivot_longer(temp_field:nh3_field, 
@@ -337,8 +377,11 @@ Muttama_na%>%
                values_to = "Number_NA") %>%
   ggplot(aes(x = Measurement, y = Number_NA, 
              fill = as.factor(src))) + 
+  scale_fill_manual(values = cbPalette) +
   geom_bar(stat="identity", position="dodge") + 
-  theme(axis.text.x= element_text(angle=90)) +
+  theme_bw() +
+  theme(axis.text.x= element_text(angle=90,size = rel(1.3))) +
+  theme(axis.text.y= element_text(size = rel(1.3))) +
   ylab("NA values in dataset (%)") + labs(fill="Source")
  
 ggsave("Figures/na_count.png", unit="cm", dpi = 300)
@@ -406,7 +449,9 @@ max <- Muttama_sum %>%
 muttama_statGW<-cbind(means,mins,max)%>%
               mutate(element=substr(element,1,nchar(element)-5))%>%
               dplyr::select(c(element,Mean,Min,Max))%>%
-              mutate_if(is.numeric,round,1)
+              mutate_if(is.numeric,round,1) %>%
+  mutate(Max = ifelse(Max == Inf | Max == -Inf, NA, Max))
+
 
 ##SW
 Muttama_sum<- Muttama_data %>%
@@ -428,11 +473,12 @@ max <- Muttama_sum %>%
 muttama_statSW<-cbind(means,mins,max)%>%
               mutate(element=substr(element,1,nchar(element)-5))%>%
               dplyr::select(c(Mean,Min,Max))%>%
-              mutate_if(is.numeric,round,1)
+              mutate_if(is.numeric,round)
+
 
 ##combine SW and GW
 muttama_stat<-cbind(muttama_statGW,muttama_statSW)%>%
-  as.data.frame()
+  as.data.frame() 
 #write.table(muttama_stat,file='Muttamastat.csv',sep=',',qmethod='double')
 
 ```
@@ -452,10 +498,24 @@ Groundwater samples have quite a distinctive signature compared to the surface w
 
 ```{r gwsw-phEC, echo = F, eval = F}
 spc_field <- Muttama%>%
-  ggplot(aes(gw_or_sw, spc_field))+ geom_boxplot(aes(group = gw_or_sw))+       geom_jitter(aes(colour = factor(src)),width = 0.25, size = 0.9) + labs(colour= "Source") + ylab("EC") + xlab ("")
+  ggplot(aes(gw_or_sw, spc_field))+ geom_boxplot(aes(group = gw_or_sw))+
+  geom_jitter(aes(colour = factor(src)),width = 0.25, size = 0.9) + 
+  labs(colour= "Source") + ylab("EC") + xlab ("") +
+  scale_colour_manual(values = cbPalette) +
+  theme(axis.text = element_text(size=rel(1.3)),
+        axis.title = element_text(size=rel(1.5)),
+        legend.text = element_text(size=rel(1.3)),
+        legend.title = element_text(size=rel(1.5)))
+  
 
 ph_field<-Muttama%>%
-  ggplot(aes(gw_or_sw,ph_field))+ geom_boxplot(aes(group=gw_or_sw))+       geom_jitter(aes(colour=factor(src)),width=0.25,size=0.9) + labs(colour="Source") + ylab("pH") + xlab ("")
+  ggplot(aes(gw_or_sw,ph_field))+ geom_boxplot(aes(group=gw_or_sw))+       geom_jitter(aes(colour=factor(src)),width=0.25,size=0.9) + labs(colour="Source") +
+  scale_colour_manual(values = cbPalette) +
+  ylab("pH") + xlab ("") +
+  theme(axis.text = element_text(size=rel(1.3)),
+        axis.title = element_text(size=rel(1.5)),
+        legend.text = element_text(size=rel(1.3)),
+        legend.title = element_text(size=rel(1.5)))
 ggarrange(ph_field,spc_field)
 
 ggsave("Figures/gwsw.png", unit="cm", dpi = 300) 
@@ -485,6 +545,7 @@ Muttama %>%
   geom_smooth(data = rainfall_month ,aes(Month, Rainfall)) +
   ylab("Number of Samples") + labs(fill = 'Source') +
   scale_x_continuous(breaks = seq(1,12,1)) +
+  scale_fill_manual(values = cbPalette) +
   theme(axis.text = element_text(size = rel(2)))
 ggsave("Figures/monthly.png", unit="cm", dpi = 300)
 
@@ -496,13 +557,18 @@ knitr::include_graphics("Figures/monthly.png")
 #Muttama_Time.rmd
 ```
 
+\clearpage
+
 Overall the water quality sampling appears to have a reasonable distribution across all months (Fig \ref{fig:month-plot}), so seasonal trends should be identifiable in the data. Average rainfall data (1995 - 2022) does not indicate any major seasonal trends, although there is a slight dominance of rainfall in early Austral Spring (months 9 and 10, September and October). This also explains the higher number of samples because, we would organise more sampling trips in this period, and spatially more channels could be sampled for surface water. The timing of Source 3, (the student data) is a clear effect of yearly field trips, which tended to occur at approximately the same time of the year in late September/early October.
 
-\clearpage
 
 ```{r annual-plot-derive, echo = F, eval = F}
 Muttama%>%
-  ggplot(aes(Date)) +geom_histogram(aes(fill=factor(src))) + xlab("Year") + ylab("Number of Samples") + labs(fill="Source")
+  ggplot(aes(Date)) +geom_histogram(aes(fill=factor(src))) + xlab("Year") +
+  ylab("Number of Samples") + labs(fill="Source") + theme_bw() +
+  scale_fill_manual(values = cbPalette) +
+  theme(axis.text = element_text(size = rel(1.5)),
+        axis.title = element_text(size = rel(1.5), family = "bold"))
 ggsave("Figures/annual.png", unit="cm", dpi = 300)
 
 
@@ -513,12 +579,12 @@ knitr::include_graphics("Figures/annual.png")
 
 #Muttama_Time.rmd
 ```
-
+\clearpage
 The number of samples collected in each year relative to the different sources changes throughout the years reflecting the duration of the different studies and funding cycles (Fig \ref{fig:annual-plot}); however the data is still well-distributed enough that overall trends should be clear. In addition, some of the sample volumes can be related to the occurrence of rainfall, as in drier years several of the channels would be dry and no sampling of surface water could occur.
 
 Consistent groundwater sampling commenced later in the project, which means that there are very few groundwater samples before 2013. In contrast, the autosamplers were installed early in the project and there are no samples from this source after 2013.
 
-\clearpage
+
 
 ```{r FDC-derive, echo = F, eval = F}
 #Join the flow data with the water quality data
@@ -568,7 +634,7 @@ GW_data %>%
   facet_wrap(~Piezo, ncol = 3) + theme_bw() + 
   scale_color_manual(values=c("Automatic correction" = "blue",
                              "Manual correction" = "red" ,
-                             "Observed Depth (m)" = "green")) +
+                             "Observed Depth (m)" = "black")) +
   scale_alpha(guide = 'none')
 dev.off()
 ```
@@ -580,9 +646,11 @@ knitr::include_graphics("Figures/FDC.png")
 #Muttama_FDC.rmd
 ```
 
+\clearpage
+
 Surface water samples were reasonably well distributed across the flow duration curve, measured at the Coolac station (410044), with only a possible bias towards periods of medium flow. This is most likely since many of the surface water sampling points are often completely dry during periods of low flow, and therefore cannot be sampled. Conversely, there are no manual samples during high or very high flow as during flood situations sampling was dangerous and restricted by work health and safety considerations. The samples at high flow are all from our automated sampling.
 
-\clearpage
+
 
 ```{r gw-series, warning=FALSE, echo=F, fig.cap = "Overview of the corrected groundwater time series for all the wells", out.width="100%"}
 
@@ -590,20 +658,22 @@ knitr::include_graphics("Figures/Final_Corrected_piezodepths.png")
 
 ```
 
+\clearpage
+
 The overall corrected groundwater timeseries shows the shorter time that loggers were installed in the wells (\ref{fig:gw-series}). It also indicates that the manual data is not always fully matched with the logger data, but further corrections are likely to be speculation.
 
 ## Spatial variation
 
 ```{r ecmap-derive, echo = F, eval = F}
 ECdata<-Muttama%>%
-  dplyr::select(site_m, Date, x, y, gw_or_sw, ph_field,
+  dplyr::select(site_code, Date, x, y, gw_or_sw, ph_field,
                 spc_field)%>%
-  group_by(x,y, gw_or_sw, site_m) %>%
+  group_by(x,y, gw_or_sw, site_code) %>%
   summarise(Mean_EC   = mean(spc_field, na.rm=TRUE),
             iqr_EC    = IQR(spc_field,na.rm=TRUE))%>%
   drop_na()
 
-map3 <- ggplot() + geom_sf(data=coolac, 
+map3 <- ggplot() + geom_sf(data=Muttama_catchment, 
                             colour = "black", fill = NA)  +
        geom_sf(data = streams, 
                colour = "darkblue", fill =NA) +
@@ -619,15 +689,16 @@ map3
 ggsave("Figures/ec_map.png", unit="cm", dpi = 300) 
 
 Muttama%>%
-  dplyr::select(spc_field,gw_or_sw,site_m)%>%
-  ggplot(aes(as.factor(site_m),spc_field)) +
+  dplyr::select(spc_field,gw_or_sw,site_code)%>%
+  ggplot(aes(as.factor(site_code),spc_field)) +
   geom_boxplot(fill="grey") + coord_flip() +
   facet_grid(cols=NULL, rows=vars(gw_or_sw), 
              scales = "free",
              space = "free") + theme_bw() + 
   ylab("EC measured in the field") + xlab("Site Number") +
-    stat_summary(fun.y=mean, geom="point", shape=20, 
+    stat_summary(fun=mean, geom="point", shape=20, 
                  size=3, color="red2", fill="red2") +
+  geom_hline(yintercept = 800, colour = "blue", linetype = "dashed") +
   theme(axis.text.y = element_text(face = 'bold'),
         axis.text.x = element_text(face = 'bold', 
                                  size = rel(1.3)),
@@ -659,14 +730,14 @@ knitr::include_graphics("Figures/ec_plot.png")
 ```{r clhco3map-generate, eval = F, echo = F}
 ClCO3 <- Muttama%>%
   dplyr::select(site_m, Date, x, y, gw_or_sw, cl_mg_l,
-                hco3_mg_l, site_name)%>%
+                hco3_mg_l, site_code)%>%
   mutate(clhco3=(cl_mg_l/hco3_mg_l))%>%
-  group_by(site_name, x, y, gw_or_sw, site_m) %>%
+  group_by(site_m, x, y, gw_or_sw, site_code) %>%
   summarise(Mean_clhco3 = mean(clhco3, na.rm=TRUE),
             iqr_clhco3 = IQR(cl_mg_l/hco3_mg_l,
                              na.rm=TRUE))%>%
   drop_na()
-map4 <- ggplot() + geom_sf(data=coolac, 
+map4 <- ggplot() + geom_sf(data=Muttama_catchment, 
                             colour = "black", fill = NA)  +
        geom_sf(data = streams, 
                colour = "darkblue", fill =NA) +
@@ -687,9 +758,9 @@ map4
 ggsave("Figures/clhco3_map.png", unit="cm", dpi = 300) 
 
 Muttama%>%
-  dplyr::select(cl_mg_l, hco3_mg_l, gw_or_sw, site_mut)%>%
+  dplyr::select(cl_mg_l, hco3_mg_l, gw_or_sw, site_code)%>%
   mutate(clhco3 = (cl_mg_l/hco3_mg_l))%>%
-  ggplot(aes(as.factor(site_mut), clhco3)) +
+  ggplot(aes(as.factor(site_code), clhco3)) +
   geom_boxplot(fill="grey") + coord_flip() +  
   facet_grid(cols = NULL, rows = vars(gw_or_sw),
              scales="free", space =  "free") + 
@@ -697,6 +768,7 @@ Muttama%>%
   ylab(expression(over(Cl, HCO[3]))) +
     stat_summary(fun = mean, geom = "point", shape=20,
                  size=3, color="red2", fill="red2") +
+  geom_hline(yintercept = 1, colour = "blue", linetype = "dashed") +
   theme(axis.text.y = element_text(face = 'bold'),
         axis.text.x = element_text(face = 'bold', 
                                  size = rel(1.3)),
@@ -711,14 +783,13 @@ ggsave("Figures/clhco3_plot.png", unit="cm", dpi = 300,
 
 ```
 
-\clearpage
-
 ```{r Carbonate-map, warning=FALSE, echo=F, fig.cap = "Spatial Variation of Cl:HCO3 ratio throughout the catchment, using Mean for each sampling location.", out.width="80%"}
 
 knitr::include_graphics("Figures/clhco3_map.png")
 
 #Muttama_maps.rmd
 ```
+\clearpage
 
 ```{r Carbonate-boxplot, warning=FALSE, echo=F, fig.cap = "Space and time Variation of Cl:HCO3 ratio by sampling location.",  out.width="80%"}
 
@@ -727,15 +798,14 @@ knitr::include_graphics("Figures/clhco3_plot.png")
 #Muttama_maps.rmd
 ```
 
+\clearpage
+
 There is clear spatial variation in water parameters throughout the catchment, including between groundwater and surface water sampling sites (Figures \ref{fig:ECmap} and \ref{fig:Carbonate-map}). As examples, the spatial distributions for EC and Cl:HCO~3~ are shown, as well as the space time boxplots for the variables. Similar maps can be easily generated for other parameters. In the map, the concentration is indicated by the size of the symbol, while the colour shading indicates the variability. This suggests surface water samples had lower variability and lower concentrations.
 
 Below the maps, a boxplot (Figures \ref{fig:ECboxplot} and \ref{fig:Carbonate-boxplot}) highlights the difference in the distributions from the surface water sample sites and the groundwater sample sites, and also indicates the difference between sample sites.
 
 Previous studies have suggested there may be a difference in Cl:HCO~3~ ratio in surface water between the eastern and western parts of the Muttama catchment [@Conyers2008], however it is difficult to see whether this pattern occurs based on the spatial maps. This partly has to do with the limitations in the spatial sampling, which relied on existing groundwater tube wells and accessible stream points.
 
-## Piper plot
-
-The piper plot of the data (\ref{fig:piper-plot}) also does not provide much further information. There is a slight shift towards the HCO~3~ and Ca/Mg type waters for the groundwater samples compared to the surface water samples. There is also a small cluster of surface water samples that are more SO~4~ dominated, potentially indicating different geological origins as mentioned earlier in the paper.
 
 ```{r piper-data, echo = F}
 # input data need to be in % divide by sums
@@ -808,6 +878,11 @@ knitr::include_graphics("Figures/piper_plot.png")
 #Muttama_maps.rmd
 ```
 
-# Conclusions
+## Piper plot
+
+The piper plot of the data (\ref{fig:piperplot}) does not provide much clarity as the samples cover a large area across the ternary space. There is a slight shift towards the HCO~3~ and Ca/Mg type waters for the groundwater samples compared to the surface water samples, which are more Na dominated. There is also a small cluster of surface water samples that are more SO~4~ dominated, potentially indicating different geological origins as mentioned earlier in the paper.
+
+
+\Conclusions [Conclusions]
 
 This paper reports on a long term (12 year) hydrogeochemistry dataset from a single catchment in NSW, Australia. This dataset includes both groundwater and surface water samples for `r length(unique(Muttama_data$site_mut))` locations within the catchment. While the dataset was collected by different groups of people at different times and locations, it still provides a valuable long term and spatially diverse data set which can be used for research into the space and time variation of dryland and groundwater salinity.
