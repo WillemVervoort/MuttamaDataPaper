@@ -58,10 +58,11 @@ competinginterests: |
 ### It is strongly recommended to make use of these sections in case data sets and/or software code have been part of your research the article is based on.
 availability:
   codedata: |
-    The majority of the code and data including the Rmarkdown for this paper is stored on Github https://github.com/WillemVervoort/MuttamaDataPaper
-    However, due to the volume of raw data, the groundwater logger data is stored in a separate Open Science Foundation project: https://osf.io/beuwk/
+    The majority of the code including the Rmarkdown for this paper is stored on Github https://github.com/WillemVervoort/MuttamaDataPaper
+    The hydrogepchemistry data is located on the University of Sydney escholaship repository
+    However, due to the volume of raw data, the groundwater logger data is stored in a separate Open Science Foundation project: https://doi.org/10.17605/OSF.IO/BEUWK
 authorcontribution: | 
-  T. Bishop initiated the sampling campaign. T. Bishop, F. van Ogtrop and R.W. Vervoort conceptualised the overall study. R.W. Vervoort and M. Tambrchi wrote the paper and analysed results. F.Akter and J. Lessels collected and analysed the majority of the samples. M. Tambrchi, A. Buzacott, J. Moloney, F. Akter analysed and managed the data. All authors participated in sampling, laboratory analysis and review of the paper. 
+  T. Bishop initiated the sampling campaign. T. Bishop, F. van Ogtrop and R.W. Vervoort conceptualised the overall study, and managed the project. R.W. Vervoort and M. Tambrchi wrote the draft paper and analysed results. F.Akter and J. Lessels collected and analysed the majority of the samples. M. Tambrchi, A. Buzacott, J. Moloney, F. Akter analysed and managed the data. All authors participated in sampling, laboratory analysis and review of the paper. 
 acknowledgements: |
   This dataset would not have been possible without the generous assistance and access to properties from the following land owners in the Muttama Creek area: R. Last, the Tozer family, M. Sullivan, P. McClintock, P. McGuire, S. Sharman, A. Hollihan, the managers at Brawlin Springs as part of the Romani Pastoral Company, and the managers and owners of Wavehill, in particular J. Litchfield. We would like to thank several generations of students in the units LWSC2002, ENVX3003 and ENSY5708, as well a multiple interns from French Institutions and University and Wageningen University for assisting with the sample collection.
 #appendix: |
@@ -74,10 +75,6 @@ output:
     base_format: rticles::copernicus_article # for using bookdown features like \@ref()
 ---
 
-**ACTIONS**  
-**
-- check number of anions/cations analysed  
-**
 ```{r packages, echo=F, warning=F, include=F, message=F}
 options(tinytex.verbose = TRUE)
 
@@ -97,7 +94,7 @@ library(raster)
 library(ggspatial)
 theme_set(theme_bw()) # ggplot theme
 # define colour palette colour blind friendly
-cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7","#999999")
+cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#CC79A7", "#F0E442", "#0072B2", "#D55E00","#999999")
 
 
 ```
@@ -145,7 +142,7 @@ This paper gives a description of the dataset to facilitate open access of the d
 
 ## Muttama catchment
 
-Muttama creek sub-catchment (Figure \ref{fig:samplemap}) is located in the Mid-Murrumbidgee catchment area of NSW in south eastern Australia. The landscape is undulating with only limited elevation variations (227 - 719 m). Muttama creek flows north-south through the length of the catchment towards the Murrumbidgee River near Gundagai. The main township, Cootamundra is located in the upper half of the catchment. The dominant land use type of this catchment is about 93% agriculture, dominated by winter-spring cropping and pasture. Mean annual rainfall (1891-2024) in the catchment is 654 mm for the longest running Bureau of Meteorology Landgrove station (station 073022).
+Muttama creek sub-catchment (Figure \ref{fig:samplemap}) is located in the Mid-Murrumbidgee catchment area of NSW in south eastern Australia. The landscape is undulating with only limited elevation variations (227 - 719 m). Muttama creek flows north-south through the length of the catchment towards the Murrumbidgee River near Gundagai. The main township, Cootamundra is located in the upper half of the catchment. The dominant land use type of this catchment is about 93\% agriculture, dominated by winter-spring cropping and pasture. Mean annual rainfall (1891-2024) in the catchment is 654 mm for the longest running Bureau of Meteorology Landgrove station (station 073022).
 
 Streamflow is measured continuously by WaterNSW the state agency responsible for water data collection at three locations in the catchment: Coolac, station no. 410044, the main downstream point, and Berthong, station no. 41000207 and Jindalee, station no. 410112 on two branches above the Cootamundra township. This data is available as open access via the (WaterNSW WaterInsights platform)[<https://waterinsights.waternsw.com.au/>]. Here, we only use the data from the Coolac station as a comparison.
 
@@ -159,7 +156,7 @@ coolac <- coolac %>%
   dplyr::select(Date, Flow)
 
 ##read in Muttama water quality data data
-Muttama_data<-read_csv("Data/MuttamaWaterQuality-AllDataDownload_DATA_2024-10-15_1434.csv")
+Muttama_data<-read_csv("Data/MuttamaWaterQuality-Publish_2025.csv")
 Muttama_data<-Muttama_data%>%
   mutate(datetime = dmy_hm(datetime)) %>%
   mutate(Month = month(datetime),
@@ -254,7 +251,7 @@ knitr::include_graphics("Figures/gw_or_sw_map.png")
 
 The depth to the nearest groundwater table varies across the Muttama catchment and it ranges from \< 2m to 20m below ground level [@DECC2009]. Deep groundwater in the catchment area occurs mostly in fractured rock aquifers common on the eastern, and western fringes of the catchment. In contrast shallow groundwater is associated with unconfined alluvial, colluvial, and eluvial aquifers. Some aquifers in the northern part of this catchment show artesian behavior [@Webb1999; @Akter2018].
 
-Saline areas of the catchment tend to be associated with geological heterogeneity, primarily the sedimentary materials in the west and rhyolite on the northwest side [@Conyers2008]. Overall, Muttama creek is a significant salt contributor to the downstream Murrumbidgee river with around 58% from cyclic sources and 42% salts originating from mineral weathering [@Conyers2008].
+Saline areas of the catchment tend to be associated with geological heterogeneity, primarily the sedimentary materials in the west and rhyolite on the northwest side [@Conyers2008]. Overall, Muttama creek is a significant salt contributor to the downstream Murrumbidgee river with around 58\% from cyclic sources and 42\% salts originating from mineral weathering [@Conyers2008].
 
 ## Data Collection
 
@@ -268,7 +265,7 @@ The water quality dataset contains data from 4 main sampling sources related to 
 
 -   Source 3: A dataset collected by undergraduate and postgraduate students as part of field trips in different units of study at the University of Sydney is identified as "Student data". This data was sampled "ad-hoc" during the field trip period using standard sampling protocols as described for the data from Akter [-@Akter2018].
 
--   Source 4: Data from several autosamplers installed in the catchment during the PhD from Lessels [-@Lessels2014]. Because these samples were not taken by a "person" and were taken on a flow weighted basis, we separated the data from the "grab" samples in the other methods. These samples are also missing the measurements that were collected in the field, as these were only analysed in the laboratory.
+-   Source 4: Data from several autosamplers installed in the catchment during the PhD from Lessels [-@Lessels2014]. Because these samples were not taken by a "person" and were taken on a flow weighted basis, we separated the data from the "grab" samples in the other methods. These samples are also missing field measurements, as these were only analysed in the laboratory.
 
 ```{r source4, echo = F}
 #identify source 4 in the data
@@ -283,8 +280,6 @@ Muttama <- Muttama %>%
 
 ```
 
-
-
 Overall, `r nrow(Muttama)` water samples were collected from `r nrow(coord)` sample locations over the `r year(min(Muttama$Date))` - `r year(max(Muttama$Date))` period. However, not all sites were sampled at all times and not all samples were fully analysed for all hydrogeochemical variables. Both surface water and groundwater samples were collected (`r nrow(coord %>% filter(str_detect(coord$site_code,"GW")==T))` groundwater sample sites and `r nrow(coord %>% filter(str_detect(coord$site_code,"SW")==T))` surface water sites) distributed across the catchment, depending on standing water availability and access.
 
 In addition to the water quality dataset, data from `r nrow(coord %>% filter(str_detect(coord$site_code,"GW")==T))` groundwater data loggers is provided from the same groundwater sample sites as in the hydrogeochemical dataset.
@@ -293,25 +288,27 @@ In addition to the water quality dataset, data from `r nrow(coord %>% filter(str
 
 The overall structure of the hydrogeochemical dataset consists of repeated measurements over time at multiple locations in Muttama catchment. For each location the name of the location and the spatial coordinates were recorded in decimal degrees (Longitude = x and Latitude = y) as well as whether the location was a groundwater or a surface water location. The names of the locations are fairly random and basic locality indicators, which cannot be interpreted exactly.
 
-The data for each location consist of up to six variables which were measured in the field (Table \ref{tab:TableMeasurements}). These were complemented by laboratory analysis, which repeated some of the field measurements, and for an additional 15 <!--check-->anion and cation variables.
+The data for each location consist of up to six variables which were measured in the field (Table \ref{tab:TableMeasurements}). These were complemented by laboratory analysis, which repeated some of the field measurements, and for additional major anion and cation variables (Ca, Mg, Na, K, SO~4~, HCO~3~), and total Nitrogen (N) and total Phosphorus (P) for part of the sample set. Some other variables were infrequently measured and are not included in the data set.
 
 \clearpage
 
 ```{r TableMeasurements, echo=F, warning=F, include=T, message=F}
 field<-c('pH','EC (Electrical conductivity)', 'SPC (temperature corrected EC)', 'Temperature', 'Alkalinity (HCO3)', 'Dissolved Oxygen (DO)', 'Turbidity')
-lab<-read_csv('Data/lab.csv')
-table_M <- tibble(`Field measurements` = c(field,rep(NA,2)), 
-                  `Lab repeat` = c(unlist(lab[1:3,1]), rep(NA,6)),
-                  `Anions` = c(unlist(lab[4:9,1]),rep(NA,3)),
-                  `Cations` = unlist(lab[,2]))# %>%
-#options(knitr.kable.NA = '')
+#lab <- read_csv('Data/lab.csv')
+table_M <- tibble(`Field measurements` = field, 
+                  `Lab repeat` = c('pH','EC', 'SPC', rep('',4)),
+                  `Anions` = c('HCO3','SO4', 'Cl', rep('',4)),
+                  `Cations` = c('Ca','Mg','Na', 'K', rep('',3)),
+                  `Others` = c('Total Nitrogen', 'Total Phosphorus',rep('',5))) 
 knitr::kable(table_M, "latex", caption = "Variables measured in the field and laboratory") %>% kable_styling()
 
 ```
 
-The variables pH, EC, SPC (field temperature corrected EC), Temperature, and in some cases DO and Turbidity were measured using a range of field probes. All field probes measured pH, EC, Temperature and calculated SPC. Early measurements (Samples up to November 2014) used a YSI probe that included a turbidity and DO probe (YSI 6600 and YSI 600 for surface and groundwater, respectively). Later groundwater samples (After November 2014) used a different YSI probe (YSI ProPlus multi-parameter) that only included a DO probe. Later (After mid 2019) surface water and groundwater sampling used a Xylem EXO probe which also included DO and turbidity. Some of the variability in the field measurements might be due to this variation in the field instrumentation, because the exact instruments information was not recorded with the data. <!-- do we actually know which samples were taken by which probe --> Anions in most of the samples were analysed using high-performance liquid chromatography method (Dionex P680 HPLC) and cations were measured on acidified samples using an Inductively Coupled Plasma Optical Emission Spectrometer (ICP-OES, Varian 720-ES) at the University of Sydney [@Akter2018]. Duplicate samples in the analysis had a reported relative percentage difference (RPD) lower than 5% in part of the sample dataset [@Akter2018]. Some of the samples in the undergraduate student sample set (Source 3) were analysed by a commercial laboratory ([ALS Environmental, Smithfield, NSW](https://www.alsglobal.com/en/locations/asia-pacific/pacific/australia/nsw/sydney-woodpark-environmental)). Alkalinity concentrations were measured in the field within 24h of collection using a HACH digital titrator (model 16900) [@Akter2018].
+The variables pH, EC, SPC (field temperature corrected EC), Temperature, and in some cases DO and Turbidity were measured using a range of field probes. All field probes measured pH, EC, Temperature and calculated SPC. Early measurements (Samples up to November 2014) used a YSI probe that included a turbidity and DO probe (YSI 6600 and YSI 600 for surface and groundwater, respectively). Later groundwater samples (After November 2014) used a different YSI probe (YSI ProPlus multi-parameter) that only included a DO probe. Later (After mid 2019) surface water and groundwater sampling used a Xylem Exo probe. Some of the variability in the field measurements might be due to this variation in the field instrumentation, because the exact instrument information was not recorded with the data. 
 
-Using the cation and anion data, ion balances were calculated from samples which had a complete set of anion and cation measurements.
+Anions in most of the samples were analysed using high-performance liquid chromatography method (Dionex P680 HPLC) and cations were measured on acidified samples using an Inductively Coupled Plasma Optical Emission Spectrometer (ICP-OES, Varian 720-ES) at the University of Sydney [@Akter2018]. Duplicate samples in the analysis had a reported relative percentage difference (RPD) lower than 5\% in part of the sample dataset [@Akter2018]. Some of the later samples and the student sample set (Source 3) were analysed by a commercial laboratory ([ALS Environmental, Smithfield, NSW](https://www.alsglobal.com/en/locations/asia-pacific/pacific/australia/nsw/sydney-woodpark-environmental)). Alkalinity concentrations were measured in the field within 24h of collection using a HACH digital titrator (model 16900) [@Akter2018] and by the commerical laboratory.
+
+Using the cation and anion data, ion balances were calculated for samples which had a complete set of anion and cation measurements.
 
 ## Continuous variables
 
@@ -319,9 +316,9 @@ The logger data, which collected groundwater pressure levels at 15 min and later
 
 The loggers in the field were uncalibrated. Due to logger failures, gaps occur in the daily data, followed by replacement of the faulty loggers. In some cases the cable length was adjusted and this was recorded in the field notes. Overall, this resulted in data with gaps and sometimes odd shifts in the recorded data.
 
-Manual water level measurements were taken at each manual sampling date to provide detailed hydrogeochemical data.
+Manual water level measurements were taken at each manual sampling date to allow calibration of the logger data.
 
-To correct the groundwater logger data, the daily data was matched to the observed data using linear regression if more than 3 manual observed data were available and slope and intercept of the regression had a p-value \> 0.1. If there were less than 3 manual observed data point for the specific logger an adjustment to the data was based on the difference between the average observed data and the average recorded water levels. Otherwise no adjustment was made. This is slightly tricky: After the manual observations are made, the well is purged and the logger is temporarily removed from the well. This data (during the temporarily removal of the logger during the purging and subsequent recovery of the groundwater level) is removed from the logger data series. As a result, there is no direct time match between the logger data series and the manual observations.
+To correct the groundwater logger data, the daily data was matched to the observed data using linear regression, if more than 3 manual observed data were available and slope and intercept of the regression had a p-value \> 0.1. If there were less than 3 manual observed data point for the specific logger an adjustment to the data was based on the difference between the average observed data and the average recorded water levels. Otherwise no adjustment was made. This is slightly tricky: After the manual observations are made, the well is purged and the logger is temporarily removed from the well. This data (during the temporarily removal of the logger during the purging and subsequent recovery of the groundwater level) is removed from the logger data series. As a result, there is no direct time match between the logger data series and the manual observations. In most cases the loggers indicated a recovery of the groundwater level in 24 hrs.
 
 To explain this more clearly the following pseudo code describes the process:
 \begin{algorithm}
@@ -346,9 +343,9 @@ To explain this more clearly the following pseudo code describes the process:
 \end{algorithmic}
 \end{algorithm}
 
-The code used to match the manually observed data with the logger data is in the script `Match_obs_logger_data.R`, which is stored with the raw data in the Open Science Foundation (OSF) repository associated with this paper [https://osf.io/beuwk/](https://osf.io/beuwk/).
+The code used to match the manually observed data with the logger data is in the script `Match_obs_logger_data.R`, which is stored with the raw data in the Open Science Foundation (OSF) repository associated with this paper [https://doi.org/10.17605/OSF.IO/BEUWK](https://doi.org/10.17605/OSF.IO/BEUWK).
 
-After the automated process, two of the groundwater level data series still had substantial discrepancies in some sections of the data. This was most likely due to the a lack of observed data for the specific logger. A final manual correction was applied. As this process is based on judgement of the data by the authors of this paper, we documented this in detail in Appendix 1.
+After the automated process, two of the groundwater level data series still had substantial discrepancies in some sections of the data. This was most likely due to the a lack of observed data for the specific logger. A final manual correction was applied. As this process is based on judgement of the data by the authors of this paper, we documented this in detail in the supplementary material.
 
 The final corrected data that is published with this paper includes a column which describes whether the data is based on the automatic correction or a further manual correction.
 
@@ -356,9 +353,9 @@ The final corrected data that is published with this paper includes a column whi
 
 Using the most complete data, boxplots and spatial maps were generated to highlight the spatial and temporal variation in the data set. We have chosen to use boxplots to visually highlight statistical differences between data variables rather than doing a full statistical analysis.
 
-The mean concentration and interquartile range (25th - 75th percentile) of the concentration data distributions were calculated to give an indication of variance of the data in the spatial maps.
+The mean concentration and interquartile range (25^th^ - 75^th^ percentile) of the concentration data distributions were calculated to give an indication of variance of the data in the spatial maps.
 
-All graphs and maps were produced using R [@R2023]. All code can be found in the associated (github repository)[<https://github.com/WillemVervoort/MuttamaDataPaper>], as part of the markdown document for this paper.
+All graphs and maps were produced using R version 4.3.1 [@R2023]. All code can be found in the associated (github repository)[<https://github.com/WillemVervoort/MuttamaDataPaper>], as part of the markdown document for this paper.
 
 # Results
 
@@ -367,12 +364,12 @@ All graphs and maps were produced using R [@R2023]. All code can be found in the
 ```{r NAcount, echo = F, eval = F}
 
 Muttama_na<- Muttama %>%
-  dplyr::select(everything()) %>%
+  dplyr::select(src,temp_field:k_mg_l) %>%
   group_by(src) %>%
   summarise_all(list(~sum(is.na(.)/nrow(Muttama))*100))
 
 Muttama_na%>%
-  pivot_longer(temp_field:nh3_field, 
+  pivot_longer(temp_field:ncol(Muttama_na), 
                names_to = "Measurement", 
                values_to = "Number_NA") %>%
   ggplot(aes(x = Measurement, y = Number_NA, 
@@ -387,7 +384,7 @@ Muttama_na%>%
 ggsave("Figures/na_count.png", unit="cm", dpi = 300)
 ```
 
-```{r gw-NA, echo = F, eval = F}
+```{r gw-NA, echo = F, eval = F, warning = F}
 #GWdata <- read_csv("../Muttama Dataset Analysis/Data/Muttama_Piezometer_Output.csv")
 
 no_piezo <- length(unique(Muttama_gw$Piezo))
@@ -420,9 +417,9 @@ knitr::include_graphics("Figures/na_GW.png")
 
 ```
 
-In the hydrogeochemistry data, data source 3 was the most complete in terms of variables analysed, because in this set more variables were analysed in the commercial lab (Fig \ref{fig:na-plot}). Some of the variables analysed in the commercial lab were not analysed with the equipment at the University of Sydney. However, source 3 had the smallest number of overall samples. Source 2 has the most incomplete data points. Source 4 has a very consistent number of missing values, possibly because not all samples were analysed in the set. For source 2, the missing data suggests that for many of the samples only a few of the variables were measured and analysed as highlighted above. In the data from source 2, almost 50% of samples are incomplete in terms of the measurement of all the variables in Table 2. Similarly, source 1 had more incomplete data, because some of the minor elements were not analysed. The field recorded variables pH, EC, SPC and Temperature were the most complete as they were generally measured directly in the field. Analysis of bicarbonate in the field only started around 2014. Thus the distribution of the NA values in the overall data set is mostly a reflection of the time period of sampling and the change in methodology over the ten years of sampling.
+In the hydrogeochemistry data, data source 3 was the most complete in terms of variables analysed, because in this set more variables were analysed in the commercial lab (Fig \ref{fig:na-plot}). Some of the variables analysed in the commercial lab were not analysed with the equipment at the University of Sydney. However, source 3 had the smallest number of overall samples. Source 2 has the most incomplete data points. Source 4 has a very consistent number of missing values, possibly because not all samples were analysed in the set. For source 2, the missing data suggests that for many of the samples only a few of the variables were measured and analysed as highlighted above. In the data from source 2, almost 50\% of samples are incomplete in terms of the measurement of all the variables in Table 2. Similarly, source 1 had more incomplete data, because some of the minor elements were not analysed. The field recorded variables pH, EC, SPC and Temperature were the most complete as they were generally measured directly in the field. Thus the distribution of the NA values in the overall data set is mostly a reflection of the time period of sampling and the change in methodology over the ten years of sampling.
 
-In the groundwater level time series, the missing data relate mostly to the logger failures and the different times that wells were instrumented. Rather than giving a full breakdown by well location, the overall level of completeness of the series is displayed (Fig \ref{fig:gw-na-plot}).
+In the groundwater level time series, the missing data relate mostly to logger failures and the different times that wells were instrumented. Rather than giving a full breakdown by well location, the overall level of completeness of the series is displayed (Fig \ref{fig:gw-na-plot}).
 
 ### Comparisons of Groundwater samples with Surface water samples
 
@@ -432,7 +429,7 @@ In the groundwater level time series, the missing data relate mostly to the logg
 
 ##GW
 Muttama_sum<- Muttama_data %>%
-  select_at(vars('gw_or_sw',temp_field:nh3_field))%>%
+  select_at(vars('gw_or_sw',temp_field:k_mg_l))%>%
   subset(gw_or_sw=='GW')%>%
   group_by(gw_or_sw)%>%
   summarise_all(funs(mean,min,max),na.rm=T) 
@@ -455,7 +452,7 @@ muttama_statGW<-cbind(means,mins,max)%>%
 
 ##SW
 Muttama_sum<- Muttama_data %>%
-  select_at(vars('gw_or_sw',temp_field:nh3_field))%>%
+  select_at(vars('gw_or_sw',temp_field:k_mg_l))%>%
   subset(gw_or_sw=='SW')%>%
   group_by(gw_or_sw)%>%
   summarise_all(funs(mean,min,max),na.rm=T) 
@@ -610,7 +607,7 @@ Muttama_prob <- left_join(Muttama_df, coolac_df)
 #Finally we can make the plot
 coolac_df %>%
   ggplot(aes(Probability,Flow)) +
-  geom_line(colour="royalblue2", size = 2) +
+  geom_line(colour="royalblue2", linewidth = 2) +
   geom_point(data=na.omit(Muttama_prob),
              aes(Probability, Flow, alpha = 0.5, size = n),colour='firebrick3') + 
   theme_bw() +
@@ -679,7 +676,7 @@ map3 <- ggplot() + geom_sf(data=Muttama_catchment,
                colour = "darkblue", fill =NA) +
   geom_point(data=ECdata, aes(x, y, colour = iqr_EC,
                               shape = factor(gw_or_sw),
-                              size = Mean_EC),alpha=0.5) +
+                              size = Mean_EC),alpha=0.8) +
   xlab("Longitude") + ylab("Latitude") +
   scale_colour_gradientn(colours=terrain.colors(15)) +
   labs(colour= "IQR(EC)",shape="Source",size="Mean EC") + 
@@ -804,21 +801,30 @@ There is clear spatial variation in water parameters throughout the catchment, i
 
 Below the maps, a boxplot (Figures \ref{fig:ECboxplot} and \ref{fig:Carbonate-boxplot}) highlights the difference in the distributions from the surface water sample sites and the groundwater sample sites, and also indicates the difference between sample sites.
 
-Previous studies have suggested there may be a difference in Cl:HCO~3~ ratio in surface water between the eastern and western parts of the Muttama catchment [@Conyers2008], however it is difficult to see whether this pattern occurs based on the spatial maps. This partly has to do with the limitations in the spatial sampling, which relied on existing groundwater tube wells and accessible stream points.
+Previous studies have suggested there may be a difference in Cl:HCO~3~ ratio in surface water between the eastern and western parts of the Muttama catchment [@Conyers2008], and Figure \ref{fig:Carbonate-map} suggest a similar pattern. A clearer picture is limited by the spatial sampling, which relied on existing groundwater tube wells and accessible stream points.
 
 
 ```{r piper-data, echo = F}
 # input data need to be in % divide by sums
+Muttama_data$ca_meq_l <- Muttama_data$ca_mg_l/40.078*2
+Muttama_data$mg_meq_l <- Muttama_data$mg_mg_l/24.305*2
+Muttama_data$na_meq_l <- Muttama_data$na_mg_l/28.990
+Muttama_data$k_meq_l <- Muttama_data$k_mg_l/39.098
+
 cation_sum <-  Muttama_data$ca_meq_l +  Muttama_data$mg_meq_l +  
   Muttama_data$na_meq_l +  Muttama_data$k_meq_l
+
+Muttama_data$cl_meq_l <- Muttama_data$cl_mg_l/35.453
+Muttama_data$hco3_meq_l <- Muttama_data$hco3_mg_l/61.0168
+Muttama_data$so4_meq_l <- Muttama_data$so4_mg_l/96.06*2
+
 anion_sum <- Muttama_data$cl_meq_l + Muttama_data$hco3_meq_l +
   Muttama_data$so4_meq_l
 piper_data <- tibble(Ca = Muttama_data$ca_meq_l/cation_sum*100, 
                      Mg = Muttama_data$mg_meq_l/cation_sum*100,
                      Cl = Muttama_data$cl_meq_l/anion_sum*100,
                      SO4 = Muttama_data$so4_meq_l/anion_sum*100,
-                     name = Muttama_data$gw_or_sw,
-                     ion_balance = Muttama_data$ion_balance)
+                     name = Muttama_data$gw_or_sw)
 # load the piper plot code
 source("scripts/ggplot_piper.R")
 
@@ -837,38 +843,6 @@ ggsave("Figures/piper_plot.png", unit="cm", dpi = 300,
 
 ```
 
-<!-- ```{r piper-data-alt, echo = F} -->
-<!-- # input data need to be in % divide by sums -->
-<!-- cation_sum <-  Muttama_data$ca_meq_l +  Muttama_data$mg_meq_l +   -->
-<!--   Muttama_data$na_meq_l +  Muttama_data$k_meq_l -->
-<!-- anion_sum <- Muttama_data$cl_meq_l + Muttama_data$hco3_meq_l + -->
-<!--   Muttama_data$so4_meq_l -->
-<!-- piper_data <- tibble(Ca = Muttama_data$ca_meq_l/cation_sum*100,  -->
-<!--                      Mg = Muttama_data$mg_meq_l/cation_sum*100, -->
-<!--                      Cl = Muttama_data$cl_meq_l/anion_sum*100, -->
-<!--                      SO4 = Muttama_data$so4_meq_l/anion_sum*100, -->
-<!--                      name = Muttama_data$gw_or_sw, -->
-<!--                      source = Muttama_data$src, -->
-<!--                      ion_balance = Muttama_data$ion_balance) -->
-<!-- # load the piper plot code -->
-<!-- source("scripts/ggplot_piper.R") -->
-
-<!-- piper_data_plot <- transform_piper_data(Mg = piper_data$Mg,  -->
-<!--                              Ca = piper_data$Ca, -->
-<!--                              Cl = piper_data$Cl, SO4 = piper_data$SO4, -->
-<!--                              name = piper_data$name) %>% -->
-<!--                              mutate(source = rep(piper_data$source,3)) -->
-<!-- ``` -->
-
-<!-- ```{r piper-plot, echo = F, eval = F} -->
-
-<!-- #ggplot_piper() -->
-<!-- ggplot_piper() + geom_point(aes(x,y, colour=as.factor(source)), size=2, data=piper_data_plot) #+  -->
-<!--   #scale_colour_manual(name="Ground Water or Surface Water", values=c(GW = "red", SW = "darkblue")) -->
-<!-- #ggsave("Figures/piper_plot.png", unit="cm", dpi = 300, -->
-<!--        width = 20, height = 10)  -->
-
-<!-- ``` -->
 
 
 ```{r piperplot, warning=FALSE, echo=F, fig.cap = "Piper-plot of all groundwater and surface water data collected over the period",  out.width="80%"}
@@ -883,6 +857,6 @@ knitr::include_graphics("Figures/piper_plot.png")
 The piper plot of the data (\ref{fig:piperplot}) does not provide much clarity as the samples cover a large area across the ternary space. There is a slight shift towards the HCO~3~ and Ca/Mg type waters for the groundwater samples compared to the surface water samples, which are more Na dominated. There is also a small cluster of surface water samples that are more SO~4~ dominated, potentially indicating different geological origins as mentioned earlier in the paper.
 
 
-\Conclusions [Conclusions]
+# Conclusions
 
-This paper reports on a long term (12 year) hydrogeochemistry dataset from a single catchment in NSW, Australia. This dataset includes both groundwater and surface water samples for `r length(unique(Muttama_data$site_mut))` locations within the catchment. While the dataset was collected by different groups of people at different times and locations, it still provides a valuable long term and spatially diverse data set which can be used for research into the space and time variation of dryland and groundwater salinity.
+This paper reports on a long term (12 year) hydrogeochemistry dataset from a single catchment in NSW, Australia. This dataset includes both groundwater and surface water samples for `r length(unique(Muttama_data$site_mut))` locations within the catchment. While the dataset was collected by different groups of people at different times and locations, it still provides a valuable long term and spatially diverse data set which can be used for research into the space and time variation of dryland and groundwater salinity. 

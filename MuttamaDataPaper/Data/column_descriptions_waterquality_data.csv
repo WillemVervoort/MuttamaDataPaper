@@ -1,0 +1,23 @@
+﻿Column name,Description
+record_id,unique record id from Redcap: yearmonthdaytime_site_description
+site_mut,site code linked to site description file
+water_type,"1 = groundwater, 2 = surface water"
+datetime,date and time
+src,"1. PhD Akter, 2. PhD Milne & Jessels, 3. UG & PG students 4. autosamplers "
+qc,"1. good, 2. medium 3. uncertain"
+temp_field,Temperature in degree C measured in the field using the water quality probe
+do_percent_field,DO percentage measured in the field using the water quality probe
+spc_field,Temperature corrected electrical conductivity in microsiemens per cm measured in the field using the water quality probe
+ph_field,pH measured in the field using the water quality probe
+turbidity_field,Turbidity in FNU measured in the field using the water quality probe
+ec_lab,electrical conductivity in microsiemens per cm measured in the lab at the University
+ph_lab,pH measured in the lab at the University
+tn_mg_l,Total Nitrogen in milligrams per liter measured using Kjeldahl digestion
+tp_mg_l,Total Phosporus in milligrams per liter measured using Kjeldahl digestion
+cl_mg_l,Chloride in milligram per liter measured by ALS labs or on the HPLC at the University of Sydney
+hco3_mg_l,Bicarbonate in milligram per liter measured by ALS labs  or on the HPLC at the University of Sydney
+so4_mg_l,Sulfate in milligram per liter measured by ALS labs or on the HPLC at the University of Sydney
+na_mg_l,Sodium in milligram per liter measured by ALS labs or on the ICP at the University of Sydney
+ca_mg_l,Calcium in milligram per liter measured by ALS labs or on the ICP at the University of Sydney
+mg_mg_l,Magnesium in milligram per liter measured by ALS labs or on the ICP at the University of Sydney
+k_mg_l,Potassium in milligram per liter measured by ALS labs or on the ICP at the University of Sydney
