@@ -1080,7 +1080,7 @@ The piper plot of the data (Figure \ref{fig:piperplot}) does not provide much cl
 
 # Discussion
 
-The dataset in this paper is unique in Australia. There are substantial datasets from experimental small catchments [i.e. @Hughes2007; @Summerel2006], but not many of these are publicly or easily accessible. In contrast, there are data from very large state and national datasets [i.e. @Jolly2001], but there are limited publicly available data sets that cover substantial space and time scales.
+The dataset in this paper is unique in Australia. There are substantial datasets from experimental small catchments [i.e. @Hughes2007; @Summerell2006], but not many of these are publicly or easily accessible. In contrast, there are data from very large state and national datasets [i.e. @Jolly2001], but there are limited publicly available data sets that cover substantial space and time scales.
 
 The dataset presented here covers multiple sites, multiple time periods and multiple sampling campaigns. This is a strength, but also has limitations. As the groundwater data clearly shows, the actual number of possible sample sites is limited by the existing and accessible groundwater wells. Over the `r time_period` years of research, several groundwater wells were accidentally destroyed during farm operations, further reducing the sample opportunities. The number of surface water sampling sites in the catchment is limited by the ephemeral nature of the stream network, with some creeks not flowing for long periods. Given the travel distance from the University of Sydney, this also meant that overall sampling is limited in scope, as is clearly shown in the spatial maps (Figures \ref{fig:ECmap} and \ref{fig:Carbonate-map}).
 
