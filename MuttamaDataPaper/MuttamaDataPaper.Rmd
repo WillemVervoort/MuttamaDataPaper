@@ -41,7 +41,7 @@ affiliation:
 #  - code: 2
 #    address: Institute for Atmospheric and Earth System Research, Faculty of Science, University of Helsinki, Helsinki, Finland
 abstract: |
-  Dryland salinity remains a major global natural resource management concern, and which is amplified in Australia. However, limited detailed space-time data sets with observations of stream and groundwater salinity has constrained a deep understanding of the range of processes that can lead to dryland salinity problems in landscapes. The aim of this study is to report on the open data set resulting from a 14-year data collection effort in a subcatchment of the Murrumbidgee catchment in New South Wales, Australia. 
+  Dryland salinity remains a major global natural resource management concern, and which is amplified in Australia. However, limited detailed space-time data sets with observations of stream and groundwater salinity has constrained a deep understanding of the range of processes that can lead to dryland salinity problems in landscapes. The aim of this study is to report on the open dataset resulting from a 14-year data collection effort in a subcatchment of the Murrumbidgee catchment in New South Wales, Australia. 
   Over a 14-year period a series of different sampling campaigns has resulted in a large dataset with hydrogeochemical data which includes both in-situ (field) data and post laboratory analysis of major anions and cations. This data is augmented with observed groundwater levels and publicly available streamflow and climate data. The data set covers 23 groundwater sample sites and 39 surface water sites. Because the data was collected by four distinct groups and over many years, we analyse to see if this has caused a bias in the dataset. In addition, we show the major spatial and temporal trends to provide an overview of the dataset.
   The dataset is made open access to encourage further research and the current paper shows the richness of the collected data and opportunities for further research.
 bibliography: datapaper.bib
@@ -63,7 +63,7 @@ availability:
 authorcontribution: | 
   T. Bishop initiated the sampling campaign. T. Bishop, F. van Ogtrop, F. Dijkstra and R.W. Vervoort conceptualised the overall study, and managed the project. R.W. Vervoort and M. Tambrchi wrote the draft paper and analysed results. F.Akter and J. Lessels collected and analysed the majority of the samples. M. Tambrchi, A. Buzacott, J. Moloney, F. Akter analysed and managed the data. All authors participated in sampling, laboratory analysis and review of the paper. 
 acknowledgements: |
-  This dataset would not have been possible without the generous assistance and access to properties from the following land owners in the Muttama Creek area: R. Last, the Tozer family, M. Sullivan, P. McClintock, P. McGuire, S. Sharman, A. Hollihan, the managers at Brawlin Springs as part of the Romani Pastoral Company, and the managers and owners of Wavehill, in particular J. Litchfield. We would like to thank several generations of students in the units LWSC2002, ENVX3003 and ENSY5708, as well a multiple interns from French Institutions and University and Wageningen University for assisting with the sample collection.
+  This dataset would not have been possible without the generous assistance and access to properties from the following land owners in the Muttama Creek area: R. Last, the Tozer family, M. Sullivan, P. McClintock, P. McGuire, S. Sharman, A. Hollihan, the managers at Brawlin Springs as part of the Romani Pastoral Company, and the managers and owners of Wavehill, in particular J. Litchfield. We would like to thank several generations of students in the units LWSC2002, ENVX3003 and ENSY5708, as well a multiple interns from French Institutions and Wageningen University for assisting with the sample collection.
 #appendix: |
  #\section{Figures and tables in appendices}
 output:
@@ -137,7 +137,8 @@ GW_data <- read_csv("Data/Muttama_piezometer_output.csv") %>%
 # Rainfall data
 rainfall<-read_csv("Data/Cootamundra_rainfall.csv")
 rainfall <- rainfall %>%
-   mutate(Date = ymd(paste(Year,Month,Day, sep = "-")))
+   mutate(Date = ymd(paste(Year,Month,Day, sep = "-"))) %>%
+  filter(Year > 2009 & Year < 2025)
   
 
 
@@ -182,7 +183,7 @@ knitr::include_graphics("Figures/Dryland Salinity Papers.png")
 #Dryland Salinity Papers.rmd
 ```
 
-The poor spatial and timescale distribution of water quality datasets has long been an obstacle to measuring trends in salinity. Studies such as Jolly et. al. [-@Jolly2001] and White et. al [-@White2009] used large historical datasets to detect broadscale trends over large periods throughout the Murray Darling Basin (MDB). This work identified that southern and eastern dryland regions in the Murray Darling Basin have rising salinity trends that were worse in areas of low rainfall [@White2009; @Jolly2001]. However, the ion composition varied greatly throughout the Murray Darling Basin (MDB) [@White2009]. More specifically, Conyers et al. [-@Conyers2008] tried to isolate which areas in the middle portion of the Murrumbidgee catchment acted as sources of salinity, as well as whether this was predominantly marine cyclic salts (NaCl) as previously assumed, or whether salts from mineral weathering were also involved (e.g. Ca, Mg, HCO~3~). While both can be measured using conventional methods such as EC, a rise in marine cyclic salts can be a major source of osmotic stress, whereas mineral weathering salts are far less harmful and are more likely to precipitate at reasonably low concentrations [@Conyers2008]. The ratio of Cl:HCO~3~ ions was identified as the best indicator of the source of salinity, with Cl^-^ acting as a measure of marine cyclic salts and HCO~3~^-^ acting as a measure of mineral weathering salts. The Muttama catchment was specifically identified as a candidate for future research as ion concentrations appeared to result in a change from east to west, correlating with the underlying geology and their mineral composition.
+The poor spatial and timescale distribution of water quality datasets has long been an obstacle to measuring trends in salinity. Studies such as Jolly et. al. [-@Jolly2001] and White et. al [-@White2009] used large historical datasets to detect broadscale trends over large periods throughout the Murray Darling Basin (MDB). This work identified that southern and eastern dryland regions in the Murray Darling Basin have rising salinity trends that were worse in areas of low rainfall [@White2009; @Jolly2001]. However, the ion composition varied greatly throughout the Murray Darling Basin (MDB) [@White2009]. More specifically, Conyers et al. [-@Conyers2008] tried to isolate which areas in the middle portion of the Murrumbidgee catchment acted as sources of salinity, as well as whether this was predominantly marine cyclic salts (NaCl) as previously assumed, or whether salts from mineral weathering were also involved (e.g. Ca, Mg, HCO~3~). While both are captured in the bulk measurement of electrical conductivity (EC), a rise in marine cyclic salts can be a major source of osmotic stress, whereas mineral weathering salts are far less harmful and are more likely to precipitate at reasonably low concentrations [@Conyers2008]. The ratio of Cl:HCO~3~ ions was identified as the best indicator of the source of salinity, with Cl^-^ acting as a measure of marine cyclic salts and HCO~3~^-^ acting as a measure of mineral weathering salts. The Muttama catchment was specifically identified as a candidate for future research as ion concentrations appeared to result in a change from east to west, correlating with the underlying geology and their mineral composition.
 
 <!-- defining the need for detailed data -->
 
@@ -190,7 +191,7 @@ It is clear from these examples that detailed spatial and temporal datasets are 
 
 <!--Some examples of spatial sampling-->
 
-Without regular and expensive automated sampling, field campaigns to collect water quality data tend to be "snapshot" activities [@Grayson1997; @Breuer2015; @Lyon2008; @Cartwright2010; @Lintern2018] which can be biased due to the over representation of low flow conditions [@Lessels2020]. Even the analyses of substantial government data bases [@Lintern2018] are likely to be biased in this way. This means that overall there are limited streamflow and groundwater salinity data sets that combine multiple locations across a significant time period and that combine a range of flow characteristics.
+Without regular and expensive automated sampling, field campaigns to collect water quality data tend to be "snapshot" activities [@Grayson1997; @Breuer2015; @Lyon2008; @Cartwright2010; @Lintern2018] which can be biased due to the over representation of low flow conditions [@Lessels2020]. Even the analyses of substantial government databases [@Lintern2018] are likely to be biased in this way. This means that overall there are limited streamflow and groundwater salinity data sets that combine multiple locations across a significant time period and that combine a range of flow characteristics.
 
 <!--aims-->
 
@@ -341,12 +342,18 @@ The logger data, which collected groundwater pressure levels at 15 min and later
 
 The loggers in the field were uncalibrated. Due to logger failures, gaps occur in the daily data, followed by replacement of the faulty loggers. In some cases the cable length was adjusted and this was recorded in the field notes. Overall, this resulted in data with gaps and sometimes shifts in the recorded logger data.
 
-Manual water level measurements were taken at each manual sampling date to allow calibration of the logger data. To correct the groundwater logger data, the daily data was matched to the observed data using linear regression, if more than 3 manual observed data were available and slope and intercept of the regression had a p-value \< 0.1. If there were less than 3 manual observed data points for the specific logger an adjustment to the data was based on the difference between the average observed data and the average recorded water levels. Otherwise no adjustment was made. This is slightly tricky: After the manual observations are made, the well is purged and the logger is temporarily removed from the well. This data (during the temporarily removal of the logger during the purging and subsequent recovery of the groundwater level) is removed from the logger data series. As a result, there is no direct time match between the logger data series and the manual observations. However, the data showed that, in most cases, the groundwater level recovered within 24 hrs.
+Manual water level measurements were taken at each manual sampling date to allow calibration of the logger data. To correct the groundwater logger data, the daily data was matched to the observed data using linear regression, if more than 3 manual observed data were available and slope and intercept of the regression had a p-value \< 0.1. If there were less than 3 manual observed data points for the specific logger an adjustment to the data was based on the difference between the average observed data and the average recorded water levels. Otherwise no adjustment was made. This is slightly tricky: After the manual observations are made, the well is purged and the logger is temporarily removed from the well. This data (during the temporarily removal of the logger during the purging and subsequent recovery of the groundwater level) is removed from the logger data series. As a result, there is no direct time match between the logger data series and the manual observations. However, the data showed that, in most cases, the groundwater level recovered within 24 hrs. To explain this more clearly the pseudocode below describes the process.
 
-To explain this more clearly the following pseudo code describes the process:
+The code used to match the manually observed data with the logger data is in the script `Match_obs_logger_data.R`, which is stored with the raw data in the Open Science Foundation (OSF) repository associated with this paper [https://doi.org/10.17605/OSF.IO/BEUWK](https://doi.org/10.17605/OSF.IO/BEUWK).
+
+After the automated process, two of the groundwater level data series still had substantial discrepancies in some sections of the data. This was most likely due to the a lack of observed data for the specific logger. A final manual correction was applied. As this process is based on judgement of the data by the authors of this paper, we documented this in detail in the supplementary material.
+
+The final corrected data that is published with this paper on [https://doi.org/10.17605/OSF.IO/BEUWK](https://doi.org/10.17605/OSF.IO/BEUWK) includes a column which describes whether the data is based on the automatic correction or a further manual correction.
+
+
 \begin{algorithm}
 \caption{Pseudo code cleaning groundwater level data}
-\label{a1}
+\label{pseudocode}
 \begin{algorithmic}
 \IF {sufficient points \> 3} 
         \STATE run a regression between interpolated depth and observed depth  
@@ -366,15 +373,11 @@ To explain this more clearly the following pseudo code describes the process:
 \end{algorithmic}
 \end{algorithm}
 
-The code used to match the manually observed data with the logger data is in the script `Match_obs_logger_data.R`, which is stored with the raw data in the Open Science Foundation (OSF) repository associated with this paper [https://doi.org/10.17605/OSF.IO/BEUWK](https://doi.org/10.17605/OSF.IO/BEUWK).
-
-After the automated process, two of the groundwater level data series still had substantial discrepancies in some sections of the data. This was most likely due to the a lack of observed data for the specific logger. A final manual correction was applied. As this process is based on judgement of the data by the authors of this paper, we documented this in detail in the supplementary material.
-
-The final corrected data that is published with this paper on [https://doi.org/10.17605/OSF.IO/BEUWK](https://doi.org/10.17605/OSF.IO/BEUWK) includes a column which describes whether the data is based on the automatic correction or a further manual correction.
+\clearpage
 
 ## Boxplots and maps
 
-Using the most complete data, boxplots and spatial maps were generated to highlight the spatial and temporal variation in the data set. The boxplots visually highlight empirical differences between data variables.
+Using the most complete data, boxplots and spatial maps were generated to highlight the spatial and temporal variation in the data set. The boxplots visually highlight empirical differences in the data.
 
 The mean concentration and interquartile range (25^th^ - 75^th^ percentile) of the concentration data distributions were calculated to give an indication of variation of the data in the spatial maps.
 
@@ -483,7 +486,7 @@ rainfall_month <- rainfall %>%
 
 Muttama %>%
   ggplot(aes(Month)) + geom_bar(aes(fill = as.factor(src))) +
-  geom_smooth(data = rainfall_month ,aes(Month, Rainfall)) +
+  geom_smooth(data = rainfall_month ,aes(Month, Rainfall), se = F) +
   ylab("Number of samples") + labs(fill = 'Source') +
   scale_x_continuous(breaks = seq(1,12,1)) +
   scale_y_continuous(sec.axis = sec_axis(~., name = "Monthly rainfall [mm]")) +
@@ -495,18 +498,18 @@ ggsave("Figures/monthly.png", unit="cm", dpi = 300)
 
 \clearpage
 
-```{r month-plot, warning=FALSE, echo=F, fig.cap = "Distribution of samples throughout the year (total number of samples collected during each month) against average monthly rainfall during the study period. ", out.width="50%"}
+```{r month-plot, warning=FALSE, echo=F, fig.cap = "Distribution of samples throughout the year (total number of samples collected during each month) with the blue line representing the average monthly rainfall during the study period. ", out.width="70%"}
 knitr::include_graphics("Figures/monthly.png")
 
 #Muttama_Time.rmd
 ```
 
-Overall the water quality sampling appears to have a reasonable distribution across all months (Fig \ref{fig:month-plot}), therefore seasonal trends should be identifiable in the data. Average rainfall data (1995 - 2022) does not indicate any major seasonal trends, although there is a slight dominance of rainfall in the early Austral Spring (months 9 and 10, September and October). This also explains the higher number of samples because, more sampling trips were organised in this period, and spatially more channels could be sampled for surface water. The timing of source 3 (the student data) is the result of the yearly field trips, which tended to occur at approximately the same time of the year in early March and late September or early October, coinciding with the University semesters.
+Overall the water quality sampling appears to have a reasonable distribution across all months (Fig \ref{fig:month-plot}), therefore seasonal trends should be identifiable in the data. Average rainfall data (1995 - 2022) does not indicate any major seasonal trends, although there is a slight dominance of rainfall in the early Austral Spring (months 9 and 10, September and October). This also explains the higher number of samples because, more sampling trips were organised in this period, and spatially more channels could be sampled for surface water. The timing of source 3 (the student data) is the result of the yearly field trips, which tended to occur at approximately the same time of the year in early March and late September or early October, coinciding with the University semester breaks.
 
 
 ```{r annual-plot-derive, echo = F, eval = F}
 Muttama%>%
-  ggplot(aes(Date)) +geom_histogram(aes(fill=factor(src))) + xlab("Year") +
+  ggplot(aes(Date)) + geom_histogram(aes(fill=factor(src)), bins = time_period) + xlab("Year") +
   ylab("Number of samples") + labs(fill="Source") + theme_bw() +
   scale_fill_manual(values = cbPalette) +
   theme(axis.text = element_text(size = rel(1.5)),
@@ -516,7 +519,7 @@ ggsave("Figures/annual.png", unit="cm", dpi = 300)
 
 ```
 
-```{r annual-plot, warning=FALSE, echo=F, fig.cap = "Distribution of samples over the study period (total number of samples collected during each year) against average monthly rainfall during the study period. ", out.width="50%"}
+```{r annual-plot, warning=FALSE, echo=F, fig.cap = "Distribution of samples over the study period (total number of samples collected during each year). ", out.width="70%"}
 knitr::include_graphics("Figures/annual.png")
 
 #Muttama_Time.rmd
@@ -865,7 +868,7 @@ ggsave("Figures/ec_plot.png", unit="cm", width = 15, height = 20, dpi = 300)
 ```
 
 
-```{r ECmap, warning=FALSE, echo=F, fig.cap = "Spatial Variation of EC throughout the catchment, using Mean EC in $\\mathrm{\\mu S~cm^{-1}}$ and interquartile range (IQR) for each sampling location. Only locations with more than 10 observations over the 14 years are included.Surface water sample sites are on the left panel, while groundwater sample sites are on the right panel. ",out.width="100%"}
+```{r ECmap, warning=FALSE, echo=F, fig.cap = "Spatial Variation of EC throughout the catchment, using Mean EC in $\\mathrm{\\mu S~cm^{-1}}$ and interquartile range (IQR) for each sampling location. Only locations with more than 10 observations over the 14 years are included. Surface water sample sites are on the left panel, while groundwater sample sites are on the right panel. ",out.width="100%"}
 
 knitr::include_graphics("Figures/ec_map.png")
 
@@ -1009,7 +1012,7 @@ knitr::include_graphics("Figures/clhco3_map.png")
 
 \clearpage
 
-```{r Carbonate-boxplot, warning=FALSE, echo=F, fig.cap = "Variation across time of the $\\mathrm{Cl:HCO_3}$ ratio by sampling location represented as a boxplot. Only locations with more than 10 observations over the 14 years are included. The blue dashed line indicate a $Cl:HCO_3$ ratio of 1",  out.width="80%"}
+```{r Carbonate-boxplot, warning=FALSE, echo=F, fig.cap = "Variation across time of the $\\mathrm{Cl:HCO_3}$ ratio by sampling location represented as a boxplot. Only locations with more than 10 observations over the 14 years are included. The blue dashed line indicate a $\\mathrm{Cl:HCO_3}$ ratio of 1",  out.width="80%"}
 
 knitr::include_graphics("Figures/clhco3_plot.png")
 
@@ -1076,7 +1079,7 @@ knitr::include_graphics("Figures/piper_plot.png")
 ## Piper plot
 
 The piper plot contains the data for all the samples with complete major anion and cation data, which are `r nrow(piper_data)` samples. Of these, `r nrow(piper_data %>% dplyr::filter(name == "SW"))` are surface water samples and the rest groundwater samples.
-The piper plot of the data (Figure \ref{fig:piperplot}) does not provide much clarity as the samples cover a large area across the ternary space. There is a slight shift towards the HCO~3~ and Ca/Mg type waters for the groundwater samples compared to the surface water samples, which are more Na dominated. There is also a small cluster of surface water samples that are more SO~4~ dominated, potentially indicating different geological origins as mentioned earlier in the paper. However, the some of the groundwater samples are very high in Cl, explaining the high EC values observed for these samples.
+The piper plot of the data (Figure \ref{fig:piperplot}) does not provide much clarity as the samples cover a large area across the ternary space. There is a slight shift towards the HCO~3~ and Ca/Mg type waters for the groundwater samples compared to the surface water samples, which are more Na dominated. There is also a small cluster of surface water samples that are more SO~4~ dominated, potentially indicating different geological origins as mentioned earlier in the paper. However, some of the groundwater samples are very high in Cl, explaining the high EC values observed for these samples.
 
 # Discussion
 

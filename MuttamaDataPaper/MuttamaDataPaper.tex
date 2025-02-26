@@ -151,7 +151,7 @@ concern, and which is amplified in Australia. However, limited detailed
 space-time data sets with observations of stream and groundwater
 salinity has constrained a deep understanding of the range of processes
 that can lead to dryland salinity problems in landscapes. The aim of
-this study is to report on the open data set resulting from a 14-year
+this study is to report on the open dataset resulting from a 14-year
 data collection effort in a subcatchment of the Murrumbidgee catchment
 in New South Wales, Australia. Over a 14-year period a series of
 different sampling campaigns has resulted in a large dataset with
@@ -212,11 +212,11 @@ composition varied greatly throughout the Murray Darling Basin (MDB)
 portion of the Murrumbidgee catchment acted as sources of salinity, as
 well as whether this was predominantly marine cyclic salts (NaCl) as
 previously assumed, or whether salts from mineral weathering were also
-involved (e.g.~Ca, Mg, HCO\textsubscript{3}). While both can be measured
-using conventional methods such as EC, a rise in marine cyclic salts can
-be a major source of osmotic stress, whereas mineral weathering salts
-are far less harmful and are more likely to precipitate at reasonably
-low concentrations \citep{Conyers2008}. The ratio of
+involved (e.g.~Ca, Mg, HCO\textsubscript{3}). While both are captured in
+the bulk measurement of electrical conductivity (EC), a rise in marine
+cyclic salts can be a major source of osmotic stress, whereas mineral
+weathering salts are far less harmful and are more likely to precipitate
+at reasonably low concentrations \citep{Conyers2008}. The ratio of
 Cl:HCO\textsubscript{3} ions was identified as the best indicator of the
 source of salinity, with Cl\textsuperscript{-} acting as a measure of
 marine cyclic salts and HCO\textsubscript{3}\textsuperscript{-} acting
@@ -245,8 +245,8 @@ collect water quality data tend to be ``snapshot'' activities
 \citep{Grayson1997, Breuer2015, Lyon2008, Cartwright2010, Lintern2018}
 which can be biased due to the over representation of low flow
 conditions \citep{Lessels2020}. Even the analyses of substantial
-government data bases \citep{Lintern2018} are likely to be biased in
-this way. This means that overall there are limited streamflow and
+government databases \citep{Lintern2018} are likely to be biased in this
+way. This means that overall there are limited streamflow and
 groundwater salinity data sets that combine multiple locations across a
 significant time period and that combine a range of flow
 characteristics.
@@ -467,14 +467,29 @@ logger during the purging and subsequent recovery of the groundwater
 level) is removed from the logger data series. As a result, there is no
 direct time match between the logger data series and the manual
 observations. However, the data showed that, in most cases, the
-groundwater level recovered within 24 hrs.
+groundwater level recovered within 24 hrs. To explain this more clearly
+the pseudocode below describes the process.
 
-To explain this more clearly the following pseudo code describes the
-process:
+The code used to match the manually observed data with the logger data
+is in the script \texttt{Match\_obs\_logger\_data.R}, which is stored
+with the raw data in the Open Science Foundation (OSF) repository
+associated with this paper \url{https://doi.org/10.17605/OSF.IO/BEUWK}.
+
+After the automated process, two of the groundwater level data series
+still had substantial discrepancies in some sections of the data. This
+was most likely due to the a lack of observed data for the specific
+logger. A final manual correction was applied. As this process is based
+on judgement of the data by the authors of this paper, we documented
+this in detail in the supplementary material.
+
+The final corrected data that is published with this paper on
+\url{https://doi.org/10.17605/OSF.IO/BEUWK} includes a column which
+describes whether the data is based on the automatic correction or a
+further manual correction.
 
 \begin{algorithm}
 \caption{Pseudo code cleaning groundwater level data}
-\label{a1}
+\label{pseudocode}
 \begin{algorithmic}
 \IF {sufficient points \> 3} 
         \STATE run a regression between interpolated depth and observed depth  
@@ -494,29 +509,13 @@ process:
 \end{algorithmic}
 \end{algorithm}
 
-The code used to match the manually observed data with the logger data
-is in the script \texttt{Match\_obs\_logger\_data.R}, which is stored
-with the raw data in the Open Science Foundation (OSF) repository
-associated with this paper \url{https://doi.org/10.17605/OSF.IO/BEUWK}.
-
-After the automated process, two of the groundwater level data series
-still had substantial discrepancies in some sections of the data. This
-was most likely due to the a lack of observed data for the specific
-logger. A final manual correction was applied. As this process is based
-on judgement of the data by the authors of this paper, we documented
-this in detail in the supplementary material.
-
-The final corrected data that is published with this paper on
-\url{https://doi.org/10.17605/OSF.IO/BEUWK} includes a column which
-describes whether the data is based on the automatic correction or a
-further manual correction.
+\clearpage
 
 \subsection{Boxplots and maps}
 
 Using the most complete data, boxplots and spatial maps were generated
 to highlight the spatial and temporal variation in the data set. The
-boxplots visually highlight empirical differences between data
-variables.
+boxplots visually highlight empirical differences in the data.
 
 The mean concentration and interquartile range (25\textsuperscript{th} -
 75\textsuperscript{th} percentile) of the concentration data
@@ -571,7 +570,7 @@ of completeness of the series is displayed (Fig \ref{fig:gw-na-plot}).
 \clearpage
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Figures/monthly} \caption{Distribution of samples throughout the year (total number of samples collected during each month) against average monthly rainfall during the study period. }\label{fig:month-plot}
+\includegraphics[width=0.7\linewidth]{Figures/monthly} \caption{Distribution of samples throughout the year (total number of samples collected during each month) with the blue line representing the average monthly rainfall during the study period. }\label{fig:month-plot}
 \end{figure}
 
 Overall the water quality sampling appears to have a reasonable
@@ -585,10 +584,10 @@ period, and spatially more channels could be sampled for surface water.
 The timing of source 3 (the student data) is the result of the yearly
 field trips, which tended to occur at approximately the same time of the
 year in early March and late September or early October, coinciding with
-the University semesters.
+the University semester breaks.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Figures/annual} \caption{Distribution of samples over the study period (total number of samples collected during each year) against average monthly rainfall during the study period. }\label{fig:annual-plot}
+\includegraphics[width=0.7\linewidth]{Figures/annual} \caption{Distribution of samples over the study period (total number of samples collected during each year). }\label{fig:annual-plot}
 \end{figure}
 
 The number of samples collected in each year relative to the different
@@ -712,7 +711,7 @@ ground surface, such as at GW10, GW12, GW13 and GW21 (Fig
 \subsection{Spatial variation}
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{Figures/ec_map} \caption{Spatial Variation of EC throughout the catchment, using Mean EC in $\mathrm{\mu S~cm^{-1}}$ and interquartile range (IQR) for each sampling location. Only locations with more than 10 observations over the 14 years are included.Surface water sample sites are on the left panel, while groundwater sample sites are on the right panel. }\label{fig:ECmap}
+\includegraphics[width=1\linewidth]{Figures/ec_map} \caption{Spatial Variation of EC throughout the catchment, using Mean EC in $\mathrm{\mu S~cm^{-1}}$ and interquartile range (IQR) for each sampling location. Only locations with more than 10 observations over the 14 years are included. Surface water sample sites are on the left panel, while groundwater sample sites are on the right panel. }\label{fig:ECmap}
 \end{figure}
 
 \clearpage
@@ -730,7 +729,7 @@ ground surface, such as at GW10, GW12, GW13 and GW21 (Fig
 \clearpage
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{Figures/clhco3_plot} \caption{Variation across time of the $\mathrm{Cl:HCO_3}$ ratio by sampling location represented as a boxplot. Only locations with more than 10 observations over the 14 years are included. The blue dashed line indicate a $Cl:HCO_3$ ratio of 1}\label{fig:Carbonate-boxplot}
+\includegraphics[width=0.8\linewidth]{Figures/clhco3_plot} \caption{Variation across time of the $\mathrm{Cl:HCO_3}$ ratio by sampling location represented as a boxplot. Only locations with more than 10 observations over the 14 years are included. The blue dashed line indicate a $\mathrm{Cl:HCO_3}$ ratio of 1}\label{fig:Carbonate-boxplot}
 \end{figure}
 
 There is clear spatial variation in water parameters throughout the
@@ -781,7 +780,7 @@ groundwater samples compared to the surface water samples, which are
 more Na dominated. There is also a small cluster of surface water
 samples that are more SO\textsubscript{4} dominated, potentially
 indicating different geological origins as mentioned earlier in the
-paper. However, the some of the groundwater samples are very high in Cl,
+paper. However, some of the groundwater samples are very high in Cl,
 explaining the high EC values observed for these samples.
 
 \section{Discussion}
@@ -901,8 +900,7 @@ Springs as part of the Romani Pastoral Company, and the managers and
 owners of Wavehill, in particular J. Litchfield. We would like to thank
 several generations of students in the units LWSC2002, ENVX3003 and
 ENSY5708, as well a multiple interns from French Institutions and
-University and Wageningen University for assisting with the sample
-collection.
+Wageningen University for assisting with the sample collection.
 \end{acknowledgements}
 
 %% REFERENCES
