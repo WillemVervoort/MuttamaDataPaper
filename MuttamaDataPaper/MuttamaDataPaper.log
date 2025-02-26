@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.7)  26 FEB 2025 20:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.26)  26 FEB 2025 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -74,7 +74,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2025/02/02 v25.3 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
 \babel@savecnt=\count272
 \U@D=\dimen146
 \l@unhyphenated=\language5
@@ -84,7 +84,7 @@ Package: babel 2025/02/02 v25.3 The multilingual framework for pdfLaTeX, LuaLaTe
 Package babel Info: You haven't specified a language as a class or package
 (babel)             option. I'll load 'nil'. Reported on input line 4188.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/nil.ldf
-Language: nil 2025/02/02 v25.3 Nil language
+Language: nil 2025/02/14 v25.4 Nil language
 \l@nil=\language6
 )) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
@@ -313,11 +313,35 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \rotFPbot=\skip72
 \rot@float@box=\box65
 \rot@mess@toks=\toks39
-)
-
-Class copernicus Warning: Cannot find lineno.sty; proceeding without it.
-
-(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/times.sty
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2025/01/29 line numbers on paragraphs v5.4
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count314
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+\linenopenalty=\count315
+\output=\toks40
+\linenoprevgraf=\count316
+\linenumbersep=\dimen171
+\linenumberwidth=\dimen172
+\c@linenumber=\count317
+\c@pagewiselinenumber=\count318
+\c@LN@truepage=\count319
+\c@internallinenumber=\count320
+\c@internallinenumbers=\count321
+\quotelinenumbersep=\dimen173
+\bframerule=\dimen174
+\bframesep=\dimen175
+\bframebox=\box66
+\@LN@amsmath@ams@eqpen=\count322
+LaTeX Info: Redefining \\ on input line 3187.
+) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/pifont.sty
 Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
@@ -330,15 +354,11 @@ LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
-(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
@@ -354,19 +374,14 @@ Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-))
-\c@section@level=\count314
-) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count315
+)
+\c@section@level=\count323
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen171
-\Hy@linkcounter=\count316
-\Hy@pagecounter=\count317
+\@linkdim=\dimen176
+\Hy@linkcounter=\count324
+\Hy@pagecounter=\count325
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -374,7 +389,7 @@ Now handling font encoding PD1 ...
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count318
+\Hy@SavedSpaceFactor=\count326
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -388,17 +403,17 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks OFF on input line 4430.
-\c@Hy@tempcnt=\count319
+\c@Hy@tempcnt=\count327
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen172
+\XeTeXLinkMargin=\dimen177
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count320
-\Field@Width=\dimen173
-\Fld@charsize=\dimen174
+\Fld@menulength=\count328
+\Field@Width=\dimen178
+\Fld@charsize=\dimen179
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -410,9 +425,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count321
-\c@Item=\count322
-\c@Hfootnote=\count323
+\Hy@abspage=\count329
+\c@Item=\count330
+\c@Hfootnote=\count331
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -421,8 +436,8 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count324
-\c@bookmark@seq@number=\count325
+\Fld@listcount=\count332
+\c@bookmark@seq@number=\count333
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -432,8 +447,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip73
 )
-\c@reaction=\count326
-\tabularwidth=\dimen175
+\c@reaction=\count334
+\tabularwidth=\dimen180
 Package color Info: Redefining color textcol on input line 2980.
 Package color Info: Redefining color bgcol on input line 2981.
 Package color Info: Redefining color barcol on input line 2982.
@@ -445,30 +460,30 @@ Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 \LTright=\skip75
 \LTpre=\skip76
 \LTpost=\skip77
-\LTchunksize=\count327
-\LTcapwidth=\dimen176
-\LT@head=\box66
-\LT@firsthead=\box67
-\LT@foot=\box68
-\LT@lastfoot=\box69
-\LT@gbox=\box70
-\LT@cols=\count328
-\LT@rows=\count329
-\c@LT@tables=\count330
-\c@LT@chunks=\count331
-\LT@p@ftn=\toks40
+\LTchunksize=\count335
+\LTcapwidth=\dimen181
+\LT@head=\box67
+\LT@firsthead=\box68
+\LT@foot=\box69
+\LT@lastfoot=\box70
+\LT@gbox=\box71
+\LT@cols=\count336
+\LT@rows=\count337
+\c@LT@tables=\count338
+\c@LT@chunks=\count339
+\LT@p@ftn=\toks41
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen177
-\WF@size=\dimen178
-\c@WF@wrappedlines=\count332
-\WF@box=\box71
-\WF@everypar=\toks41
+\wrapoverhang=\dimen182
+\WF@size=\dimen183
+\c@WF@wrappedlines=\count340
+\WF@box=\box72
+\WF@everypar=\toks42
 Package: wrapfig 2003/01/31  v 3.6
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
-\everycr=\toks42
+\everycr=\toks43
 \minrowclearance=\skip78
-\rownum=\count333
+\rownum=\count341
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -481,36 +496,36 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box72
-\sift@deathcycles=\count334
-\@vwid@loff=\dimen179
-\@vwid@roff=\dimen180
+\@vwid@box=\box73
+\sift@deathcycles=\count342
+\@vwid@loff=\dimen184
+\@vwid@roff=\dimen185
 )
-\c@taburow=\count335
-\tabu@nbcols=\count336
-\tabu@cnt=\count337
-\tabu@Xcol=\count338
-\tabu@alloc=\count339
-\tabu@nested=\count340
-\tabu@target=\dimen181
-\tabu@spreadtarget=\dimen182
-\tabu@naturalX=\dimen183
-\tabucolX=\dimen184
-\tabu@Xsum=\dimen185
-\extrarowdepth=\dimen186
-\abovetabulinesep=\dimen187
-\belowtabulinesep=\dimen188
-\tabustrutrule=\dimen189
-\tabu@thebody=\toks43
-\tabu@footnotes=\toks44
-\tabu@box=\box73
-\tabu@arstrutbox=\box74
-\tabu@hleads=\box75
-\tabu@vleads=\box76
+\c@taburow=\count343
+\tabu@nbcols=\count344
+\tabu@cnt=\count345
+\tabu@Xcol=\count346
+\tabu@alloc=\count347
+\tabu@nested=\count348
+\tabu@target=\dimen186
+\tabu@spreadtarget=\dimen187
+\tabu@naturalX=\dimen188
+\tabucolX=\dimen189
+\tabu@Xsum=\dimen190
+\extrarowdepth=\dimen191
+\abovetabulinesep=\dimen192
+\belowtabulinesep=\dimen193
+\tabustrutrule=\dimen194
+\tabu@thebody=\toks44
+\tabu@footnotes=\toks45
+\tabu@box=\box74
+\tabu@arstrutbox=\box75
+\tabu@hleads=\box76
+\tabu@vleads=\box77
 \tabu@cellskip=\skip79
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box77
+\@tempboxb=\box78
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
@@ -521,9 +536,9 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \TPTL@width=\skip80
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen190
-\c@nlinenum=\count341
-\TeXr@lab=\toks45
+\rotheadsize=\dimen195
+\c@nlinenum=\count349
+\TeXr@lab=\toks46
 ) (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -542,112 +557,118 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 103.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 105.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (./MuttamaDataPaper.aux)
 \openout1 = `MuttamaDataPaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count342
-Package hyperref Info: Link coloring OFF on input line 103.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 146.
+\c@lstlisting=\count350
+Package hyperref Info: Link coloring OFF on input line 105.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 148.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 146.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 148.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-Package xcolor Warning: Incompatible color definition on input line 146.
-
-
 Package xcolor Warning: Incompatible color definition on input line 148.
 
+
+Package xcolor Warning: Incompatible color definition on input line 150.
+
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 171.
+(c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 171.
 <Figures/Dryland Salinity Papers.png, id=29, 527.0892pt x 325.6968pt>
 File: Figures/Dryland Salinity Papers.png Graphic file (type png)
 <use Figures/Dryland Salinity Papers.png>
-Package pdftex.def Info: Figures/Dryland Salinity Papers.png  used on input line 198.
+Package pdftex.def Info: Figures/Dryland Salinity Papers.png  used on input line 200.
 (pdftex.def)             Requested size: 453.24931pt x 280.07887pt.
 
 
 [1
 
 {c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (1.76079pt too wide) in paragraph at lines 228--242
+Overfull \hbox (1.76079pt too wide) in paragraph at lines 230--244
 []\T1/ptm/m/n/10 It is clear from these examples that detailed spatial and temporal datasets are key to understanding different hydrogeochemical
  []
 
 
 
 [2 <./Figures/Dryland Salinity Papers.png>]
-<Figures/gw_or_sw_map.png, id=96, 505.89pt x 505.89pt>
-File: Figures/gw_or_sw_map.png Graphic file (type png)
-<use Figures/gw_or_sw_map.png>
-Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 298.
-(pdftex.def)             Requested size: 402.89255pt x 402.89851pt.
-
 
 [3]
+<Figures/gw_or_sw_map.png, id=114, 505.89pt x 505.89pt>
+File: Figures/gw_or_sw_map.png Graphic file (type png)
+<use Figures/gw_or_sw_map.png>
+Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 300.
+(pdftex.def)             Requested size: 402.89255pt x 402.89851pt.
+
 
 [4 <./Figures/gw_or_sw_map.png>]
 
 [5]
-Overfull \hbox (0.39166pt too wide) in paragraph at lines 374--382
+Overfull \hbox (0.39166pt too wide) in paragraph at lines 376--384
 []\T1/ptm/m/n/10 The data for each location consist of up to six variables which were measured in the field (Table []1[]). These were complemented
  []
 
 
 
 [6]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 445.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 447.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 491.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 493.
 
 
 [7]
 
 [8]
-<Figures/na_count.png, id=193, 528.0528pt x 326.6604pt>
+<Figures/na_count.png, id=197, 528.0528pt x 326.6604pt>
 File: Figures/na_count.png Graphic file (type png)
 <use Figures/na_count.png>
-Package pdftex.def Info: Figures/na_count.png  used on input line 535.
+Package pdftex.def Info: Figures/na_count.png  used on input line 537.
 (pdftex.def)             Requested size: 453.24931pt x 280.3941pt.
 
 
 [9
 
  <./Figures/na_count.png>]
-<Figures/na_GW.png, id=203, 528.0528pt x 326.6604pt>
+<Figures/na_GW.png, id=207, 528.0528pt x 326.6604pt>
 File: Figures/na_GW.png Graphic file (type png)
 <use Figures/na_GW.png>
-Package pdftex.def Info: Figures/na_GW.png  used on input line 541.
+Package pdftex.def Info: Figures/na_GW.png  used on input line 543.
 (pdftex.def)             Requested size: 453.24931pt x 280.3941pt.
 
 
@@ -656,47 +677,47 @@ Package pdftex.def Info: Figures/na_GW.png  used on input line 541.
  <./Figures/na_GW.png>]
 
 [11]
-<Figures/monthly.png, id=216, 528.0528pt x 326.6604pt>
+<Figures/monthly.png, id=220, 528.0528pt x 326.6604pt>
 File: Figures/monthly.png Graphic file (type png)
 <use Figures/monthly.png>
-Package pdftex.def Info: Figures/monthly.png  used on input line 573.
+Package pdftex.def Info: Figures/monthly.png  used on input line 575.
 (pdftex.def)             Requested size: 352.52809pt x 218.08376pt.
-<Figures/annual.png, id=218, 526.8483pt x 325.215pt>
+<Figures/annual.png, id=222, 526.8483pt x 325.215pt>
 File: Figures/annual.png Graphic file (type png)
 <use Figures/annual.png>
-Package pdftex.def Info: Figures/annual.png  used on input line 590.
+Package pdftex.def Info: Figures/annual.png  used on input line 592.
 (pdftex.def)             Requested size: 352.52809pt x 217.61006pt.
-<Figures/FDC.png, id=220, 341.3553pt x 255.8358pt>
+<Figures/FDC.png, id=224, 341.3553pt x 255.8358pt>
 File: Figures/FDC.png Graphic file (type png)
 <use Figures/FDC.png>
-Package pdftex.def Info: Figures/FDC.png  used on input line 607.
+Package pdftex.def Info: Figures/FDC.png  used on input line 609.
 (pdftex.def)             Requested size: 402.89255pt x 301.9656pt.
 
 
 [12
 
  <./Figures/monthly.png>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 639.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 641.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<Figures/gwsw.png, id=231, 528.0528pt x 326.6604pt>
+<Figures/gwsw.png, id=235, 528.0528pt x 326.6604pt>
 File: Figures/gwsw.png Graphic file (type png)
 <use Figures/gwsw.png>
-Package pdftex.def Info: Figures/gwsw.png  used on input line 690.
+Package pdftex.def Info: Figures/gwsw.png  used on input line 692.
 (pdftex.def)             Requested size: 402.89255pt x 249.24142pt.
-<Figures/Final_Corrected_piezodepths.png, id=233, 762.85pt x 762.85pt>
+<Figures/Final_Corrected_piezodepths.png, id=237, 762.85pt x 762.85pt>
 File: Figures/Final_Corrected_piezodepths.png Graphic file (type png)
 <use Figures/Final_Corrected_piezodepths.png>
-Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 696.
+Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 698.
 (pdftex.def)             Requested size: 503.61377pt x 503.6106pt.
 
 
 [13 <./Figures/annual.png>]
-<Figures/ec_map.png, id=248, 569.0058pt x 426.6339pt>
+<Figures/ec_map.png, id=252, 569.0058pt x 426.6339pt>
 File: Figures/ec_map.png Graphic file (type png)
 <use Figures/ec_map.png>
-Package pdftex.def Info: Figures/ec_map.png  used on input line 714.
+Package pdftex.def Info: Figures/ec_map.png  used on input line 716.
 (pdftex.def)             Requested size: 503.61377pt x 377.60027pt.
 
 
@@ -709,26 +730,26 @@ Package pdftex.def Info: Figures/ec_map.png  used on input line 714.
 [17 <./Figures/Final_Corrected_piezodepths.png>]
 
 [18 <./Figures/ec_map.png>]
-<Figures/ec_plot.png, id=277, 426.6339pt x 569.0058pt>
+<Figures/ec_plot.png, id=281, 426.6339pt x 569.0058pt>
 File: Figures/ec_plot.png Graphic file (type png)
 <use Figures/ec_plot.png>
-Package pdftex.def Info: Figures/ec_plot.png  used on input line 720.
+Package pdftex.def Info: Figures/ec_plot.png  used on input line 722.
 (pdftex.def)             Requested size: 402.89255pt x 537.34866pt.
 
 
 [19 <./Figures/ec_plot.png>]
-<Figures/clhco3_map.png, id=284, 569.0058pt x 426.6339pt>
+<Figures/clhco3_map.png, id=288, 569.0058pt x 426.6339pt>
 File: Figures/clhco3_map.png Graphic file (type png)
 <use Figures/clhco3_map.png>
-Package pdftex.def Info: Figures/clhco3_map.png  used on input line 726.
+Package pdftex.def Info: Figures/clhco3_map.png  used on input line 728.
 (pdftex.def)             Requested size: 402.89255pt x 302.08542pt.
 
 
 [20 <./Figures/clhco3_map.png>]
-<Figures/clhco3_plot.png, id=291, 569.0058pt x 569.0058pt>
+<Figures/clhco3_plot.png, id=295, 569.0058pt x 569.0058pt>
 File: Figures/clhco3_plot.png Graphic file (type png)
 <use Figures/clhco3_plot.png>
-Package pdftex.def Info: Figures/clhco3_plot.png  used on input line 732.
+Package pdftex.def Info: Figures/clhco3_plot.png  used on input line 734.
 (pdftex.def)             Requested size: 402.89255pt x 402.89429pt.
 
 
@@ -737,17 +758,17 @@ Package pdftex.def Info: Figures/clhco3_plot.png  used on input line 732.
 
 
  <./Figures/clhco3_plot.png>]
-<Figures/piper_plot.png, id=304, 569.0058pt x 284.5029pt>
+<Figures/piper_plot.png, id=308, 569.0058pt x 284.5029pt>
 File: Figures/piper_plot.png Graphic file (type png)
 <use Figures/piper_plot.png>
-Package pdftex.def Info: Figures/piper_plot.png  used on input line 768.
+Package pdftex.def Info: Figures/piper_plot.png  used on input line 770.
 (pdftex.def)             Requested size: 402.89255pt x 201.44713pt.
 
 
 [22 <./Figures/piper_plot.png>]
 
 [23]
-Overfull \hbox (6.63234pt too wide) in paragraph at lines 868--868
+Overfull \hbox (6.63234pt too wide) in paragraph at lines 870--870
 []\T1/ptm/m/n/9 The majority of the code and associated data, including the Rmarkdown for this paper, is stored on Github []$https : / / github . com / WillemVervoort /
  []
 
@@ -769,18 +790,18 @@ L3 programming layer <2021/03/21>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16727 strings out of 475171
- 261249 string characters out of 5764022
- 711991 words of memory out of 5000000
- 39326 multiletter control sequences out of 15000+600000
- 595731 words of font info for 94 fonts, out of 8000000 for 9000
+ 17057 strings out of 475171
+ 266766 string characters out of 5764021
+ 717881 words of memory out of 5000000
+ 39647 multiletter control sequences out of 15000+600000
+ 598621 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,11n,93p,553b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MuttamaDataPaper.pdf (26 pages, 3878839 bytes).
+ 84i,11n,93p,553b,658s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MuttamaDataPaper.pdf (26 pages, 3884975 bytes).
 PDF statistics:
- 443 PDF objects out of 1000 (max. 8388607)
- 377 compressed objects within 4 object streams
+ 460 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
  106 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -72,6 +72,9 @@ output:
     keep_tex: true
   bookdown::pdf_book:
     base_format: rticles::copernicus_article # for using bookdown features like \@ref()
+header-includes:
+  - \usepackage{lineno}
+  - \linenumbers
 ---
 
 ```{r packages, echo=F, warning=F, include=F, message=F}
