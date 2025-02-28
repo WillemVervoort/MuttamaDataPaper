@@ -1,8 +1,12 @@
 ---
-title: "Manual adjustments groundwater standing waterlevels"
-author: "Willem Vervoort, Floris van Ogtrop et al."
+title: "Supplementary material to: A detailed streamflow and groundwater salinity dataset for Muttama Creek Catchment, NSW, Australia - Manual adjustments groundwater standing waterlevels"
 date: "`r Sys.Date()`"
 output: pdf_document
+header-includes:
+  - \renewcommand{\figurename}{Figure S}
+  - \makeatletter
+  - \def\fnum@figure{\figurename\thefigure}
+  - \makeatother
 ---
 
 ```{r setup, include=FALSE}
@@ -30,7 +34,7 @@ As the scripts and automatic adjustments have not been able to remove these anom
 
 1.  load the R packages tidyverse and lubridate
 
-```{r packages}
+```{r packages, warning = FALSE, message=FALSE}
 require(tidyverse)
 ```
 
@@ -53,11 +57,19 @@ GW06 <- GW_data %>%
 
 Identify jumps in the data using diff()
 
-```{r}
+```{r jumps-GW06}
 GW06 <- GW06 %>%
   mutate(diff_gw = c(0,diff(GW06$`Corrected Depth (m)`)))
 
+
+png("../figures/HistogramGW06_difference.png")
 hist(GW06$diff_gw)
+dev.off()
+```
+
+```{r hist-jumps-GW06, warning=FALSE, echo=F, fig.cap = "Histogram of the jumps in the GW06 differenced data",  out.width="80%"}
+
+knitr::include_graphics("../Figures/HistogramGW06_difference.png")
 
 ```
 
@@ -69,7 +81,7 @@ Dates <- GW06 %>%
 Dates
 ```
 
-Comparing this to Figure \ref{fig:piezodata}, this means the section between `r Dates$Date[1]` and `r Dates$Date[2]` needs to be corrected by `r Dates$diff_gw[1]` being the difference in the anomaly (bias) at the beginning of the section. This value is close to the adjustment value in the field notes of 4.95m on *2017-06-02* which is also close to `r Dates$Date[1]`. The section past `r Dates$Date[2]` until `r Dates$Date[3]` needs to be corrected by `r Dates$diff_gw[3]` which is the estimate of the positive bias at the end. This value differs from the earlier correction and it is unclear where this difference comes from.
+Comparing Figure \ref{fig:hist-jumps-GW06} to Figure \ref{fig:piezodata}, this means the section between `r Dates$Date[1]` and `r Dates$Date[2]` needs to be corrected by `r Dates$diff_gw[1]` being the difference in the anomaly (bias) at the beginning of the section. This value is close to the adjustment value in the field notes of 4.95m on *2017-06-02* which is also close to `r Dates$Date[1]`. The section past `r Dates$Date[2]` until `r Dates$Date[3]` needs to be corrected by `r Dates$diff_gw[3]` which is the estimate of the positive bias at the end. This value differs from the earlier correction and it is unclear where this difference comes from.
 
 ```{r GW06_manual}
 # correction for the first section
@@ -94,11 +106,18 @@ GW06 <- GW06 %>%
   mutate(Ind = ifelse(GW06$Date >= Dates$Date[2] &
                                      GW06$Date <= Dates$Date[3]+1,1,Ind))
 
-
+png("../Figures/GW06_firstcorrection.png")
 GW06 %>%
   ggplot(aes(Date,`Corrected Depth (m)`)) + 
   geom_point(colour = "blue") +
   geom_point(aes(Date,`Manual correct`),colour = "red")
+dev.off()
+```
+
+```{r firstcorr-GW06, warning=FALSE, echo=F, fig.cap = "First correction of the GW06 groundwater level data",  out.width="80%"}
+
+knitr::include_graphics("../Figures/GW06_firstcorrection.png")
+
 ```
 
 This appears to require one further correction,to removes the single anomaly in 2019.
@@ -131,13 +150,20 @@ GW06 <- GW06 %>%
   mutate(Ind = ifelse(GW06$Date >= Dates$Date[1] &
                                      GW06$Date <= Dates$Date[2],1,Ind))
 
-
+png("../Figures/GW06_secondcorrection.png")
 GW06 %>%
   ggplot(aes(Date,`Corrected Depth (m)`)) + 
   geom_point(colour = "blue") +
   geom_point(aes(Date,`Manual correct`),colour = "red")
+dev.off()
+```
+
+```{r secondcorr-GW06, warning=FALSE, echo=F, fig.cap = "Second correction of the GW06 groundwater level data",  out.width="80%"}
+
+knitr::include_graphics("../Figures/GW06_secondcorrection.png")
 
 ```
+
 
 Finally, we can clean up so we only retain the "Manual correct" column, but none of the intermediate columns.
 
@@ -161,11 +187,18 @@ GW13_noNA <- GW13 %>%
   #filter(is.na(`Corrected Depth (m)`) == F) %>%
   mutate(diff_gw = c(0,diff(`Corrected Depth (m)`)))
 
+png("../figures/HistogramGW13_difference.png")
 hist(GW13_noNA$diff_gw)
+dev.off()
+```
+
+```{r hist-jumps-GW13, warning=FALSE, echo=F, fig.cap = "Histogram of the jumps in the GW13 differenced data",  out.width="80%"}
+
+knitr::include_graphics("../Figures/HistogramGW13_difference.png")
 
 ```
 
-This indicates that any values \> 1 and \< -1 are the anomalies. We can find the points where this transitions and then find the dates.
+Figure \ref{fig:hist-jumps-GW13} indicates that any values \> 1 and \< -1 are the anomalies. We can find the points where this transitions and then find the dates.
 
 ```{r find_dates_GW13}
 Dates <- GW13_noNA %>%
@@ -175,7 +208,7 @@ Dates %>%
   dplyr::select(Date,diff_gw)
 ```
 
-Comparing this to Figure \ref{fig:piezodata}, the first two dates relate to the small number of anomalies earlier in the time series. This means the section between `r Dates$Date[1]` and `r Dates$Date[2]` needs to be corrected by `r Dates$diff_gw[1]` being the difference in the anomaly (bias) at the beginning of the section.
+Comparing Figure \ref{fig:hist-jumps-GW13} to Figure \ref{fig:piezodata}, the first two dates relate to the small number of anomalies earlier in the time series. This means the section between `r Dates$Date[1]` and `r Dates$Date[2]` needs to be corrected by `r Dates$diff_gw[1]` being the difference in the anomaly (bias) at the beginning of the section.
 
 The later section is trickier as the `diff()` results do not identify the correct anomaly in the data (which should be around 4 m), because of all the missing values in the data. The results from `diff()` only finds `r Dates$diff_gw[3]` as the largest difference, but this probably overdoes the correction.
 
@@ -204,15 +237,22 @@ GW13 <- GW13 %>%
                                      GW13$Date <
                                      Dates$Date[5],1,Ind))
 
-
+png("../figures/Correction_GW13.png")
 GW13 %>%
   pivot_longer(c(`Corrected Depth (m)`,`Manual correct`), values_to = "Depth",
               names_to = "Method") %>%
   ggplot(aes(Date, Depth, colour = Method)) + geom_point() +
   geom_point(aes(Date, Ind), colour = "yellow") +
   scale_colour_manual(values = c("Corrected Depth (m)" = "blue", "Manual correct" = "red"))
+dev.off()
+```
+
+```{r corr-GW13, warning=FALSE, echo=F, fig.cap = "Correction of the GW13 groundwater level timeseries",  out.width="80%"}
+
+knitr::include_graphics("../Figures/Correction_GW13.png")
 
 ```
+
 
 ## producing the final output
 
@@ -266,23 +306,14 @@ GW_data_output %>%
   scale_alpha(guide = 'none')
 dev.off()
 ```
-<!--
-```{r}
-GW_data_output %>% 
-  filter(Piezo == "GW13") %>%
-    mutate(`Observed Depth (m)` = `Obs Depth (m)`) %>%
-  pivot_longer(cols=c(`Observed Depth (m)`, `Final GW Depth (m)`), 
-               names_to = "SWL_type", values_to = "SWL (m)") %>% 
-  ggplot(aes(Date,`SWL (m)`, colour = SWL_type)) + geom_point() + theme_bw()
-```
-
--->
 
 ```{r gw-series, warning=FALSE, echo=F, fig.cap = "Overview of the corrected groundwater time series for all the wells", out.width="100%"}
 
 knitr::include_graphics("../Figures/Final_Corrected_piezodepths.png")
 
 ```
+
+Save the data to be used in the paper
 
 ```{r}
 write_csv(GW_data_output, "../Data/Muttama_Piezometer_Output.csv")

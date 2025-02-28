@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: MuttamaDataPaper.aux
+The style file: copernicus.bst
+Database file #1: datapaper.bib
+Warning--missing school in Akter2018
+Warning--missing school in Lessels2014
+You've used 25 entries,
+            2932 wiz_defined-function locations,
+            1221 strings with 16147 characters,
+and the built_in function-call counts, 23452 in all, are:
+= -- 2366
+> -- 1109
+< -- 8
++ -- 476
+- -- 349
+* -- 1604
+:= -- 2526
+add.period$ -- 25
+call.type$ -- 25
+change.case$ -- 170
+chr.to.int$ -- 26
+cite$ -- 77
+duplicate$ -- 2201
+empty$ -- 1236
+format.name$ -- 417
+if$ -- 4610
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 290
+newline$ -- 84
+num.names$ -- 100
+pop$ -- 1037
+preamble$ -- 1
+purify$ -- 166
+quote$ -- 0
+skip$ -- 1284
+stack$ -- 0
+substring$ -- 822
+swap$ -- 1808
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 222
+warning$ -- 2
+while$ -- 110
+width$ -- 0
+write$ -- 298
+(There were 2 warnings)
