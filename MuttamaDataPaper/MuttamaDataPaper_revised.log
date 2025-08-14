@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.27)  14 AUG 2025 21:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.27)  14 AUG 2025 21:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**MuttamaDataPaper.tex
-(./MuttamaDataPaper.tex
+**MuttamaDataPaper_revised.tex
+(./MuttamaDataPaper_revised.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (./copernicus.cls
@@ -560,8 +560,8 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 103.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (./MuttamaDataPaper.aux)
-\openout1 = `MuttamaDataPaper.aux'.
+) (./MuttamaDataPaper_revised.aux)
+\openout1 = `MuttamaDataPaper_revised.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
 LaTeX Font Info:    ... okay on input line 103.
@@ -609,57 +609,61 @@ File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.54997pt on input line 169.
-<Figures/Dryland Salinity Papers.png, id=29, 530.9436pt x 328.1058pt>
-File: Figures/Dryland Salinity Papers.png Graphic file (type png)
-<use Figures/Dryland Salinity Papers.png>
-Package pdftex.def Info: Figures/Dryland Salinity Papers.png  used on input line 198.
-(pdftex.def)             Requested size: 453.24931pt x 280.0928pt.
 
 
 [1
 
 {c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (1.76079pt too wide) in paragraph at lines 228--242
+<Figures/Dryland Salinity Papers.png, id=65, 530.9436pt x 328.1058pt>
+File: Figures/Dryland Salinity Papers.png Graphic file (type png)
+<use Figures/Dryland Salinity Papers.png>
+Package pdftex.def Info: Figures/Dryland Salinity Papers.png  used on input line 208.
+(pdftex.def)             Requested size: 402.89255pt x 248.97249pt.
+
+
+[2 <./Figures/Dryland Salinity Papers.png>]
+Overfull \hbox (1.76079pt too wide) in paragraph at lines 238--252
 []\T1/ptm/m/n/10 It is clear from these examples that detailed spatial and temporal datasets are key to understanding different hydrogeochemical
  []
 
 
 
-[2 <./Figures/Dryland Salinity Papers.png>]
-
 [3]
-<Figures/gw_or_sw_map.png, id=114, 505.89pt x 505.89pt>
+<Figures/gw_or_sw_map.png, id=143, 505.89pt x 505.89pt>
 File: Figures/gw_or_sw_map.png Graphic file (type png)
 <use Figures/gw_or_sw_map.png>
-Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 298.
+Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 320.
 (pdftex.def)             Requested size: 402.89255pt x 402.89851pt.
 
 
-[4 <./Figures/gw_or_sw_map.png>]
+[4]
 
-[5]
-Overfull \hbox (0.39166pt too wide) in paragraph at lines 374--382
+[5 <./Figures/gw_or_sw_map.png>]
+Overfull \hbox (0.39166pt too wide) in paragraph at lines 396--404
 []\T1/ptm/m/n/10 The data for each location consist of up to six variables which were measured in the field (Table []1[]). These were complemented
  []
 
 
 
 [6]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 445.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 488.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 491.
-
 
 [7]
 
 [8]
-<Figures/na_count.png, id=197, 803.0pt x 803.0pt>
+<Figures/na_count.png, id=214, 803.0pt x 803.0pt>
 File: Figures/na_count.png Graphic file (type png)
 <use Figures/na_count.png>
-Package pdftex.def Info: Figures/na_count.png  used on input line 535.
+Package pdftex.def Info: Figures/na_count.png  used on input line 556.
 (pdftex.def)             Requested size: 453.24931pt x 453.25475pt.
+<Figures/timeDist.png, id=218, 803.0pt x 803.0pt>
+File: Figures/timeDist.png Graphic file (type png)
+<use Figures/timeDist.png>
+Package pdftex.def Info: Figures/timeDist.png  used on input line 600.
+(pdftex.def)             Requested size: 352.52809pt x 352.53691pt.
 
 
 [9
@@ -667,155 +671,131 @@ Package pdftex.def Info: Figures/na_count.png  used on input line 535.
 ]
 
 [10 <./Figures/na_count.png>]
-<Figures/na_GW.png, id=212, 528.0528pt x 326.6604pt>
-File: Figures/na_GW.png Graphic file (type png)
-<use Figures/na_GW.png>
-Package pdftex.def Info: Figures/na_GW.png  used on input line 541.
-(pdftex.def)             Requested size: 453.24931pt x 280.3941pt.
 
-
-[11
-
- <./Figures/na_GW.png>]
-
-[12]
-<Figures/monthly.png, id=225, 528.0528pt x 326.6604pt>
-File: Figures/monthly.png Graphic file (type png)
-<use Figures/monthly.png>
-Package pdftex.def Info: Figures/monthly.png  used on input line 573.
-(pdftex.def)             Requested size: 352.52809pt x 218.08376pt.
-<Figures/annual.png, id=227, 526.8483pt x 325.215pt>
-File: Figures/annual.png Graphic file (type png)
-<use Figures/annual.png>
-Package pdftex.def Info: Figures/annual.png  used on input line 590.
-(pdftex.def)             Requested size: 352.52809pt x 217.61006pt.
-<Figures/FDC.png, id=229, 341.3553pt x 255.8358pt>
+[11 <./Figures/timeDist.png>]
+<Figures/FDC.png, id=241, 341.3553pt x 255.8358pt>
 File: Figures/FDC.png Graphic file (type png)
 <use Figures/FDC.png>
-Package pdftex.def Info: Figures/FDC.png  used on input line 607.
+Package pdftex.def Info: Figures/FDC.png  used on input line 617.
 (pdftex.def)             Requested size: 402.89255pt x 301.9656pt.
-
-
-[13
-
- <./Figures/monthly.png>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 639.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 649.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<Figures/gwsw.png, id=241, 528.0528pt x 326.6604pt>
+
+[12 <./Figures/FDC.png>]
+<Figures/gwsw.png, id=251, 528.0528pt x 326.6604pt>
 File: Figures/gwsw.png Graphic file (type png)
 <use Figures/gwsw.png>
-Package pdftex.def Info: Figures/gwsw.png  used on input line 690.
+Package pdftex.def Info: Figures/gwsw.png  used on input line 700.
 (pdftex.def)             Requested size: 402.89255pt x 249.24142pt.
-<Figures/Final_Corrected_piezodepths.png, id=243, 1084.05pt x 762.85pt>
+<Figures/Final_Corrected_piezodepths.png, id=253, 1084.05pt x 762.85pt>
 File: Figures/Final_Corrected_piezodepths.png Graphic file (type png)
 <use Figures/Final_Corrected_piezodepths.png>
-Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 696.
+Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 706.
 (pdftex.def)             Requested size: 503.61377pt x 354.39566pt.
 
 
-[14 <./Figures/annual.png>]
-<Figures/ec_map.png, id=257, 569.0058pt x 426.6339pt>
-File: Figures/ec_map.png Graphic file (type png)
-<use Figures/ec_map.png>
-Package pdftex.def Info: Figures/ec_map.png  used on input line 714.
-(pdftex.def)             Requested size: 503.61377pt x 377.60027pt.
+[13]
+
+[14 <./Figures/gwsw.png>]
+
+[15 <./Figures/Final_Corrected_piezodepths.png>]
+<Figures/spatial_maps.png, id=279, 569.0058pt x 711.1368pt>
+File: Figures/spatial_maps.png Graphic file (type png)
+<use Figures/spatial_maps.png>
+Package pdftex.def Info: Figures/spatial_maps.png  used on input line 726.
+(pdftex.def)             Requested size: 402.89255pt x 503.53258pt.
 
 
-[15 <./Figures/FDC.png>]
-
-[16]
-
-[17 <./Figures/gwsw.png>]
-
-[18 <./Figures/Final_Corrected_piezodepths.png>]
-
-[19 <./Figures/ec_map.png>]
-<Figures/ec_plot.png, id=287, 426.6339pt x 569.0058pt>
-File: Figures/ec_plot.png Graphic file (type png)
-<use Figures/ec_plot.png>
-Package pdftex.def Info: Figures/ec_plot.png  used on input line 720.
-(pdftex.def)             Requested size: 402.89255pt x 537.34866pt.
+[16 <./Figures/spatial_maps.png>]
+<Figures/boxplots.png, id=288, 426.6339pt x 569.0058pt>
+File: Figures/boxplots.png Graphic file (type png)
+<use Figures/boxplots.png>
+Package pdftex.def Info: Figures/boxplots.png  used on input line 732.
+(pdftex.def)             Requested size: 352.52809pt x 470.17357pt.
 
 
-[20 <./Figures/ec_plot.png>]
-<Figures/clhco3_map.png, id=293, 569.0058pt x 426.6339pt>
-File: Figures/clhco3_map.png Graphic file (type png)
-<use Figures/clhco3_map.png>
-Package pdftex.def Info: Figures/clhco3_map.png  used on input line 726.
-(pdftex.def)             Requested size: 402.89255pt x 302.08542pt.
+[17
 
 
-[21 <./Figures/clhco3_map.png>]
-<Figures/clhco3_plot.png, id=300, 569.0058pt x 569.0058pt>
-File: Figures/clhco3_plot.png Graphic file (type png)
-<use Figures/clhco3_plot.png>
-Package pdftex.def Info: Figures/clhco3_plot.png  used on input line 732.
-(pdftex.def)             Requested size: 402.89255pt x 402.89429pt.
-
-
-[22
-
-
-
- <./Figures/clhco3_plot.png>]
-<Figures/piper_plot.png, id=313, 569.0058pt x 569.0058pt>
+ <./Figures/boxplots.png>]
+<Figures/piper_plot.png, id=299, 569.0058pt x 569.0058pt>
 File: Figures/piper_plot.png Graphic file (type png)
 <use Figures/piper_plot.png>
-Package pdftex.def Info: Figures/piper_plot.png  used on input line 768.
-(pdftex.def)             Requested size: 402.89255pt x 402.89429pt.
+Package pdftex.def Info: Figures/piper_plot.png  used on input line 767.
+(pdftex.def)             Requested size: 503.61377pt x 503.60918pt.
 
 
-[23 <./Figures/piper_plot.png>]
+[18]
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 870--874
+[19 <./Figures/piper_plot.png>]
+<Figures/globalboxplot.png, id=337, 426.6339pt x 284.5029pt>
+File: Figures/globalboxplot.png Graphic file (type png)
+<use Figures/globalboxplot.png>
+Package pdftex.def Info: Figures/globalboxplot.png  used on input line 823.
+(pdftex.def)             Requested size: 402.89255pt x 268.67432pt.
+
+Overfull \hbox (0.64023pt too wide) in paragraph at lines 826--838
+[]\T1/ptm/m/n/10 The Muttama catchment dataset presented here covers multiple sites, multiple time periods and multiple sampling campaigns.
+ []
+
+
+
+[20 <./Figures/globalboxplot.png>]
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 918--922
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--878
+Underfull \hbox (badness 10000) in paragraph at lines 922--926
 
+ []
+
+(./MuttamaDataPaper_revised.bbl
+
+[22]
+Underfull \hbox (badness 1661) in paragraph at lines 28--29
+[]\T1/ptm/m/n/9 Crosbie, R. S., Hughes, J. D., Friend, J., and Baldwin, B. J.: Monitoring the hydrological impact of land use change in a
  []
 
 
 
-[25] (./MuttamaDataPaper.bbl
-
-[26]
-Underfull \hbox (badness 1117) in paragraph at lines 49--50
+[23]
+Underfull \hbox (badness 1117) in paragraph at lines 64--65
 []\T1/ptm/m/n/9 Lintern, A., Webb, J. A., Ryu, D., Liu, S., Waters, D., Leahy, P., Bende-Michl, U., and Western, A. W.: What Are the Key
  []
 
 
-
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 []\T1/ptm/m/n/9 Vervoort, R. and Akter, F.: Muttama Creek Catchment Groundwater data, Open Science Foundation,
  []
 
-)
 
-[28] (./MuttamaDataPaper.aux)
+
+[24])
+
+[25] (./MuttamaDataPaper_revised.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2021/03/21>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17065 strings out of 475171
- 267009 string characters out of 5763733
- 718049 words of memory out of 5000000
- 39651 multiletter control sequences out of 15000+600000
+ 16994 strings out of 475171
+ 266228 string characters out of 5763733
+ 721441 words of memory out of 5000000
+ 39594 multiletter control sequences out of 15000+600000
  598621 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,11n,93p,553b,658s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MuttamaDataPaper.pdf (28 pages, 3831931 bytes).
+ 84i,12n,93p,676b,683s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on MuttamaDataPaper_revised.pdf (25 pages, 3457970 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 401 compressed objects within 5 object streams
- 107 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 500 PDF objects out of 1000 (max. 8388607)
+ 432 compressed objects within 5 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

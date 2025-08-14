@@ -81,7 +81,7 @@ library(sf)
 library(raster)
 library(ggspatial)
 library(ggrepel)
-library(ggpubr)
+library(ggcorrplot)
 
 theme_set(theme_bw()) # ggplot theme
 # define colour palette colour blind friendly
@@ -139,6 +139,16 @@ coord <- coord %>%
 Muttama <- left_join(Muttama_data, coord, 
                      by = c('site_code','site_mut'), 
                      copy = T)
+
+#identify source 4 in the data
+Muttama <- Muttama %>%
+  mutate(src = ifelse(str_detect(Muttama$record_id,"_AS")==T,4,src))
+
+# correct watertype 3 to 2 for autosamplers
+Muttama <- Muttama %>%
+  mutate(water_type = ifelse(str_detect(Muttama$record_id,"_AS")== T, 2,
+                             water_type))
+
 Muttama_gw <- left_join(GW_data, coord, 
                      by = c('site_code', 'site_m'), 
                      copy = T)
@@ -152,7 +162,7 @@ Muttama_joined <- left_join(Muttama , coolac, by = "Date") %>%
 
 <!--setting the scene-->
 
-Dryland and irrigation salinity has long been a major natural resource management concern in Australia [@Jolly2001; @White2009; @Scanlon2007; @Walker2002; @Finlayson2010]. Globally, the success of management of salinity, while extensively documented, has remained patchy [@Leblanc2012]. As a result, in Australia, the volume of research and number of publications in this area has decreased significantly in recent years (Figure \ref{fig:SalinityPapers}). This is partly due to the effect of the millenium drought on groundwater levels and the consequent reduction in the appearance of salinity effects in the landscape [@Mcfarlane2016]. However, the reduction in research is also because of the increased understanding that salinity processes are more complex than previously recognised. For example, salinity processes can vary substantially across the landscape [@Conyers2008] and the processes of salt delivery to the stream also varies in the landscape [@Summerell2006; @Hughes2007] and is dependent on landscape characteristics [@vanDijk2008; @Dalhaus2010]. As a result, the investment required to improve the understanding and increase the effectiveness of management is considerable and this has resulted in a reduction of the number of studies after the large investment in the late 1990s and 2000s in Australia.
+Dryland and irrigation salinity has long been a major natural resource management concern in Australia [@Jolly2001; @White2009; @Scanlon2007; @Walker2002; @Finlayson2010]. Globally, the success of management of salinity, while extensively documented, has remained patchy [@Leblanc2012]. As a result, in Australia, the volume of research and number of publications in this area has decreased significantly in recent years (Figure \ref{fig:SalinityPapers}). This is partly due to the effect of the millenium drought on groundwater levels and the consequent reduction in the appearance of salinity effects in the landscape [@mcfarlane2016]. However, the reduction in research is also because of the increased understanding that salinity processes are more complex than previously recognised. For example, salinity processes can vary substantially across the landscape [@Conyers2008] and the processes of salt delivery to the stream also varies in the landscape [@Summerell2006; @Hughes2007] and is dependent on landscape characteristics [@vanDijk2008; @Dalhaus2010]. As a result, the investment required to improve the understanding and increase the effectiveness of management is considerable and this has resulted in a reduction of the number of studies after the large investment in the late 1990s and 2000s in Australia.
 
 ```{r papers, echo = F, eval = F, warning = F, message = F}
 dry<-read_csv("Data/dryland salinity papers.csv")%>%
@@ -281,19 +291,6 @@ The water quality dataset contains data from 4 main sampling sources related to 
 -   Source 3: A dataset collected by undergraduate and postgraduate students as part of field trips in different units of study at the University of Sydney is identified as "Student data". This data was sampled "ad-hoc" during the field trip period using standard sampling protocols as described for the data from Akter [-@Akter2018].
 
 -   Source 4: Data from several autosamplers installed in the catchment during the PhD from Lessels [-@Lessels2014]. Because these samples were not taken by a "person" and were taken on a flow weighted basis, we separated the data from the "grab" samples in the other methods. These samples are also missing field measurements, as these were only analysed in the laboratory.
-
-```{r source4, echo = F}
-#identify source 4 in the data
-Muttama <- Muttama %>%
-  mutate(src = ifelse(str_detect(Muttama$record_id,"_AS")==T,4,src))
-
-# correct watertype 3 to 2 for autosamplers
-Muttama <- Muttama %>%
-  mutate(water_type = ifelse(str_detect(Muttama$record_id,"_AS")== T, 2,
-                             water_type))
-
-
-```
 
 Overall, `r nrow(Muttama)` water samples were collected from `r nrow(coord)` sample locations over the `r year(min(Muttama$Date))` - `r year(max(Muttama$Date))` period. However, not all sites were sampled at all times and not all samples were fully analysed for all hydrogeochemical variables. Both surface water and groundwater samples were collected at `r nrow(coord %>% filter(str_detect(coord$site_code,"GW")==T))` groundwater sample sites and `r nrow(coord %>% filter(str_detect(coord$site_code,"SW")==T))` surface water sites. These are distributed across the catchment, depending on standing water availability and access.
 
