@@ -1,0 +1,20 @@
+﻿Instrument,Purpose,Sensors,Date
+YSI6600,Surface water,pH: 6561 pH probe,up to November 2014
+YSI6600,Surface water,Temperature/EC: 6560 Conductivity/Temperature,up to November 2014
+YSI6600,Surface water,"Turbidity: 6136 Turbidity Probe, Wiping ",up to November 2014
+YSI6600,Surface water,DO: 6562 Dissolved oxygen probe,up to November 2014
+YSI600,Ground water,pH: 6561 pH probe,up to November 2014
+YSI600,Ground water,Temperature/EC: 6560 Conductivity/Temperature probe,up to November 2014
+YSI ProDSS multiparameter sampling,Ground water,pH: ProDSS pH Sensor with Module,November 2014 - mid 2019
+YSI ProDSS multiparameter sampling,Ground water,Temperature/EC: ProDSS Conductivity and Temperature Sensor,November 2014 - mid 2019
+YSI ProDSS multiparameter sampling,Ground water,DO: ProDSS ODO Optical Dissolved Oxygen Sensor,November 2014 - mid 2019
+YSI EXO2 multiparameter sonde,Surface water,pH:EXO pH Smart Sensor,After November 2014 - end 2023
+YSI EXO2 multiparameter sonde,Surface water,Temperature/EC: EXO Conductivity and Temperature Smart Sensor,After November 2014 - end 2023
+YSI EXO2 multiparameter sonde,Surface water,Turbidity: EXO Turbidity Smart Sensor,After November 2014 - end 2023
+YSI EXO2 multiparameter sonde,Surface water,DO: EXO Optical Dissolved Oxygen Smart Sensor,After November 2014 - end 2023
+YSI EXO1 multiparameter sonde,Ground water,pH: EXO pH Smart Sensor,After Mid 2019 to current
+YSI EXO1 multiparameter sonde,Ground water,Temperature/EC: EXO Conductivity and Temperature Smart Sensor,After Mid 2019 to current
+YSI ProDSS multiparameter sampling,Surface water,pH: ProDSS pH Sensor with Module,Start 2024 to current
+YSI ProDSS multiparameter sampling,Surface water,Temperature/EC: ProDSS Conductivity and Temperature Sensor,Start 2024 to current
+YSI ProDSS multiparameter sampling,Surface water,Turbidity: ProDSS Turbidity Sensor,Start 2024 to current
+YSI ProDSS multiparameter sampling,Surface water,DO: ProDSS ODO Optical Dissolved Oxygen Sensor,Start 2024 to current

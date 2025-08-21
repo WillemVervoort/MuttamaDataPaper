@@ -198,9 +198,10 @@ Dryland salinity also remains a global problem
 \citep{thorslund_vanvliet2020, stavi2021, mcfarlane2016}. In particular,
 the impact of salinity on freshwater systems such as wetlands is
 recognised as a serious threat \citep{canedoarguelles2016_science}. More
-importantly, in this case it is recognised that not only the EC (such as
-in the global database from Thorslund and van Vliet
-\citeyearpar{thorslund_vanvliet2020}) is of importance, but the actual
+importantly, in this case it is recognised that not only total salt
+concentration, using the often reported electrical conductivity (EC,
+such as in the global database from Thorslund and van Vliet
+\citeyearpar{thorslund_vanvliet2020}), is of importance, but the actual
 different chemical species, such as types of cations, as they have
 different impacts on ecology \citep{canedoarguelles2016_science}.
 
@@ -270,17 +271,17 @@ paper, provides a microcosm of groundwater and surface water salinity
 variability in Australia. Focusing on a medium size catchment in greater
 detail creates opportunities to test whether sources of salinity can be
 traced back to specific areas of land. The Muttama catchment is
-representative for flat semi-arid catchment globally, but typical for
-Australia where a significant amount of research has taken place at the
-catchment scale
+representative of flat semi-arid catchments globally, but especially of
+Australian catchments where a significant amount of research has taken
+place at the catchment scale
 \citep[e.g.][]{crosbie2007, Hughes2007, hughes2008, Summerell2006}.
 Unfortunately, a lot of the older data is not easily accessible and
 extractable. This paper attempts to correct this by providing an open
 dataset, which hopefully will also encourage other research teams to
 summarise and report open data. As all watersheds are unique in some
 way, it is hard to identify more exact matches to the watershed.
-However, we believe that the data would be relevant for areas in the US,
-Canada, Asia and South America
+However, we believe that the data would be relevant for semi-arid areas
+in the US, Canada, Asia and South America
 \citep{thorslund_vanvliet2020, stavi2021}.
 
 This paper gives a description of the dataset to facilitate open access
@@ -409,7 +410,7 @@ data set.
 \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
 \begin{tabular}[t]{l|r|l|l|l|l|l|l|l|l}
 \hline
-Field measurements & Records Field & Lab repeat & Records Lab & Anions & Records Anions & Cations & Records Cations & Others & Records others\\
+Field measurements & Records Field & Lab repeat & Records Lab & Anions & Records Anions & Cations & Records Cations & Other & Records other\\
 \hline
 pH & 742 & pH & 182 & Cl$^-$ & 1010 & Na$^+$ & 1035 & Total Nitrogen & 96\\
 \hline
@@ -427,39 +428,70 @@ Turbidity & 90 &  &  &  &  &  &  &  & \\
 \end{table}
 
 The variables pH, EC, SPC (specific conductance: field temperature
-corrected EC), Temperature, and in some cases DO and Turbidity were
-measured using a range of field probes (Table
+corrected EC), Temperature, and in some cases dissolved oxygen (DO) and
+Turbidity were measured using a range of field probes (Table
 \ref{tab:TableInstruments}). All field probes measured pH, EC,
 Temperature and calculated SPC. Early measurements (samples up to
 November 2014) used a YSI probe that included a turbidity and DO probe
 (YSI 6600 and YSI 600 for surface and groundwater, respectively). Later
 groundwater samples (After November 2014) used a different YSI probe
-(YSI ProPlus multi-parameter) that only included a DO probe. Finally,
-(after mid 2019) surface water and groundwater sampling used a Xylem Exo
-probe with DO, pH, EC, Temperature and SPC. Some of the variability in
-the field measurements might be due to this variation in the field
-instrumentation, because the exact instrument information was not
-recorded with the data.
+(YSI ProDSS multi-parameter) that only included a DO probe, while the
+suface water sampling used a YSI EXO2 multiparameter sonde that included
+pH, EC, DO and Turbidity. Finally, (after mid 2019) surface water and
+groundwater sampling used a Xylem Exo probe with DO, pH, EC, Temperature
+and SPC. Some of the variability in the field measurements might be due
+to this variation in the field instrumentation.
 
 \begin{table}
 \centering
 \caption{\label{tab:TableInstruments}Different instruments used in the sampling.}
 \centering
-\begin{tabular}[t]{l|l|l|l}
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{>{}l|l|l|l}
 \hline
-Instrument & Purpose & Sensors & Date\\
+Instrument & Purpose & Date & Sensors\\
 \hline
-YSI 6600 & Surface water & pH, EC, Temperature, turbidity, DO & up to November 2014\\
+\textbf{YSI6600} & Surface water & up to November 2014 & pH: 6561 pH probe\\
+\cline{4-4}
+ &  &  & Temperature/EC: 6560 Conductivity/Temperature\\
+\cline{4-4}
+ &  &  & Turbidity: 6136 Turbidity Probe, Wiping\\
+\cline{4-4}
+ &  &  & DO: 6562 Dissolved oxygen probe\\
+\cline{1-2}
+\cline{4-4}
+\textbf{YSI600} & Ground water &  & pH: 6561 pH probe\\
+\cline{4-4}
+ &  &  & Temperature/EC: 6560 Conductivity/Temperature probe\\
+\cline{1-1}
+\cline{3-4}
+\textbf{YSI ProDSS multiparameter sampling} &  & November 2014 - mid 2019 & pH: ProDSS pH Sensor with Module\\
+\cline{4-4}
+ &  &  & Temperature/EC: ProDSS Conductivity and Temperature Sensor\\
+\cline{4-4}
+ &  &  & DO: ProDSS ODO Optical Dissolved Oxygen Sensor\\
+\cline{1-4}
+\textbf{YSI EXO2 multiparameter sonde} & Surface water & After November 2014 - end 2023 & pH:EXO pH Smart Sensor\\
+\cline{4-4}
+ &  &  & Temperature/EC: EXO Conductivity and Temperature Smart Sensor\\
+\cline{4-4}
+ &  &  & Turbidity: EXO Turbidity Smart Sensor\\
+\cline{4-4}
+ &  &  & DO: EXO Optical Dissolved Oxygen Smart Sensor\\
+\cline{1-4}
+\textbf{YSI EXO1 multiparameter sonde} & Ground water & After Mid 2019 to current & pH: EXO pH Smart Sensor\\
+\cline{4-4}
+ &  &  & Temperature/EC: EXO Conductivity and Temperature Smart Sensor\\
+\cline{1-4}
+\textbf{YSI ProDSS multiparameter sampling} & Surface water & Start 2024 to current & pH: ProDSS pH Sensor with Module\\
+\cline{4-4}
+ &  &  & Temperature/EC: ProDSS Conductivity and Temperature Sensor\\
+\cline{4-4}
+ &  &  & Turbidity: ProDSS Turbidity Sensor\\
+\cline{4-4}
+ &  &  & DO: ProDSS ODO Optical Dissolved Oxygen Sensor\\
 \hline
-YSI 600 & Groundwater & pH, EC, Temperature, turbidity, DO & up to November 2014\\
-\hline
-YSI ProPlus multi-parameter & Groundwater & pH, EC, Temperature, DO & after November 2014\\
-\hline
-Xylem Exo Probe & Surface water & pH, EC, Temperature, DO & after mid 2019\\
-\hline
-Xylem Exo Probe & Groundwater & pH, EC, Temperature, DO & after mid 2019\\
-\hline
-\end{tabular}
+\end{tabular}}
 \end{table}
 
 Anions in most of the samples were analysed using high-performance
@@ -558,8 +590,8 @@ repository}, as part of the markdown document for this paper.
 
 In the hydrogeochemistry data, data source 3 was the most complete in
 terms of variables analysed, because in this set more variables were
-analysed in the commercial lab (Fig \ref{fig:na-plot} top). Some of the
-variables analysed in the commercial lab were not analysed with the
+analysed in the commercial lab (Figure \ref{fig:na-plot} top). Some of
+the variables analysed in the commercial lab were not analysed with the
 equipment at the University of Sydney. However, source 3 had the
 smallest number of overall samples. Source 2 has the most incomplete
 data points. Source 4 has a very consistent number of missing values,
@@ -578,23 +610,23 @@ methodology over the 14 years of sampling.
 In the groundwater level time series, the missing data relate mostly to
 logger failures and the different times that wells were instrumented.
 Rather than giving a full breakdown by well location, the overall level
-of completeness of the series is displayed (Fig \ref{fig:na-plot}
+of completeness of the series is displayed (Figure \ref{fig:na-plot}
 bottom).
 
 \subsection{Temporal Distribution of Data}
 
 Overall the water quality sampling appears to have a reasonable
-distribution across all months (Fig \ref{fig:timedist-plot}), therefore
-seasonal trends should be identifiable in the data. Average rainfall
-data (1995 - 2022) does not indicate any major seasonal trends, although
-there is a slight dominance of rainfall in the early Austral Spring
-(months 9 and 10, September and October). This also explains the higher
-number of samples because, more sampling trips were organised in this
-period, and spatially more channels could be sampled for surface water.
-The timing of source 3 (the student data) is the result of the yearly
-field trips, which tended to occur at approximately the same time of the
-year in early March and late September or early October, coinciding with
-the University semester breaks.
+distribution across all months (Figure \ref{fig:timedist-plot}),
+therefore seasonal trends should be identifiable in the data. Average
+rainfall data (1995 - 2022) does not indicate any major seasonal trends,
+although there is a slight dominance of rainfall in the early Austral
+Spring (months 9 and 10, September and October). This also explains the
+higher number of samples because, more sampling trips were organised in
+this period, and spatially more channels could be sampled for surface
+water. The timing of source 3 (the student data) is the result of the
+yearly field trips, which tended to occur at approximately the same time
+of the year in early March and late September or early October,
+coinciding with the University semester breaks.
 
 \begin{figure}
 \includegraphics[width=0.7\linewidth]{Figures/timeDist} \caption{Top:Distribution of samples throughout the year (total number of samples collected during each month) with the blue line representing the average monthly rainfall during the study period. Bottom: Distribution of samples over the study period (total number of samples collected during each year).}\label{fig:timedist-plot}
@@ -602,7 +634,7 @@ the University semester breaks.
 
 The number of samples collected in each year relative to the different
 sources changes throughout the years reflecting the duration of the
-different studies and funding cycles (Fig \ref{fig:timedist-plot});
+different studies and funding cycles (Figure \ref{fig:timedist-plot});
 however the data is still well-distributed enough that overall trends
 should be clear. In addition, some of the sample volumes can be related
 to the occurrence of rainfall, as in drier years several of the channels
@@ -632,7 +664,7 @@ samples}
 
 \begin{table}
 \centering
-\caption{\label{tab:TableElementstats}Summary statistics for elements measured in the field}
+\caption{\label{tab:TableElementstats}Summary statistics for elements measured in the field.}
 \centering
 \begin{tabular}[t]{l|l|l|l|l|l|l}
 \hline
@@ -686,15 +718,15 @@ are low across the catchment samples, with only a few outliers related
 to specific locations and dates.
 
 Groundwater samples have quite a distinctive hydrogeochemical signature
-compared to the surface water samples (Fig \ref{fig:gw_sw-plot}). Since
-`Source 1' collected most of the groundwater samples, this results in
-differences between data collection sources. Field SPC measurements were
-used to represent EC since these samples had the fewest missing data.
-There also appears to be a slight bias towards lower EC values for
+compared to the surface water samples (Figure \ref{fig:gw_sw-plot}).
+Since `Source 1' collected most of the groundwater samples, this results
+in differences between data collection sources. Field SPC measurements
+were used to represent EC since these samples had the fewest missing
+data. There also appears to be a slight bias towards lower EC values for
 sampling group 2, but this is likely because these samples were
-collected during two very wet years in 2010 and 2011 (Fig
+collected during two very wet years in 2010 and 2011 (Figure
 \ref{fig:timedist-plot}) and are mostly associated with high flow values
-(Fig \ref{fig:FDC}).
+(Figure \ref{fig:FDC}).
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Figures/gwsw} \caption{Difference in pH and EC for groundwater and surface water samples. The source of the data (the sampling group) is indicated with colour.}\label{fig:gw_sw-plot}
@@ -707,7 +739,7 @@ collected during two very wet years in 2010 and 2011 (Fig
 \end{figure}
 
 The overall corrected groundwater timeseries shows the shorter time that
-loggers were installed in the wells (Fig \ref{fig:gw-series}),
+loggers were installed in the wells (Figure \ref{fig:gw-series}),
 associated with the PhD thesis from Akter \citeyearpar{Akter2018}. It
 also indicates that the manual data can not always be fully matched with
 the logger data, but further corrections are likely to be speculation.
@@ -715,7 +747,7 @@ the logger data, but further corrections are likely to be speculation.
 In general, shallow groundwater occurs between 1 and 5 meters below the
 surface and is responsive to dry and wet periods. Some of the wells have
 positive pressures, resulting in occasional groundwater levels above the
-ground surface, such as at GW10, GW12, GW13 and GW21 (Fig
+ground surface, such as at GW10, GW12, GW13 and GW21 (Figure
 \ref{fig:gw-series}).
 
 \subsection{Spatial variation}
@@ -723,13 +755,13 @@ ground surface, such as at GW10, GW12, GW13 and GW21 (Fig
 \clearpage
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{Figures/spatial_maps} \caption{Top row: Spatial Variation of $\mathrm{Cl^-:HCO_3^-}$ ratio throughout the catchment, highlighting mean and interquartile range (IQR) for each sampling location. Bottom row: Spatial Variation of EC throughout the catchment, using Mean EC in $\mathrm{\mu S~cm^{-1}}$ and interquartile range (IQR) for each sampling location. Only locations with more than 10 observations over the 14 years are included. Surface water sample sites are in the left column, while groundwater sample sites are in the right column.}\label{fig:spatial-map}
+\includegraphics[width=0.8\linewidth]{Figures/spatial_maps} \caption{Top row: Spatial variation of $\mathrm{Cl^-:HCO_3^-}$ ratio throughout the catchment, highlighting mean and interquartile range (IQR) for each sampling location. Bottom row: Spatial Variation of EC throughout the catchment, using Mean EC in $\mathrm{\mu S~cm^{-1}}$ and interquartile range (IQR) for each sampling location. Only locations with more than 10 observations over the 14 years are included. Surface water sample sites are in the left column, while groundwater sample sites are in the right column.}\label{fig:spatial-map}
 \end{figure}
 
 \clearpage
 
 \begin{figure}
-\includegraphics[width=0.7\linewidth]{Figures/boxplots} \caption{Variation across time of the $\mathrm{Cl:HCO_3}$ ratio (left) and EC (right) by sampling location represented as a boxplot. Only locations with more than 10 observations over the 14 years are included. The blue dashed line (left) indicate a $\mathrm{Cl:HCO_3}$ ratio of 1, while the The blue dashed line (right) is the drinking water limit of 800 $\mathrm{\mu S~cm^{-1}}$.}\label{fig:boxplots}
+\includegraphics[width=0.7\linewidth]{Figures/boxplots} \caption{Variation across time of the $\mathrm{Cl:HCO_3}$ ratio (left) and EC (right) by sampling location represented as a boxplot. Only locations with more than 10 observations over the 14 years are included. The blue dashed line (left) indicates a $\mathrm{Cl:HCO_3}$ ratio of 1, while the blue dashed line (right) is the drinking water limit of 800 $\mathrm{\mu S~cm^{-1}}$.}\label{fig:boxplots}
 \end{figure}
 
 There is clear spatial variation in water parameters throughout the
@@ -764,7 +796,7 @@ have lower variability in the surface water samples and lower
 Cl:HCO\textsubscript{3} values.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{Figures/piper_plot} \caption{Piper-plot of all groundwater and surface water data collected over the period with complete major anion data}\label{fig:piperplot}
+\includegraphics[width=1\linewidth]{Figures/piper_plot} \caption{Piper-plot of all groundwater and surface water data collected over the period with complete major anion data.}\label{fig:piperplot}
 \end{figure}
 
 \subsection{Piper plot}
@@ -800,27 +832,33 @@ samples with data from the database from Thorslund and van Vliet
 \citeyearpar{thorslund_vanvliet2020}. We subset the global database by
 Australia, and restricted the groundwater data to shallow groundwater
 \textless{} 20m from the surface (Figure \ref{fig:global-plot}). The
-figure clearly shows that the data collected here fall well within the
-overall distribution of observed salinity values in Australia for both
-surface water and groundwater.
+data from this figure are not included in the github due to the size of
+the global data set and because the original data is readily available.
+The figure clearly shows that the data collected in the Muttama
+catchment fall well within the overall distribution of comparable
+observed salinity values in Australia for both surface water and
+groundwater.
 
 In addition, comparison with Table 3 and Figure 5 in \citet{Hughes2007}
-clearly highlights the of the Cl/HCO\textsubscript{3} ration comparing
-values of EC, Cl, and HCO\textsubscript{3}. For example
-\citet{Hughes2007} found a much lower mean of 77 mg/L for
+clearly highlights the value of the Cl/HCO\textsubscript{3} ratio in
+comparing values of EC, Cl, and HCO\textsubscript{3}. For example, in a
+catchment about 100 km north of Muttama catchment, \citet{Hughes2007}
+found a much lower mean of 77 mg L\textsuperscript{-1} for
 CaCO\textsubscript{3} in runoff. This study found a higher mean of 334
-mg/L (Table \ref{tab:TableElementstats}). However, \citet{Hughes2007}
-found a mean of 1056 mg/L for Cl, while this study found a much lower
-mean of 294 mg/L, suggesting quite different ratios. Finally,
+mg L\textsuperscript{-1} (Table \ref{tab:TableElementstats}). However,
+\citet{Hughes2007} found a mean of 1056 mg L\textsuperscript{-1} for Cl,
+while this study found a much lower mean of 294 mg
+L\textsuperscript{-1}, suggesting quite different ratios. Finally,
 \citet{Hughes2007} reported a mean EC of 3717 \(\mu S/cm\) in runoff,
 while our data has mean of 1246 \(\mu S/cm\) (Using the temperature
 corrected value). In other words, the EC values in the Muttama Creek
-catchment are more dominated by the alkalinity. However, similar to
-Muttama Creek catchment, Figure 5 in \citet{Hughes2007} also indicates
-much higher alkalinity in the groundwater.
+catchment are more dominated by the alkalinity, resulting in lower EC
+values. However, similar to Muttama Creek catchment, Figure 5 in
+\citet{Hughes2007} also indicates much higher alkalinity in the
+groundwater.
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{Figures/globalboxplot} \caption{Boxplots comparing the electrical conductivity for samples of the Australian database and the database of samples from Muttama Catchment}\label{fig:global-plot}
+\includegraphics[width=0.8\linewidth]{Figures/globalboxplot} \caption{Boxplots comparing the electrical conductivity for samples of the Australian database extracted from Thorslund and van Vliet (2020) and the database of samples from Muttama Catchment.}\label{fig:global-plot}
 \end{figure}
 
 The Muttama catchment dataset presented here covers multiple sites,
@@ -864,22 +902,24 @@ these areas, particularly to limit the movement of saline discharge into
 the creek \citep{Akter2018}.
 
 The presented dataset provides significant opportunities for further
-research, particularly the length of the time series. This could provide
-a more in depth look at trends in salinity related to climate. There are
-few data sets that cover shallow groundwater and concurrent surface
-water across a similar wide range of hydrogeochemistry. This opens up
-the opportunity to look at temporal variability in groundwater surface
-water connections, particularly for flat semi-arid systems similar to
-Muttama Catchment, as in \citet{Akter2018}.
+research, particularly because of the length of the time series. For
+example, there is the opportunity to examine trends in salinity due to
+changes in climate. There are few datasets that cover shallow
+groundwater and concurrent surface water across a similar wide range of
+hydrogeochemistry. This opens up the opportunity to look at temporal
+variability in groundwater surface water connections, particularly for
+flat semi-arid systems similar to Muttama Catchment, as in
+\citet{Akter2018}.
 
 The comprehensive nature of the data also creates opportunities for
 testing more complex hydrological and hydrogeological models. An example
-could be to extend the work by Deb et al. \citep{debMuttamamodel2019} to
-look at variations in rainfall runoff response during wet and dry
-periods, which for Muttama catchment was linked to groundwater surface
-water connections. Finally, given our intention to continue collecting
-data in the catchment, there is a future opportunity to look at shifts
-in the hydrogeochemistry as a result of changes in climate.
+could be to extend the work by Deb et al.
+\citeyearpar{debMuttamamodel2019} to look at variations in
+rainfall-runoff response during wet and dry periods, which for Muttama
+catchment was linked to groundwater surface water connections. Finally,
+given our intention to continue collecting data in the catchment, there
+is an opportunity to look at shifts in the hydrogeochemistry as a result
+of wet and dry periods.
 
 \section{Conclusions}
 
@@ -905,8 +945,7 @@ catchment salinity.
 
 \bigskip
 
-\noindent \textbf{Competing interests}\\
-The authors declare no competing interests.
+\competinginterests{The authors declare no competing interests}.
 
 \bigskip
 
@@ -933,10 +972,10 @@ The authors declare no competing interests.
 \noindent \textbf{Author contributions}\\
 TB initiated the sampling campaign. TB, FvO, FD and RWV conceptualised
 the overall study, and managed the project. RWV and MT wrote the draft
-paper and analysed results. FA and JL collected and analysed the
-majority of the samples. MT, AB, JM, FA analysed and managed the data.
-All authors participated in sampling, laboratory analysis and review of
-the paper.
+paper and analysed results. FA, DK and JL collected and analysed the
+majority of the samples. MT, AB, JM, FA and DK analysed and managed the
+data. All authors participated in sampling, laboratory analysis and
+review of the paper.
 
 \bigskip
 
