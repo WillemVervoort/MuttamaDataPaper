@@ -147,8 +147,8 @@ laboratory analysis of major anions and cations. This data is augmented
 with observed groundwater levels and publicly available streamflow and
 climate data. The data set covers 23 groundwater sample sites and 39
 surface water sites. Because the data was collected by four distinct
-groups and over many years, we analyse to see if this has caused a bias
-in the dataset. In addition, we show the major spatial and temporal
+groups and over many years, we investigate whether this has caused a
+bias in the dataset. In addition, we show the major spatial and temporal
 trends to provide an overview of the dataset. The dataset is made open
 access to encourage further research and the current paper shows the
 richness of the collected data and opportunities for further research.
@@ -259,16 +259,14 @@ variability in Australia. Focusing on a medium size catchment in greater
 detail creates opportunities to test whether sources of salinity can be
 traced back to specific areas of land. The Muttama catchment is
 representative of flat semi-arid catchments globally, but especially of
-Australian catchments where a significant amount of research has taken
+Australian catchments, where a significant amount of research has taken
 place at the catchment scale
 \citep[e.g.][]{crosbie2007, Hughes2007, hughes2008, Summerell2006}.
 Unfortunately, a lot of the older data is not easily accessible and
 extractable. This paper attempts to correct this by providing an open
 dataset, which hopefully will also encourage other research teams to
-summarise and report open data. As all watersheds are unique in some
-way, it is hard to identify more exact matches to the watershed.
-However, we believe that the data would be relevant for semi-arid areas
-in the US, Canada, Asia and South America
+summarise and report open data. We believe that the data would be
+relevant for semi-arid areas in the US, Canada, Asia and South America
 \citep{thorslund_vanvliet2020, stavi2021}.
 
 This paper gives a description of the dataset to facilitate open access
@@ -298,11 +296,12 @@ Streamflow is measured continuously by WaterNSW, the state agency
 responsible for water data collection, at three locations in the
 catchment: Coolac, station no. 410044, the main downstream point, and
 Berthong, station no. 41000207 and Jindalee, station no. 410112 on two
-branches above the Cootamundra township. This data is available as open
-access via the \href{https://waterinsights.waternsw.com.au/}{WaterNSW
-WaterInsights platform} or through the
-\href{http://bom.gov.au/waterdata/}{Bureau of Meteorology}. Here, we
-only use the data from the Coolac station as a comparison.
+branches above the Cootamundra township. These data are available as
+open access via the
+\href{https://waterinsights.waternsw.com.au/}{WaterNSW WaterInsights
+platform} or through the \href{http://bom.gov.au/waterdata/}{Bureau of
+Meteorology}. Here, we only use the data from the Coolac station as a
+comparison.
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Figures/gw_or_sw_map} \caption{Muttama Catchment Sampling Locations with Elevation. Symbol colour indicates whether location was a groundwater or surface water source, with blue being surface water and coral red being groundwater. The numbers on the map represent the sample location number.}\label{fig:samplemap}
@@ -481,7 +480,7 @@ Instrument & Purpose & Date & Sensors\\
 \end{tabular}}
 \end{table}
 
-Anions in most of the samples were analysed using high-performance
+Anions in most of the samples were analysed using the high-performance
 liquid chromatography method (Dionex P680 HPLC) and cations were
 measured on acidified samples using an Inductively Coupled Plasma
 Optical Emission Spectrometer (ICP-OES, Varian 720-ES) at the University
@@ -500,13 +499,13 @@ escholarship repository: \url{doi.org/10.25910/m0wp-8890}
 
 \subsection{Continuous variables}
 
-The logger data, which collected groundwater pressure levels at 15 min
-and later at 2 hour intervals, were adjusted for the length of the cable
-and the height of the standpipe above the ground level. They were
-subsequently summarised to raw daily values using an R script
-(\texttt{SummariseDailyData.R}), which is stored with the raw data in
-the Open Science Foundation (OSF) repository associated with this paper
-\url{https://doi.org/10.17605/OSF.IO/BEUWK}.
+The logger data, which early on collected groundwater pressure levels at
+15 min and from mid-2016 at 2 hour intervals, were adjusted for the
+length of the cable and the height of the standpipe above the ground
+level. They were subsequently summarised to raw daily values using an R
+script (\texttt{SummariseDailyData.R}), which is stored with the raw
+data in the Open Science Foundation (OSF) repository associated with
+this paper \url{https://doi.org/10.17605/OSF.IO/BEUWK}.
 
 The loggers in the field were uncalibrated. Due to logger failures, gaps
 occur in the daily data, followed by replacement of the faulty loggers.
@@ -522,15 +521,15 @@ and slope and intercept of the regression had a p-value \textless{} 0.1.
 If there were less than 3 manual observed data points for the specific
 logger an adjustment to the data was based on the difference between the
 average observed data and the average recorded water levels. Otherwise
-no adjustment was made. This is slightly tricky: After the manual
-observations are made, the well is purged and the logger is temporarily
-removed from the well. This data (during the temporarily removal of the
-logger during the purging and subsequent recovery of the groundwater
-level) is removed from the logger data series. As a result, there is no
-direct time match between the logger data series and the manual
-observations. However, the data showed that, in most cases, the
-groundwater level recovered within 24 hrs. The pseudo code in the
-supplementary material describes the process in more detail.
+no adjustment was made. After the manual observations are made, the well
+is purged and the logger is temporarily removed from the well. This data
+(during the temporarily removal of the logger during the purging and
+subsequent recovery of the groundwater level) is removed from the logger
+data series. As a result, there is no direct time match between the
+logger data series and the manual observations. However, the data showed
+that, in most cases, the groundwater level recovered within 24 hrs. The
+pseudo code in the supplementary material describes the process in more
+detail.
 
 The code used to match the manually observed data with the logger data
 is in the script \texttt{Match\_obs\_logger\_data.R}, which is stored
@@ -646,8 +645,8 @@ high flow as during flood situations sampling was dangerous and
 restricted by work health and safety considerations. The samples at high
 flow are all from our automated sampling.
 
-\subsubsection{Comparisons of Groundwater samples with Surface water
-samples}
+\subsubsection{Comparisons of the geochemistry of groundwater samples
+with Surface water samples}
 
 \begin{table}
 \centering
@@ -735,7 +734,7 @@ In general, shallow groundwater occurs between 1 and 5 meters below the
 surface and is responsive to dry and wet periods. Some of the wells have
 positive pressures, resulting in occasional groundwater levels above the
 ground surface, such as at GW10, GW12, GW13 and GW21 (Figure
-\ref{fig:gw-series}).
+\ref{fig:samplemap} and Figure \ref{fig:gw-series}).
 
 \subsection{Spatial variation}
 
@@ -803,11 +802,11 @@ explaining the high EC values observed for these samples.
 
 \section{Discussion}
 
-The dataset in this paper is unique in Australia. There are datasets
-from experimental small catchments
-\citep[i.e.][]{Hughes2007, crosbie2007, Summerell2006}, but not many of
-these are publicly or easily accessible. In contrast, there are data
-from very large state and national datasets
+The dataset in this paper is unique in Australia. There are surface
+water and groundwater geochemistry datasets from experimental small
+catchments \citep[i.e.][]{Hughes2007, crosbie2007, Summerell2006}, but
+not many of these are publicly or easily accessible. In contrast, there
+are data from very large state and national datasets
 \citep[i.e.][]{Jolly2001, thorslund_vanvliet2020}, but there are limited
 publicly available data sets that cover similar substantial space and
 time scales, and the range of hydrogeochemistry covered here. This is
@@ -815,7 +814,7 @@ particularly true in the case of shallow groundwater (\textless{} 20m)
 which is the focus in this dataset.
 
 As a baseline comparison, we compared the EC data from the catchment
-samples with data from the database from Thorslund and van Vliet
+samples with data from the global database from Thorslund and van Vliet
 \citeyearpar{thorslund_vanvliet2020}. We subset the global database by
 Australia, and restricted the groundwater data to shallow groundwater
 \textless{} 20m from the surface (Figure \ref{fig:global-plot}). The
@@ -837,29 +836,29 @@ mg L\textsuperscript{-1} (Table \ref{tab:TableElementstats}). However,
 while this study found a much lower mean of 294 mg
 L\textsuperscript{-1}, suggesting quite different ratios. Finally,
 \citet{Hughes2007} reported a mean EC of 3717 \(\mu S/cm\) in runoff,
-while our data has mean of 1246 \(\mu S/cm\) (Using the temperature
+while our data has mean of 1246 \(\mu S/cm\) (using the temperature
 corrected value). In other words, the EC values in the Muttama Creek
 catchment are more dominated by the alkalinity, resulting in lower EC
-values. However, similar to Muttama Creek catchment, Figure 5 in
-\citet{Hughes2007} also indicates much higher alkalinity in the
-groundwater.
+values. However, similar to Muttama Creek catchment, \citet{Hughes2007}
+also indicates much higher alkalinity in the groundwater.
 
 \begin{figure}
 \includegraphics[width=0.8\linewidth]{Figures/globalboxplot} \caption{Boxplots comparing the electrical conductivity for samples of the Australian database extracted from Thorslund and van Vliet (2020) and the database of samples from Muttama Catchment.}\label{fig:global-plot}
 \end{figure}
 
 The Muttama catchment dataset presented here covers multiple sites,
-multiple time periods and multiple sampling campaigns. This is a
-strength, but also has limitations. As the groundwater data clearly
-shows, the actual number of possible sample sites is limited by the
-existing and accessible groundwater wells. Over the 14 years of
-research, several groundwater wells were accidentally destroyed during
-farm operations, further reducing the sample opportunities. The number
-of surface water sampling sites in the catchment is limited by the
-ephemeral nature of the stream network, with some creeks not flowing for
-long periods. Given the travel distance from the University of Sydney,
-this also meant that overall sampling is limited in scope, as is clearly
-shown in the spatial maps (Figure \ref{fig:spatial-map}).
+multiple time periods and multiple sampling campaigns. Despite the
+strengths of this dataset (i.e., the large spatial and temporal range
+and large range in hydrogeochemical parameters), there are also
+limitations. As the groundwater data clearly shows, the actual number of
+possible sample sites is limited by the existing and accessible
+groundwater wells. Over the 14 years of research, several groundwater
+wells were accidentally destroyed during farm operations, further
+reducing the sample opportunities. The number of surface water sampling
+sites in the catchment is limited by the ephemeral nature of the stream
+network, with some creeks not flowing for long periods. The overall
+sampling is therefore limited in scope, as is clearly shown in the
+spatial maps (Figure \ref{fig:spatial-map}).
 
 The development of the dataset over many years regrettably does not
 allow a full uncertainty analysis. There is reasonable quality
@@ -895,8 +894,8 @@ changes in climate. There are few datasets that cover shallow
 groundwater and concurrent surface water across a similar wide range of
 hydrogeochemistry. This opens up the opportunity to look at temporal
 variability in groundwater surface water connections, particularly for
-flat semi-arid systems similar to Muttama Catchment, as in
-\citet{Akter2018}.
+flat semi-arid systems similar to Muttama Catchment, as was done for a
+more limited set of data in \citet{Akter2018}.
 
 The comprehensive nature of the data also creates opportunities for
 testing more complex hydrological and hydrogeological models. An example
@@ -910,17 +909,18 @@ of wet and dry periods.
 
 \section{Conclusions}
 
-Detailed datasets for medium to large scale catchments are
-underrepresented in salinity research in Australia and worldwide. This
-paper reports on a long term (14 year) hydrogeochemistry dataset from a
-single medium scale catchment (\textgreater{} 1000
-km\textsuperscript{2}) in NSW, Australia. This dataset includes a total
-of 1160 water samples from 62 locations within the catchment and
-includes groundwater and surface water sites. While the dataset was
-collected by different groups of people at different times and
-locations, it still provides a valuable long term and spatially diverse
-data set. The complete sample set covers a wide range of flow and
-wetness conditions. Clear differences were observed in pH,
+Detailed datasets for medium to large scale catchments (greater or equal
+than 1000 km\textsuperscript{2}) are underrepresented in salinity
+research in Australia and worldwide, with very few public datasets
+identified for Australia. This paper reports on a long term (14 year)
+hydrogeochemistry dataset from a single medium scale catchment
+(\textgreater{} 1000 km\textsuperscript{2}) in NSW, Australia. This
+dataset includes a total of 1160 water samples from 62 locations within
+the catchment and includes groundwater and surface water sites. While
+the dataset was collected by different groups of people at different
+times and locations, it still provides a valuable long term and
+spatially diverse data set. The complete sample set covers a wide range
+of flow and wetness conditions. Clear differences were observed in pH,
 electroconductivity, and in ion ratios between groundwater and surface
 water samples. Spatial differences in water chemistry are also apparent,
 with our data reinforcing prior chemical gradients observed in the

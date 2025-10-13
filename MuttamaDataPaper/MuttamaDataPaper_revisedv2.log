@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.26)  13 OCT 2025 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.26)  13 OCT 2025 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**MuttamaDataPaper_revised.tex
-(./MuttamaDataPaper_revised.tex
+**MuttamaDataPaper_revisedv2.tex
+(./MuttamaDataPaper_revisedv2.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (./copernicus.cls
@@ -557,8 +557,8 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 90.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-) (./MuttamaDataPaper_revised.aux)
-\openout1 = `MuttamaDataPaper_revised.aux'.
+) (./MuttamaDataPaper_revisedv2.aux)
+\openout1 = `MuttamaDataPaper_revisedv2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
@@ -632,21 +632,21 @@ Overfull \hbox (1.76079pt too wide) in paragraph at lines 226--240
 <Figures/gw_or_sw_map.png, id=141, 505.89pt x 505.89pt>
 File: Figures/gw_or_sw_map.png Graphic file (type png)
 <use Figures/gw_or_sw_map.png>
-Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 308.
+Package pdftex.def Info: Figures/gw_or_sw_map.png  used on input line 307.
 (pdftex.def)             Requested size: 402.89255pt x 402.89851pt.
 
 
 [4]
 
 [5 <./Figures/gw_or_sw_map.png>]
-Overfull \hbox (0.39166pt too wide) in paragraph at lines 384--392
+Overfull \hbox (0.39166pt too wide) in paragraph at lines 383--391
 []\T1/ptm/m/n/10 The data for each location consist of up to six variables which were measured in the field (Table []1[]). These were complemented
  []
 
 
 
 [6]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 507.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 506.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -654,15 +654,15 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 [7]
 
 [8]
-<Figures/na_count.png, id=210, 803.0pt x 803.0pt>
+<Figures/na_count.png, id=209, 803.0pt x 803.0pt>
 File: Figures/na_count.png Graphic file (type png)
 <use Figures/na_count.png>
-Package pdftex.def Info: Figures/na_count.png  used on input line 575.
+Package pdftex.def Info: Figures/na_count.png  used on input line 574.
 (pdftex.def)             Requested size: 453.24931pt x 453.25475pt.
-<Figures/timeDist.png, id=214, 803.0pt x 803.0pt>
+<Figures/timeDist.png, id=213, 803.0pt x 803.0pt>
 File: Figures/timeDist.png Graphic file (type png)
 <use Figures/timeDist.png>
-Package pdftex.def Info: Figures/timeDist.png  used on input line 619.
+Package pdftex.def Info: Figures/timeDist.png  used on input line 618.
 (pdftex.def)             Requested size: 352.52809pt x 352.53691pt.
 
 
@@ -673,26 +673,26 @@ Package pdftex.def Info: Figures/timeDist.png  used on input line 619.
 [10 <./Figures/na_count.png>]
 
 [11 <./Figures/timeDist.png>]
-<Figures/FDC.png, id=237, 341.3553pt x 255.8358pt>
+<Figures/FDC.png, id=236, 341.3553pt x 255.8358pt>
 File: Figures/FDC.png Graphic file (type png)
 <use Figures/FDC.png>
-Package pdftex.def Info: Figures/FDC.png  used on input line 636.
+Package pdftex.def Info: Figures/FDC.png  used on input line 635.
 (pdftex.def)             Requested size: 402.89255pt x 301.9656pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 668.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 667.
 (c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 [12 <./Figures/FDC.png>]
-<Figures/gwsw.png, id=247, 530.9436pt x 328.1058pt>
+<Figures/gwsw.png, id=246, 530.9436pt x 328.1058pt>
 File: Figures/gwsw.png Graphic file (type png)
 <use Figures/gwsw.png>
-Package pdftex.def Info: Figures/gwsw.png  used on input line 719.
+Package pdftex.def Info: Figures/gwsw.png  used on input line 718.
 (pdftex.def)             Requested size: 402.89255pt x 248.97249pt.
-<Figures/Final_Corrected_piezodepths.png, id=249, 1084.05pt x 762.85pt>
+<Figures/Final_Corrected_piezodepths.png, id=248, 1084.05pt x 762.85pt>
 File: Figures/Final_Corrected_piezodepths.png Graphic file (type png)
 <use Figures/Final_Corrected_piezodepths.png>
-Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 725.
+Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input line 724.
 (pdftex.def)             Requested size: 503.61377pt x 354.39566pt.
 
 
@@ -704,7 +704,7 @@ Package pdftex.def Info: Figures/Final_Corrected_piezodepths.png  used on input 
 <Figures/spatial_maps.png, id=275, 569.0058pt x 711.1368pt>
 File: Figures/spatial_maps.png Graphic file (type png)
 <use Figures/spatial_maps.png>
-Package pdftex.def Info: Figures/spatial_maps.png  used on input line 745.
+Package pdftex.def Info: Figures/spatial_maps.png  used on input line 744.
 (pdftex.def)             Requested size: 402.89255pt x 503.53258pt.
 
 
@@ -712,7 +712,7 @@ Package pdftex.def Info: Figures/spatial_maps.png  used on input line 745.
 <Figures/boxplots.png, id=284, 426.6339pt x 569.0058pt>
 File: Figures/boxplots.png Graphic file (type png)
 <use Figures/boxplots.png>
-Package pdftex.def Info: Figures/boxplots.png  used on input line 751.
+Package pdftex.def Info: Figures/boxplots.png  used on input line 750.
 (pdftex.def)             Requested size: 352.52809pt x 470.17357pt.
 
 
@@ -723,20 +723,25 @@ Package pdftex.def Info: Figures/boxplots.png  used on input line 751.
 <Figures/piper_plot.png, id=295, 569.0058pt x 569.0058pt>
 File: Figures/piper_plot.png Graphic file (type png)
 <use Figures/piper_plot.png>
-Package pdftex.def Info: Figures/piper_plot.png  used on input line 786.
+Package pdftex.def Info: Figures/piper_plot.png  used on input line 785.
 (pdftex.def)             Requested size: 503.61377pt x 503.60918pt.
+
+Overfull \hbox (7.50095pt too wide) in paragraph at lines 805--815
+\T1/ptm/m/n/10 The dataset in this paper is unique in Australia. There are surface water and groundwater geochemistry datasets from experimental
+ []
+
 
 
 [18]
 
 [19 <./Figures/piper_plot.png>]
-<Figures/globalboxplot.png, id=333, 426.6339pt x 284.5029pt>
+<Figures/globalboxplot.png, id=334, 426.6339pt x 284.5029pt>
 File: Figures/globalboxplot.png Graphic file (type png)
 <use Figures/globalboxplot.png>
-Package pdftex.def Info: Figures/globalboxplot.png  used on input line 848.
+Package pdftex.def Info: Figures/globalboxplot.png  used on input line 846.
 (pdftex.def)             Requested size: 402.89255pt x 268.67432pt.
 
-Overfull \hbox (0.64023pt too wide) in paragraph at lines 851--863
+Overfull \hbox (0.64023pt too wide) in paragraph at lines 849--862
 []\T1/ptm/m/n/10 The Muttama catchment dataset presented here covers multiple sites, multiple time periods and multiple sampling campaigns.
  []
 
@@ -754,7 +759,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 948--952
 
  []
 
-(./MuttamaDataPaper_revised.bbl
+(./MuttamaDataPaper_revisedv2.bbl
 
 [22
 pdfTeX warning (ext4): destination with the same identifier (name{competinginterests.1}) has been already used, duplicate ignored
@@ -782,7 +787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
 [24])
 
-[25] (./MuttamaDataPaper_revised.aux)
+[25] (./MuttamaDataPaper_revisedv2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2021/03/21>
@@ -790,17 +795,17 @@ L3 programming layer <2021/03/21>
  ) 
 Here is how much of TeX's memory you used:
  17812 strings out of 475172
- 284014 string characters out of 5764042
- 734941 words of memory out of 5000000
+ 284048 string characters out of 5764042
+ 734945 words of memory out of 5000000
  40422 multiletter control sequences out of 15000+600000
  595731 words of font info for 94 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,12n,93p,685b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,93p,687b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/rver4657/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MuttamaDataPaper_revised.pdf (25 pages, 3433950 bytes).
+Output written on MuttamaDataPaper_revisedv2.pdf (25 pages, 3433998 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
+ 486 PDF objects out of 1000 (max. 8388607)
+ 420 compressed objects within 5 object streams
  93 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
