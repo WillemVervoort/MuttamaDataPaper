@@ -6,7 +6,7 @@ author:
     surname: Vervoort
     affiliation: 1
     email: willem.vervoort@sydney.edu.au
-  - given_name: Floris
+  - given_name: Floris F.
     surname: van Ogtrop
     affiliation: 1
     email: floris.vanogtrop@sydney.edu.au
@@ -17,29 +17,29 @@ author:
   - given_name: Farzina
     surname: Akter
     affiliation: 1
-  - given_name: Alexander
+  - given_name: Alexander J.V.
     surname: Buzacott
-    affiliation: 1
-  - given_name: Jason
+    affiliation: 1, 2
+  - given_name: Jason S.
     surname: Lessels
     affiliation: 1
-  - given_name: James
+  - given_name: James P. 
     surname: Moloney
     affiliation: 1
   - given_name: Dipangkar
     surname: Kundu
     affiliation: 1
-  - given_name: Feike
+  - given_name: Feike A.
     surname: Dijkstra
     affiliation: 1
-  - given_name: Thomas
+  - given_name: Thomas F. A.
     surname: Bishop
     affiliation: 1
 affiliation:
   - code: 1
     address: Sydney Institute of Agriculture, The University of Sydney, NSW 2006, Australia
-#  - code: 2
-#    address: Institute for Atmospheric and Earth System Research, Faculty of Science, University of Helsinki, Helsinki, Finland
+  - code: 2
+    address: Institute for Atmospheric and Earth System Research, Faculty of Science, University of Helsinki, Helsinki, Finland
 abstract: |
   Dryland salinity remains a major global natural resource management concern, and which is amplified in Australia. However, limited detailed space-time data sets with observations of stream and groundwater salinity has constrained a deep understanding of the range of processes that can lead to dryland salinity problems in landscapes. The aim of this study is to report on the open dataset resulting from a 14-year data collection effort in a subcatchment of the Murrumbidgee catchment in New South Wales, Australia. 
   Over a 14-year period a series of different sampling campaigns has resulted in a large dataset with hydrogeochemical data which includes both in-situ (field) data and post laboratory analysis of major anions and cations. This data is augmented with observed groundwater levels and publicly available streamflow and climate data. The data set covers 23 groundwater sample sites and 39 surface water sites. Because the data was collected by four distinct groups and over many years, we investigate whether this has caused a bias in the dataset. In addition, we show the major spatial and temporal trends to provide an overview of the dataset.
@@ -1190,18 +1190,18 @@ Finally, given our intention to continue collecting data in the catchment, there
 Detailed datasets for medium to large scale catchments (greater or equal than 1000 km^2^) are underrepresented in salinity research in Australia and worldwide, with very few public datasets identified for Australia. This paper reports on a long term (`r time_period` year) hydrogeochemistry dataset from a single medium scale catchment (> 1000 km^2^) in NSW, Australia. This dataset includes a total of `r nrow(Muttama)` water samples from `r nrow(coord)` locations within the catchment and includes groundwater and surface water sites. While the dataset was collected by different groups of people at different times and locations, it still provides a valuable long term and spatially diverse data set. The complete sample set covers a wide range of flow and wetness conditions. Clear differences were observed in pH, electroconductivity, and in ion ratios between groundwater and surface water samples. Spatial differences in water chemistry are also apparent, with our data reinforcing prior chemical gradients observed in the catchment. Though in this paper we only provide a limited analysis of the data, we anticipate the dataset can be used for research to gain better insight into the spatio-temporal evolution of hydrogeochemical processes from larger catchments and improve the understanding of catchment salinity.  
 
 \bigskip
-\competinginterests{The authors declare no competing interests}.  
+\competinginterests{The authors declare no competing interests}
 
 \bigskip
 \noindent \textbf{Availability code \& data}  
 
 - The majority of the code and associated data, including the Rmarkdown for this paper, is stored on Github [https://github.com/WillemVervoort/MuttamaDataPaper](https://github.com/WillemVervoort/MuttamaDataPaper).  
-- The hydrogeochemistry data is located on [the University of Sydney escholarship repository](doi.org/10.25910/m0wp-8890) @vervoort2025.  
+- The hydrogeochemistry data is located on the University of Sydney escholarship repository [doi.org/10.25910/m0wp-8890](doi.org/10.25910/m0wp-8890) @vervoort2025.  
 - However, due to the volume of raw data, the groundwater logger data is stored in a separate Open Science Foundation project: [https://doi.org/10.17605/OSF.IO/BEUWK](https://doi.org/10.17605/OSF.IO/BEUWK) @vervoort2024.  
 
 \bigskip
 \noindent \textbf{Author contributions}  
-TB initiated the sampling campaign. TB, FvO, FD and RWV conceptualised the overall study, and managed the project. RWV and MT wrote the draft paper and analysed results. FA, DK and JL collected and analysed the majority of the samples. MT, AB, JM, FA and DK analysed and managed the data. All authors participated in sampling, laboratory analysis and review of the paper.  
+TFAB initiated the sampling campaign. TFAB, FFvO, FAD and RWV conceptualised the overall study, and managed the project. RWV and MT wrote the draft paper and analysed results. FA, DK and JSL collected and analysed the majority of the samples. MT, AVJB, JPM, FA and DK analysed and managed the data. All authors participated in sampling, laboratory analysis and review of the paper.  
 
 \bigskip
 \noindent \textbf{Acknowledgements}  
